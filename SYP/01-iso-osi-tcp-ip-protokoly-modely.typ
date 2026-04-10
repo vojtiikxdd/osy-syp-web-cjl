@@ -101,30 +101,30 @@
 
     = Průběh zapouzdření dat:
 
-    + Aplikační vrstva
+    / Aplikační vrstva:
 
       - Data vytvořená aplikací
       - Název: Data
       - Jedná se například o obsah webové stránky, e-mail nebo soubor, který chceme přenést.
     
-    + Transportní vrstva
+    / Transportní vrstva:
     
       - Přidání TCP/UDP hlavičky
       - Název: Segment (TCP) / Datagram (UDP)
       - Tato vrstva rozdělí data na menší části (segmenty nebo datagramy) 
         - každý má maximálně 1,5 KB pro TCP a asi 65 KB pro UDP - a přidá informace potřebné pro správný přenos, jako jsou porty a čísla sekvencí (transportní hlavička).
     
-    + Internetová vrstva
+    / Internetová vrstva:
     
       - Přidání IP hlavičky
       - Název: Paket (Packet)
     
-    + Linková vrstva
+    / Linková vrstva:
     
       - Přidání MAC adres (hlavička a patička)
       - Název: Rámec (Frame)
     
-    + Fyzická vrstva
+    / Fyzická vrstva:
     
       - Převod na elektrické/optické signály
       - Název: Bity (Bits)
@@ -133,7 +133,7 @@
 
     = Protokoly modelu TCP/IP
 
-    + Aplikační vrstva:
+    / Aplikační vrstva:
 
       - HTTP – přenos webových stránek
       - HTTPS – zabezpečený HTTP
@@ -141,35 +141,35 @@
       - SMTP – odesílání e-mailů
       - DNS – překlad domén na IP adresy
 
-    + Transportní vrstva:
+    / Transportní vrstva:
 
       - TCP – spolehlivý přenos (kontrola chyb, pořadí)
       - UDP – rychlý, bez záruky doručení
 
-    + Internetová vrstva:
+    / Internetová vrstva:
 
       - IP – adresace zařízení
       - ICMP – diagnostika (např. ping)
 
-    + ARP 
+    / ARP:
       - překlad IP na MAC adresu
 
-    + Síťové rozhraní:
+    / Síťové rozhraní:
 
       - Ethernet – přenos v lokální síti
       - Wi-Fi – bezdrátová komunikace
 
     = Broadcast, Multicast, Unicast
 
-    + Unicast
+    / Unicast:
       
       - komunikace 1 → 1 (např. načtení webu)
     
-    + Broadcast
+    / Broadcast:
       
       - komunikace 1 → všichni v síti
     
-    + Multicast
+    / Multicast:
       
       - komunikace 1 → skupina zařízení
 
