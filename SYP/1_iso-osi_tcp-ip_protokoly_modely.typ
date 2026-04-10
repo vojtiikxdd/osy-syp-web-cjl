@@ -1,13 +1,14 @@
-#import "../template.typ": maturita_projekt, tema
+#import "../template.typ": header, theme
 
-#show: body => maturita_projekt(
+#show: body => header(
   title: "ISO/OSI a TCP/IP, protokoly a modely",
+  author: "Vojtěch Razima",
   body,
 )
 
-#tema(
+#theme(
   uvod: [
-    "ISO/OSI (International Organization for Standardization / Open Systems Interconnection) je referenční model pro síťovou komunikaci, který byl vyvinut v 80. letech 20. století. Tento model rozděluje síťovou komunikaci do sedmi vrstev, z nichž každá má specifické funkce a odpovědnosti. Plní funkci jako standard pro návrh a implementaci síťových protokolů, což umožňuje interoperabilitu mezi různými systémy a zařízeními."
+    ISO/OSI (International Organization for Standardization / Open Systems Interconnection) je referenční model pro síťovou komunikaci, který byl vyvinut v 80. letech 20. století. Tento model rozděluje síťovou komunikaci do sedmi vrstev, z nichž každá má specifické funkce a odpovědnosti. Plní funkci jako standard pro návrh a implementaci síťových protokolů, což umožňuje interoperabilitu mezi různými systémy a zařízeními.
   ],
   body: [
     #set heading(numbering: "1.1")
@@ -76,12 +77,8 @@
     6. Prezentační vrstva (Presentation Layer): Zajišťuje převod dat do formátu, který může být pochopen aplikací. Řeší problémy jako kódování, komprese a šifrování dat.
 
     7. Aplikační vrstva (Application Layer): Poskytuje rozhraní pro uživatele a aplikace k přístupu ke službám sítě. Zahrnuje protokoly jako HTTP, FTP, SMTP a další.
-
-
-
-    =
   ],
   zaver: [
-    "Model ISO/OSI je důležitým konceptem v oblasti počítačových sítí, protože poskytuje strukturovaný rámec pro pochopení a návrh síťových protokolů. I když se v praxi často používají jiné modely (například TCP/IP), ISO/OSI zůstává klíčovým referenčním modelem pro výuku a porozumění síťové komunikaci."
+    Model ISO/OSI je důležitým konceptem v oblasti počítačových sítí, protože poskytuje strukturovaný rámec pro pochopení a návrh síťových protokolů. I když se v praxi často používají jiné modely (například TCP/IP), ISO/OSI zůstává klíčovým referenčním modelem pro výuku a porozumění síťové komunikaci.
   ],
 )

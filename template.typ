@@ -1,4 +1,4 @@
-#let maturita_projekt(title: "", author: "", body) = {
+#let header(title: "", author: "", body) = {
   set page(
     paper: "a4",
     margin: (x: 2.5cm, y: 2.5cm),
@@ -24,7 +24,7 @@
   body
 }
 
-#let tema(
+#let theme(
   uvod: [],
   body: [],
   zaver: [],

@@ -8,29 +8,28 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Typst
-        uses: chataigne/setup-typst@v1
+      - name: Install Typst
+        run: |
+          curl -L https://github.com/typst/typst/releases/latest/download/typst-x86_64-unknown-linux-musl.tar.xz \
+          | tar -xJ --strip-components=1 -C /usr/local/bin typst-x86_64-unknown-linux-musl/typst
 
       - name: Compile PDF files
         run: |
-          # Vytvoření cílové struktury ve složce 'dist'
           mkdir -p dist/OSY dist/SYP dist/WEB
+          shopt -s nullglob
 
-          # Kompilace všech .typ souborů v předmětech (pokud existují)
-          # Používáme smyčku, aby se zkompilovalo vše automaticky
           for subject in OSY SYP WEB; do
             if [ -d "$subject" ]; then
               for file in "$subject"/*.typ; do
-                if [ -f "$file" ]; then
-                  filename=$(basename "$file" .typ)
-                  typst compile "$file" "dist/$subject/$filename.pdf"
-                fi
+                filename=$(basename "$file" .typ)
+                echo "Kompiluju: $file -> dist/$subject/$filename.pdf"
+                typst compile "$file" "dist/$subject/$filename.pdf"
               done
             fi
           done
 
-      - name: Deploy to PDF branch
-        uses: s0/git-publish-subdir-action@develop
+      - name: Deploy to generated branch
+        uses: s0/git-publish-subdir-action@v5.0.1
         env:
           REPO: self
           BRANCH: generated
