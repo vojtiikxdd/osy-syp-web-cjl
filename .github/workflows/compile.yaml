@@ -23,7 +23,7 @@ jobs:
               for file in "$subject"/*.typ; do
                 filename=$(basename "$file" .typ)
                 echo "Kompiluju: $file -> dist/$subject/$filename.pdf"
-                typst compile "$file" "dist/$subject/$filename.pdf"
+                typst compile --root . "$file" "dist/$subject/$filename.pdf"
               done
             fi
           done
