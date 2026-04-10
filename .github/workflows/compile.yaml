@@ -29,10 +29,9 @@ jobs:
           done
 
       - name: Deploy to generated branch
-        uses: s0/git-publish-subdir-action@v5.0.0
-        env:
-          REPO: self
-          BRANCH: generated
-          FOLDER: dist
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          MESSAGE: "Auto build: {sha}"
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          publish_branch: generated
+          commit_message: "Auto build: ${{ github.sha }}"
