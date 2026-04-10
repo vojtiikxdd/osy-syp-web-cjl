@@ -1,0 +1,39 @@
+name: Compile All Typst Questions
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Typst
+        uses: chataigne/setup-typst@v1
+
+      - name: Compile PDF files
+        run: |
+          # Vytvoření cílové struktury ve složce 'dist'
+          mkdir -p dist/OSY dist/SYP dist/WEB
+
+          # Kompilace všech .typ souborů v předmětech (pokud existují)
+          # Používáme smyčku, aby se zkompilovalo vše automaticky
+          for subject in OSY SYP WEB; do
+            if [ -d "$subject" ]; then
+              for file in "$subject"/*.typ; do
+                if [ -f "$file" ]; then
+                  filename=$(basename "$file" .typ)
+                  typst compile "$file" "dist/$subject/$filename.pdf"
+                fi
+              done
+            fi
+          done
+
+      - name: Deploy to PDF branch
+        uses: s0/git-publish-subdir-action@develop
+        env:
+          REPO: self
+          BRANCH: generated
+          FOLDER: dist
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          MESSAGE: "Auto build: {sha}"
