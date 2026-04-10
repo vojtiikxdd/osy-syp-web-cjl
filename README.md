@@ -12,9 +12,9 @@ Všechna PDF jsou automaticky generována po merge do `main` a dostupná na bran
 
 # ⚠️ Než začneš cokoliv dělat
 
-1. **Vytvoř si vlastní branch** podle názvu otázky, např. `osy-navrh-male-site`
+1. **Vytvoř si vlastní branch** podle názvu otázky, např. `osy-*cislo*-navrh-male-site`
 2. Soubor vlož do správné složky: `OSY/`, `SYP/` nebo `WEB/`
-3. Pojmenuj soubor podle otázky, např. `navrh-male-site.typ`
+3. Pojmenuj soubor podle otázky, např. `*cislo-otazky*-navrh-male-site.typ`
 4. Až budeš hotov, udělej PR přes [webové rozhraní](https://github.com/vojtiikxdd/osy-syp-web/compare) — **nikdy ho nesluč sám**
 
 ---
