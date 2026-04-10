@@ -45,15 +45,19 @@ Zkopíruj tuto kostru do svého `.typ` souboru:
 )
 
 #theme(
-  uvod: [
+  intro: [
     Krátký úvod k tématu.
   ],
   body: [
     = Nadpis kapitoly
     Text...
   ],
-  zaver: [
+  summary: [
     Shrnutí.
+  ],
+  resources: [
+    - [Youtube vide](https://www.youtube.com)
+    - [wiki](https://en.wikipedia.org/wiki/Wiki)
   ],
 )
 ```

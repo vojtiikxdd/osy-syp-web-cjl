@@ -25,19 +25,25 @@
 }
 
 #let theme(
-  uvod: [],
+  intro: [],
   body: [],
-  zaver: [],
+  summary: [],
+  resources: []
 ) = {
 
-  [= Úvod]
-  uvod
+  [= Úvod ]
+  intro
   
   body
   
-  [== Závěr]
-  zaver
-  
+  [== Závěr ]
+  summary
+
+  pagebreak()
+
+  [== Zdroje ]
+  resources
+
   v(2em)
   line(length: 40%, stroke: 0.5pt + gray)
 }
