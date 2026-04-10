@@ -12,10 +12,11 @@ Všechna PDF jsou automaticky generována po merge do `main` a dostupná na bran
 
 # ⚠️ Než začneš cokoliv dělat
 
-1. **Vytvoř si vlastní branch** podle názvu otázky, např. `osy-*cislo*-navrh-male-site`
+1. **Vytvoř si vlastní branch** podle názvu otázky - `osy-*cislo-otazky*-*tema*`, např. `osy-01-iso-osi-tcp-ip`
 2. Soubor vlož do správné složky: `OSY/`, `SYP/` nebo `WEB/`
-3. Pojmenuj soubor podle otázky, např. `*cislo-otazky*-navrh-male-site.typ`
+3. Pojmenuj soubor podle otázky -`*cislo-otazky*-*tema*.typ`, např. `01-iso-osi-tcp-ip.typ`
 4. Až budeš hotov, udělej PR přes [webové rozhraní](https://github.com/vojtiikxdd/osy-syp-web/compare) — **nikdy ho nesluč sám**
+5. **Upravuj pouze tebou vytvořené soubory**. Při návrhu na zlepšení [podej návrh](https://github.com/vojtiikxdd/osy-syp-web/issues)
 
 ---
 
@@ -64,7 +65,7 @@ Zkopíruj tuto kostru do svého `.typ` souboru:
 )
 ```
 
-Do Zrdojů není nutné uvádět všěe poctivě, je ale dobré přihodit např. youtube video, ketré téma dobře vysvětluje
+Do Zrdojů není nutné uvádět vše poctivě, je ale dobré přihodit např. youtube video, které téma dobře vysvětluje
 
 Dokumentace různých funkcí Typstu [zde](https://typst.app/docs/)
 
@@ -84,4 +85,4 @@ nebo živý náhled při úpravách:
 typst watch OSY/tvuj-soubor.typ
 ```
 
-případně si přidej do VS Code extension [Tinymist Typst](https://marketplace.visualstudio.com/items?itemName=myriad-dreamin.tinymist) a používej preview v editoru vpravo nahoře (ikona knihy s lupou)
+Případně si přidej do VS Code extension [Tinymist Typst](https://marketplace.visualstudio.com/items?itemName=myriad-dreamin.tinymist) a používej preview v editoru vpravo nahoře (ikona knihy s lupou)
