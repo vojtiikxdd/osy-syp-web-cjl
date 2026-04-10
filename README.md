@@ -62,7 +62,9 @@ Zkopíruj tuto kostru do svého `.typ` souboru:
 )
 ```
 
-dokumentace různých funkcí Typstu [zde](https://typst.app/docs/)
+Do Zrdojů není nutné uvádět všěe poctivě, je ale dobré přihodit např. youtube video, ketré téma dobře vysvětluje
+
+Dokumentace různých funkcí Typstu [zde](https://typst.app/docs/)
 
 ---
 
