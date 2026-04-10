@@ -134,19 +134,28 @@
     = Protokoly modelu TCP/IP
 
     + Aplikační vrstva:
+
       - HTTP – přenos webových stránek
       - HTTPS – zabezpečený HTTP
       - FTP – přenos souborů
       - SMTP – odesílání e-mailů
       - DNS – překlad domén na IP adresy
+
     + Transportní vrstva:
+
       - TCP – spolehlivý přenos (kontrola chyb, pořadí)
       - UDP – rychlý, bez záruky doručení
+
     + Internetová vrstva:
+
       - IP – adresace zařízení
       - ICMP – diagnostika (např. ping)
-    + ARP – překlad IP na MAC adresu
+
+    + ARP 
+      - překlad IP na MAC adresu
+
     + Síťové rozhraní:
+
       - Ethernet – přenos v lokální síti
       - Wi-Fi – bezdrátová komunikace
 
