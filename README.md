@@ -49,6 +49,8 @@ Zkopíruj tuto kostru do svého `.typ` souboru:
     Krátký úvod k tématu.
   ],
   body: [
+    #set heading(numbering: "1.1")
+
     = Nadpis kapitoly
     Text...
   ],
