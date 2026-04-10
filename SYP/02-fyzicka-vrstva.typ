@@ -11,6 +11,8 @@
     Fyzická vrstva (Physical Layer) je nejnižší vrstva referenčního modelu OSI. Zajišťuje přenos jednotlivých bitů mezi zařízeními prostřednictvím fyzického média. Definuje elektrické, mechanické a funkční vlastnosti přenosu dat, například napětí, konektory, rychlosti přenosu a typy kabelů.
   ],
   body: [
+    #set heading(numbering: "1.1")
+
     = Typy běžně používaných přenosových - síťových médií:
 
     == Metalická (drátová) média
