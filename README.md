@@ -59,8 +59,8 @@ Zkopíruj tuto kostru do svého `.typ` souboru:
     Shrnutí.
   ],
   resources: [
-    - [Youtube - Téma](https://www.youtube.com)
-    - [Wiki - Téma](https://en.wikipedia.org/)
+    - #link("https://www.youtube.com")[Youtube - Téma]
+    - #link("https://en.wikipedia.org/")[Wiki - Téma]
   ],
 )
 ```
