@@ -21,14 +21,25 @@
 
     / Kroucená dvoulinka (Twisted Pair):
 
+      #figure(
+        image("../assets/kroucena-dvoulinka.jpg"),
+        caption: "Kroucená dvoulinka (Twisted Pair)"
+      )
+
       - Typy: UTP, STP, FTP
       - Maximální délka: 100 m (pro Ethernet)
       - Konektor: RJ-45
+
 
     / Koaxiální kabel:
 
       - Maximální délka: cca 185 m (10BASE2), až 500 m (10BASE5)
       - Konektor: BNC
+
+      #figure(
+        image("../assets/koaxialni-kabel.jpg"),
+        caption: "Koaxiální kabel (Coaxial Cable)"
+      )
 
     == Optická média
 
@@ -41,6 +52,16 @@
         - SM: desítky až stovky km
       / Konektory: SC, LC, ST
 
+      #figure(
+        image("../assets/opticke-vlakno.webp"),
+        caption: "Optické vlákno (Fiber Optic)"
+      )
+  
+      #figure(
+        image("../assets/opticke-vlakno-konektory.jpeg"),
+        caption: "Optické vlákno s konektory (Fiber Optic Cable)"
+      )
+
     == Bezdrátová média
 
     / Wi-Fi (rádiové vlny):
@@ -52,9 +73,15 @@
 
       - Dosah: cca 10 m (běžně)
 
-    / Mikrovlnné spoje:
+    / Mikrovlnné spoje (Radioreléový spoj):
 
       - Dosah: až desítky km (přímá viditelnost)
+      - Operuje s malým výkonem a vysokou frekvencí (1-80 GHz)
+
+      #figure(
+        image("../assets/mikrovlnne-spoje.jpg"),
+        caption: "Mikrovlnný spoj (Microwave Link)"
+      )
 
     / Satelitní komunikace:
 
@@ -103,11 +130,54 @@
       [Sluchátka, periferie],
     )
 
+    = Zapojení UTP kabelu
+
+    Existují dva základní standardy zapojení:
+
+    / Přímý kabel (Straight-through):
+      - Oba konce zapojeny stejně (T568A nebo T568B)
+      - Použití:
+        - PC ↔ switch
+        - switch ↔ router
+
+    / Křížený kabel (Crossover):
+      - Jeden konec T568A, druhý T568B
+      - Použití:
+        - PC ↔ PC
+        - switch ↔ switch (starší zařízení bez Auto-MDIX)
+
+    = Vlivy okolního prostředí na přenos
+
+    == Negativní vlivy
+
+    / Elektromagnetické rušení (EMI):
+      - Zdroje: elektrické motory, silová vedení, transformátory
+
+    / Přeslech (Crosstalk):
+      - Vzájemné ovlivňování vodičů uvnitř kabelu
+
+    / Fyzické poškození:
+      - Nadměrný ohyb nebo zlomení kabelu
+
+    / Atmosférické vlivy:
+      - Déšť, mlha — především u bezdrátových technologií
+
+    / Teplota a vlhkost:
+      - Ovlivňuje elektrické vlastnosti materiálů
+
+    == Eliminace vlivů
+
+    - Použití stíněných kabelů (STP, FTP)
+    - Správné vedení kabeláže (dál od silových vodičů)
+    - Použití optických vláken (odolné vůči EMI)
+    - Kvalitní instalace a mechanická ochrana kabelů
+    - Použití opakovačů (repeaters) nebo zesilovačů
+    - Využití korekčních mechanismů (např. CRC)
   ],
   summary: [
     Fyzická vrstva a přenosová média tvoří základ každé počítačové sítě. Správná volba média závisí na požadavcích na rychlost, vzdálenost, cenu a odolnost proti rušení. Moderní sítě stále více využívají optická vlákna a bezdrátové technologie, zatímco metalické kabely zůstávají důležité především v lokálních sítích.
   ],
   resources: [
-    - [Youtube - Fyzická vrstva](https://www.youtube.com/watch?v=ZScMXyQSFfo)
+    - #link("https://www.youtube.com/watch?v=ZScMXyQSFfo")[Youtube - Fyzická vrstva]
   ],
 )
