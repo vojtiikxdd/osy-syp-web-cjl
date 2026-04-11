@@ -204,6 +204,8 @@
     Model ISO/OSI je důležitým konceptem v oblasti počítačových sítí, protože poskytuje strukturovaný rámec pro pochopení a návrh síťových protokolů. I když se v praxi často používají jiné modely (například TCP/IP), ISO/OSI zůstává klíčovým referenčním modelem pro výuku a porozumění síťové komunikaci.
   ],
   resources: [
-    - [YouTube: Základy fungování sítí](https://www.youtube.com/watch?v=036dn5OSlvA)
+    - #link("https://www.youtube.com/watch?v=036dn5OSlvA")[YouTube: Základy fungování sítí]
+
+    - #link("https://www.youtube.com/watch?v=3b_TAYtzuho")[YouTube: ISO and TCP/IP models - best explanation]
   ]
 )
