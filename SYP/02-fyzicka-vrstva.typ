@@ -14,7 +14,7 @@
 
     #figure(
       image("../assets/kolize-mezi-daty.png"),
-      caption: "Ukázka kolize mezi daty při přenosu bez kontroly"
+      caption: "Ukázka kolize mezi daty při přenosu bez kontroly",
     )
   ],
   body: [
@@ -28,15 +28,14 @@
 
     / Kroucená dvoulinka (Twisted Pair):
 
-      #figure(
-        image("../assets/kroucena-dvoulinka.jpg"),
-        caption: "Kroucená dvoulinka (Twisted Pair)"
-      )
-
       - Typy: UTP, STP, FTP
       - Maximální délka: 100 m (pro Ethernet)
       - Konektor: RJ-45
 
+      #figure(
+        image("../assets/kroucena-dvoulinka.jpg"),
+        caption: "Kroucená dvoulinka (Twisted Pair)",
+      )
 
     / Koaxiální kabel:
 
@@ -45,7 +44,7 @@
 
       #figure(
         image("../assets/koaxialni-kabel.jpg"),
-        caption: "Koaxiální kabel (Coaxial Cable)"
+        caption: "Koaxiální kabel (Coaxial Cable)",
       )
 
     == Optická média
@@ -54,19 +53,21 @@
       / Typy:
         - Multimode (MM)
         - Singlemode (SM)
+
+        #figure(
+          image("../assets/opticke-vlakno.webp"),
+          caption: "Optické vlákno (Fiber Optic)",
+        )
+
       / Maximální délka:
         - MM: stovky metrů až jednotky km
         - SM: desítky až stovky km
-      / Konektory: SC, LC, ST
+      / Konektory:
+        - SC, LC, ST
 
       #figure(
-        image("../assets/opticke-vlakno.webp"),
-        caption: "Optické vlákno (Fiber Optic)"
-      )
-  
-      #figure(
         image("../assets/opticke-vlakno-konektory.jpeg"),
-        caption: "Optické vlákno s konektory (Fiber Optic Cable)"
+        caption: "Optické vlákno s konektory (Fiber Optic Cable)",
       )
 
     == Bezdrátová média
@@ -87,7 +88,7 @@
 
       #figure(
         image("../assets/mikrovlnne-spoje.jpg"),
-        caption: "Mikrovlnný spoj (Microwave Link)"
+        caption: "Mikrovlnný spoj (Microwave Link)",
       )
 
     / Satelitní komunikace:
