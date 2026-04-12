@@ -106,7 +106,7 @@
       ip address 192.168.1.1 255.255.255.0
       no shutdown                           // aktivace rozhraní
 
-    ip route 0.0.0.0 0.0.0.0 192.168.1.254 // statická default route
+    ip route 0.0.0.0 0.0.0.0 192.168.1.254  // statická default route
 
     copy running-config startup-config      // uložení konfigurace do NVRAM
     show running-config                     // zobrazení aktuální konfigurace
@@ -114,7 +114,7 @@
     show ip route                           // zobrazení směrovací tabulky
     show ip interface brief                 // přehled rozhraní a jejich IP adres
     ping 192.168.1.1                        // test konektivity
-    traceroute 192.168.1.1                 // sledování trasy paketů
+    traceroute 192.168.1.1                  // sledování trasy paketů
     ```
   
     #block(fill: luma(240), inset: 10pt, radius: 4pt)[
