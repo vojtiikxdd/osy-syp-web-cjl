@@ -5,8 +5,8 @@ Sdílené typst zápisky ke státní maturitě. PDF se generují automaticky po 
 ---
 
 # 📄 PDF náhled
-
-Všechna PDF jsou automaticky generována po merge do `main` a dostupná na branchi [generated](https://github.com/vojtiikxdd/osy-syp-web/tree/generated).
+> [!IMPORTANT]
+> Všechna PDF jsou automaticky generována po merge do `main` a dostupná na branch [generated](https://github.com/vojtiikxdd/osy-syp-web/tree/generated).
 
 ---
 

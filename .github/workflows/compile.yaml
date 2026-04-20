@@ -15,17 +15,27 @@ jobs:
 
       - name: Compile PDF files
         run: |
-          mkdir -p dist/OSY dist/SYP dist/WEB
+          mkdir -p dist/OSY dist/SYP dist/WEB dist/OTHER dist/CJL
           shopt -s nullglob
 
-          for subject in OSY SYP WEB; do
+          for subject in OSY SYP WEB OTHER; do
             if [ -d "$subject" ]; then
               for file in "$subject"/*.typ; do
                 filename=$(basename "$file" .typ)
-                echo "Kompiluju: $file -> dist/$subject/$filename.pdf"
+                echo "Compiling: $file -> dist/$subject/$filename.pdf"
                 typst compile --root . "$file" "dist/$subject/$filename.pdf"
               done
             fi
+          done
+
+          for author_dir in CJL/*/; do
+            author=$(basename "$author_dir")
+            for file in "$author_dir"*.typ; do
+              book=$(basename "$file" .typ)
+              output="dist/CJL/${author}-${book}.pdf"
+              echo "Compiling: $file -> $output"
+              typst compile --root . "$file" "$output"
+            done
           done
 
       - name: Deploy to generated branch
