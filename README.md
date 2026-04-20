@@ -1,4 +1,4 @@
-# Maturitní zápisky — OSY / SYP / WEB
+# Maturitní zápisky — OSY / SYP / WEB / CJL
 
 Sdílené typst zápisky ke státní maturitě. PDF se generují automaticky po každém merge do `main`.
 
