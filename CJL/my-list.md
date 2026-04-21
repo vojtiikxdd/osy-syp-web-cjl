@@ -25,7 +25,7 @@
 
 15. Viktor Dyk - Krysař _done_
 16. Franz Kafka - Proměna _done_
-17. **Franz Kafka - Proces**
+17. Franz Kafka - Proces _done_
 18. Ota Pavel - Smrt krásných srnců _done_
 19. **Karel Čapek - Matka**
 20. **Karel Čapek - Bílá nemoc**
