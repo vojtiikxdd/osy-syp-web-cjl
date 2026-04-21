@@ -18,7 +18,7 @@
 10. Erich Maria Remarque - Na západní frontě klid _done_
 11. George Orwell - Farma zvířat _done_
 12. George Orwell - 1984 _done_
-13. **Ernest Hemingway - Stařec a moře**
+13. Ernest Hemingway - Stařec a moře _done_
 14. George Bernard Shaw - Pygmalion _done_
 
 # Česká literatura 20. a 21. století (žák vybírá min. 5 děl)
