@@ -15,7 +15,7 @@
 # Světová literatura 20. a 21. století (žák vybírá min. 4 díla)
 
 9. Romain Rolland - Petr a Lucie _done_
-10. **Erich Maria Remarque - Na západní frontě klid**
+10. Erich Maria Remarque - Na západní frontě klid _done_
 11. George Orwell - Farma zvířat _done_
 12. George Orwell - 1984 _done_
 13. **Ernest Hemingway - Stařec a moře**
