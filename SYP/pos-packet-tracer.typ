@@ -17,7 +17,7 @@
 ])
 
 #outline(
-  title: "Obsah"
+  title: "Obsah",
 )
 
 == Režimy v konzoli v Packet Traceru
@@ -34,9 +34,9 @@ V Cisco Packet Traceru existují různé režimy, které umožňují uživatelů
 Router> enable
 Router#
 ```
-  - Co umí:
-    - Přístup k pokročilým diagnostickým příkazům
-    - Možnost přechodu do režimu konfigurace
+- Co umí:
+  - Přístup k pokročilým diagnostickým příkazům
+  - Možnost přechodu do režimu konfigurace
 
 - *Global Configuration Mode*: Tento režim umožňuje uživatelům provádět změny v celkové konfiguraci zařízení. Přístup do tohoto režimu je získán z Privileged EXEC Mode.
 ```bash
@@ -44,32 +44,32 @@ Router> enable
 Router# configure terminal
 Router(config)#
 ```
-  - Co umí:
-    - Konfigurace rozhraní
-    - Nastavení protokolů a služeb
+- Co umí:
+  - Konfigurace rozhraní
+  - Nastavení protokolů a služeb
 
 - *Interface Configuration Mode*: Tento režim je specifický pro konfiguraci jednotlivých síťových rozhraní.
 ```bash
 Router(config)# interface GigabitEthernet0/0
 Router(config-if)#
 ```
-  - Co umí:
-    - Nastavení IP adresy a subnet masky
-    - Konfigurace rychlosti a duplexu
+- Co umí:
+  - Nastavení IP adresy a subnet masky
+  - Konfigurace rychlosti a duplexu
 
 - *Line Configuration Mode*: Tento režim umožňuje konfiguraci přístupových linek, jako jsou konzolové a VTY linky.
 ```bash
 Router(config)# line console 0
 Router(config-line)#
 ```
-  - Co umí:
-    - Nastavení hesel pro přístup
-    - Konfigurace časových limitů a dalších parametrů
+- Co umí:
+  - Nastavení hesel pro přístup
+  - Konfigurace časových limitů a dalších parametrů
 
 - *Další režimy specifické pro různé rozhraní*: do nich lze obvykle přistoupit z Global Configuration Mode.
 
 #figure(
-  image("../assets/image.png", width: 50%),
+  image("../assets/image-3.png", width: 50%),
 )
 
 == Typy \*castu na síti
@@ -190,7 +190,7 @@ Router(config-if)# ip address 192.168.1.1 255.255.255.0
 Router(config-if)# no shutdown
 Router(config-if)# exit
 # Vynechání adres pro např. statické přiřazení (obě adresy jsou inkluzivní)
-Router(config)# ip dhcp excluded-address 192.168.1.1 192.168.1.10 
+Router(config)# ip dhcp excluded-address 192.168.1.1 192.168.1.10
 
 Router(config)# ip dhcp pool LAN_POOL
 # Nastavení informací o síťi pro DHCP klienty
@@ -232,7 +232,7 @@ Switch(config-if-range)# switchport access vlan 20
 
 === Trunking mezi switchi (Router-on-a-Stick)
 
-Trunking umožňuje přenos více VLAN přes jeden fyzický spoj mezi dvěma switchi. To je užitečné, když chcete, aby více VLAN mohlo komunikovat přes stejný kabel. 
+Trunking umožňuje přenos více VLAN přes jeden fyzický spoj mezi dvěma switchi. To je užitečné, když chcete, aby více VLAN mohlo komunikovat přes stejný kabel.
 
 Typickým příkladem použítí může být situace, kdy máte více switchů a chcete, aby spolu komunikovaly stejné VLANy na obou switchích.
 
