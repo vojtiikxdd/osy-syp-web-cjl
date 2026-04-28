@@ -1,5 +1,4 @@
 #import "../template.typ": header, theme
-#import "@preview/cetz:0.3.0": canvas, draw
 
 #show: body => header(
   title: "Hasování",
