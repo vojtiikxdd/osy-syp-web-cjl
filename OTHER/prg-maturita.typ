@@ -334,6 +334,8 @@ private void ProcházejVšechnyPrvky(Control kontejner) {
 ProcházejVšechnyPrvky(this);
 ```
 
+#pagebreak()
+
 = Jednoduché datové typy
 
 == Deklarace datových typů a proměnných
@@ -1077,6 +1079,8 @@ int main() {
 + Intuitivní použití -- programátor nemusí pamatovat různé názvy
 + Polymorfismus -- základ objektově orientovaného programování
 
+#pagebreak()
+
 = Metody C\#
 
 == Pojem metoda
@@ -1588,6 +1592,8 @@ class FormatovaniTextu {
 + *Konzistence* -- jednotné rozhraní pro podobné operace
 + *Polymorfismus* -- základ OOP v C\#
 
+#pagebreak()
+ 
 = Datový typ pole
 
 == Jednorozměrné pole
