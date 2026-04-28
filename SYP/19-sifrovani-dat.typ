@@ -191,7 +191,7 @@
         - Útoky postranními kanály
   ],
   summary: [
-    Shrnutí.
+    Šifrování dat je klíčovým nástrojem pro zajištění bezpečnosti a důvěrnosti informací v digitálním světě. Existují dva hlavní typy kryptografie – symetrická a asymetrická – které se liší způsobem, jakým používají klíče pro šifrování a dešifrování dat. Symetrická kryptografie využívá stejný klíč pro oba procesy, zatímco asymetrická kryptografie používá pár klíčů (veřejný a soukromý). Mezi nejznámější algoritmy patří DES, AES pro symetrickou kryptografii a RSA pro asymetrickou kryptografii. V praxi se často využívá kombinace obou typů kryptografie pro dosažení optimální bezpečnosti a výkonu.
   ],
   resources: [
     - #link("https://www.youtube.com")[Youtube - Téma]
