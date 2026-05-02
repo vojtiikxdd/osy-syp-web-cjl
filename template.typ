@@ -1,4 +1,6 @@
 #let header(title: "", author: "", body) = {
+  import "@preview/zebraw:0.6.1": *
+
   set page(
     paper: "a4",
     margin: (x: 2.5cm, y: 2.5cm),
@@ -21,6 +23,11 @@
   
   v(2em)
   
+  outline(
+    title: "Obsah",
+  )
+
+  show: zebraw
   body
 }
 
@@ -38,6 +45,21 @@
   
   [== Závěr ]
   summary
+
+  pagebreak()
+
+  [== Zdroje ]
+  resources
+
+  v(2em)
+  line(length: 40%, stroke: 0.5pt + gray)
+}
+
+#let simple(
+  body: [],
+  resources: []
+) = {
+  body
 
   pagebreak()
 

@@ -15,10 +15,10 @@ jobs:
 
       - name: Compile PDF files
         run: |
-          mkdir -p dist/OSY dist/SYP dist/WEB dist/OTHER dist/CJL
+          mkdir -p dist/SYP dist/PRT dist/CJL
           shopt -s nullglob
 
-          for subject in OSY SYP WEB OTHER; do
+          for subject in SYP PRT; do
             if [ -d "$subject" ]; then
               for file in "$subject"/*.typ; do
                 filename=$(basename "$file" .typ)

@@ -87,7 +87,7 @@
 
     == Základní příkazy
   
-    ```ssh_config
+    ```cisco_ios
     hostname JMENO                          // přejmenování routeru
 
     line console 0                          // heslo pro konzolový přístup

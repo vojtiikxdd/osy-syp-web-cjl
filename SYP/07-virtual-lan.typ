@@ -52,7 +52,7 @@
     3. *Multilayer Switch (L3):* Směrování probíhá přímo na switchi pomocí *SVI (Switch Virtual Interface)*. Je to nejrychlejší metoda, nevyžaduje externí zařízení.
 
     = Základní konfigurace (Cisco IOS)
-    ```ssh_config
+    ```cisco_ios
     // Vytvoření VLAN
     S1(config)# vlan 10
     S1(config-vlan)# name Management

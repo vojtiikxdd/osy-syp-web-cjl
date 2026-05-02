@@ -202,7 +202,7 @@
 
     == Základní příkazy
 
-    ```ssh_config
+    ```cisco_ios
     hostname JMENO                        // nastavení názvu zařízení
     enable secret HESLO                   // heslo pro privilegovaný mód
     line console 0
