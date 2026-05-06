@@ -5,27 +5,27 @@
     header: align(right)[#text(size: 9pt, gray)[#title | #author]],
     numbering: "1",
   )
-  
+
   set text(font: "New Computer Modern", size: 11pt, lang: "cs")
-  set par(justify: true) 
+  set par(justify: true)
 
   show heading.where(level: 1): set text(size: 22pt, weight: "bold", fill: navy)
   show heading.where(level: 2): set text(size: 16pt, weight: "bold", fill: red.darken(20%))
-  
+
   align(center)[
     #block(text(size: 28pt, weight: "bold")[#title])
     #v(1em)
     #text(size: 14pt)[Příprava k maturitě - SPŠT IT] \
     #line(length: 100%, stroke: 1pt + navy)
   ]
-  
+
   v(2em)
-  
+
   outline(
     title: "Obsah",
   )
 
-  
+
   body
 }
 
@@ -33,17 +33,18 @@
   intro: [],
   body: [],
   summary: [],
-  resources: []
+  resources: [],
 ) = {
   import "@preview/zebraw:0.6.1": *
 
+  show: zebraw
+  show footnote.entry: set text(navy)
+
   [= Úvod ]
   intro
-  
-  show: zebraw
-  
+
   body
-  
+
   [== Shrnutí ]
   summary
 
@@ -58,12 +59,13 @@
 
 #let simple(
   body: [],
-  resources: []
+  resources: [],
 ) = {
   import "@preview/zebraw:0.6.1": *
 
+  show footnote.entry: set text(navy)
   show: zebraw
-  
+
   body
 
   pagebreak()

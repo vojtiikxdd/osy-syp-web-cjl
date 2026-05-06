@@ -17,7 +17,7 @@
     Fyzická vrstva neřeší kontrolu nad daty, ale pouze zajišťuje, že data jsou fyzicky přenášena mezi zařízeními. Jakákoliv data budou odeslány na fyzickou vrstvu, budou přenesena. Kontrolu nad daty a jejich správností zajišťují vyšší vrstvy, zejména datalinková vrstva, bez ní by mohly vznikat kolize a chyby v přenášených datech.
 
     #figure(
-      image("../assets/kolize-mezi-daty.png"),
+      image("../assets/kolize-mezi-daty.png", width: 80%),
       caption: "Ukázka kolize mezi daty při přenosu bez kontroly",
     )
 
@@ -34,7 +34,7 @@
       - Konektor: RJ-45
 
       #figure(
-        image("../assets/kroucena-dvoulinka.jpg", width: 80%),
+        image("../assets/kroucena-dvoulinka.jpg", width: 70%),
         caption: "Kroucená dvoulinka (Twisted Pair)",
       )
 
@@ -44,7 +44,7 @@
       - Konektor: BNC
 
       #figure(
-        image("../assets/koaxialni-kabel.jpg", width: 80%),
+        image("../assets/koaxialni-kabel.jpg", width: 70%),
         caption: "Koaxiální kabel (Coaxial Cable)",
       )
 
@@ -67,19 +67,33 @@
         - SC, LC, ST
 
       #figure(
-        image("../assets/opticke-vlakno-konektory.jpeg", width: 80%),
+        image("../assets/opticke-vlakno-konektory.jpeg", width: 110%),
         caption: "Optické vlákno s konektory (Fiber Optic Cable)",
       )
 
-    == Bezdrátová média
+    #pagebreak()
 
-    / Wi-Fi (rádiové vlny):
+    == Bezdrátová přenosová média
 
-      - Dosah: desítky metrů (v interiéru)
-      - Frekvence: 2,4 GHz / 5 GHz / 6 GHz
+    Jako fyzické médium využívají bezdrátové technologie elektromagnetické vlnění v nelicencovaných pásmech ISM (Industrial, Scientific, and Medical). Zatímco fyzická vrstva může být u různých zařízení identická (shodná frekvence), způsob řízení přístupu k médiu a formátování dat se zásadně liší podle použitého standardu.
+
+    / Wi-Fi (Standard IEEE 802.11):
+      
+      Tento protokol je navržen pro vysokorychlostní datové přenosy v rámci lokálních sítí (WLAN). Operuje v pásmech 2,4 GHz, 5 GHz a moderně i 6 GHz. Z hlediska modelu TCP/IP zajišťuje komplexní správu síťového rozhraní, podporu více připojených uzlů současně a vysoký vysílací výkon pro dosah v řádu desítek metrů. Daňí za tyto schopnosti je vyšší režie protokolu (overhead) a značná energetická náročnost.
+
+    / Proprietární RF rozhraní #footnote[RF - Radio Frequency] (Periferie):
+      
+      Bezdrátové periferie, jako jsou klávesnice a myši, využívají v pásmu 2,4 GHz specifické proprietární protokoly (WPAN), které se od Wi-Fi liší architekturou vrstvy síťového rozhraní.
+      
+      - *Energetická optimalizace:* Protokoly jsou navrženy pro extrémně nízkou spotřebu a minimální latenci při přenosu malých objemů dat (např. kódy stisknutých kláves).
+      
+      - *Mechanismus AFH (Adaptive Frequency Hopping):* Zařízení dynamicky mění komunikační kanály v rámci pásma, aby eliminovala kolize s širokopásmovými signály Wi-Fi.
+      
+      - *Interference:* Při vysokém vytížení pásma 2,4 GHz (např. intenzivní stahování dat přes Wi-Fi) může dojít k zahlcení fyzického média, což vede k zahození rámců periferie a projevuje se jako zpoždění (lag) nebo výpadky vstupu.
 
     / Bluetooth:
 
+      - Zvládne i přenos souborů a médií, ale primárně pro připojení periferií (sluchátka, klávesnice)
       - Dosah: cca 10 m (běžně)
 
     / Mikrovlnné spoje (Radioreléový spoj):
@@ -95,6 +109,8 @@
     / Satelitní komunikace:
 
       - Dosah: globální
+
+    #pagebreak()
 
     = Výhody, nevýhody a použití jednotlivých médií
 
@@ -136,7 +152,7 @@
       [*Bluetooth*],
       [- Nízká spotřeba \ - Jednoduché spojení],
       [- Krátký dosah \ - Nízká rychlost],
-      [Sluchátka, periferie],
+      [Sluchátka, hodinky, reproduktory, ostatní periferie],
     )
 
     = Zapojení UTP kabelu
@@ -155,7 +171,11 @@
         - PC ↔ PC
         - switch ↔ switch (starší zařízení bez Auto-MDIX)
 
+    #pagebreak()
+
     = Vlivy okolního prostředí na přenos
+
+    Každé médium má svoje slabiny
 
     == Negativní vlivy
 
