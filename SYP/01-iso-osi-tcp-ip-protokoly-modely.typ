@@ -15,6 +15,8 @@
 
     ISO/OSI lze přirovnat ke komunikaci mezi lidmi. Začne to myšlenkou, zprocesování a korekci zprávy, vyslovení a předání zprávy řečí a zpátečně přijetí zprávy sluchem, dekódování zprávy a nakonec pochopení zprávy. Stejně to funguje i u ISO/OSI nebo TCP/IP. Data, která chce komunikační zařízení poslat (např. webový dotaz na novou stránku), Jde to od kliknutí na nějaké webové stránce, přes proces v počítači, zabalení do paketu s nutnými informacemi k přenosu, poslání do routeru až k serveru, který dotaz zpětně zpracuje obrácenou cestou, jakou byla zpráva/dotaz zpracován/a. Každá vrstva přidává své vlastní informace a funkce, aby zajistila správný přenos dat od odesílatele k příjemci.
 
+    ISO/OSI není pouze softwarová záležitost, ale zahrnuje i hardwarové aspekty, jako jsou kabely, konektory a fyzické přenosové médium, ikdyž je software velkou součástí tohoto modelu.
+
     = Důvod použití vrstevnatých modelů
 
     Vrstevnaté modely v počítačových sítích slouží k rozdělení složité komunikace na menší, přehledné části (vrstvy). Každá vrstva má přesně definovanou funkci a komunikuje pouze se sousedními vrstvami.

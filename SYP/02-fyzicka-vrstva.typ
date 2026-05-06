@@ -1,4 +1,4 @@
-#import "../template.typ": header, theme
+#import "../template.typ": header, simple
 
 #show: body => header(
   title: "Fyzická vrstva, přenosová média a jejich vlastnosti",
@@ -6,8 +6,12 @@
   body,
 )
 
-#theme(
-  intro: [
+#simple(
+  body: [
+    #set heading(numbering: "1.1")
+
+    = Úvod do tématu
+
     Fyzická vrstva (Physical Layer) je nejnižší vrstva referenčního modelu OSI. Zajišťuje přenos jednotlivých bitů mezi zařízeními prostřednictvím fyzického média. Definuje elektrické, mechanické a funkční vlastnosti přenosu dat, například napětí, konektory, rychlosti přenosu a typy kabelů.
 
     Fyzická vrstva neřeší kontrolu nad daty, ale pouze zajišťuje, že data jsou fyzicky přenášena mezi zařízeními. Jakákoliv data budou odeslány na fyzickou vrstvu, budou přenesena. Kontrolu nad daty a jejich správností zajišťují vyšší vrstvy, zejména datalinková vrstva, bez ní by mohly vznikat kolize a chyby v přenášených datech.
@@ -16,9 +20,6 @@
       image("../assets/kolize-mezi-daty.png"),
       caption: "Ukázka kolize mezi daty při přenosu bez kontroly",
     )
-  ],
-  body: [
-    #set heading(numbering: "1.1")
 
     = Typy běžně používaných přenosových - síťových médií:
 
@@ -33,7 +34,7 @@
       - Konektor: RJ-45
 
       #figure(
-        image("../assets/kroucena-dvoulinka.jpg"),
+        image("../assets/kroucena-dvoulinka.jpg", width: 80%),
         caption: "Kroucená dvoulinka (Twisted Pair)",
       )
 
@@ -43,7 +44,7 @@
       - Konektor: BNC
 
       #figure(
-        image("../assets/koaxialni-kabel.jpg"),
+        image("../assets/koaxialni-kabel.jpg", width: 80%),
         caption: "Koaxiální kabel (Coaxial Cable)",
       )
 
@@ -55,7 +56,7 @@
         - Singlemode (SM)
 
         #figure(
-          image("../assets/opticke-vlakno.webp"),
+          image("../assets/opticke-vlakno.webp", width: 80%),
           caption: "Optické vlákno (Fiber Optic)",
         )
 
@@ -66,7 +67,7 @@
         - SC, LC, ST
 
       #figure(
-        image("../assets/opticke-vlakno-konektory.jpeg"),
+        image("../assets/opticke-vlakno-konektory.jpeg", width: 80%),
         caption: "Optické vlákno s konektory (Fiber Optic Cable)",
       )
 
@@ -87,7 +88,7 @@
       - Operuje s malým výkonem a vysokou frekvencí (1-80 GHz)
 
       #figure(
-        image("../assets/mikrovlnne-spoje.jpg"),
+        image("../assets/mikrovlnne-spoje.jpg", width: 80%),
         caption: "Mikrovlnný spoj (Microwave Link)",
       )
 
@@ -181,9 +182,6 @@
     - Kvalitní instalace a mechanická ochrana kabelů
     - Použití opakovačů (repeaters) nebo zesilovačů
     - Využití korekčních mechanismů (např. CRC)
-  ],
-  summary: [
-    Fyzická vrstva a přenosová média tvoří základ každé počítačové sítě. Správná volba média závisí na požadavcích na rychlost, vzdálenost, cenu a odolnost proti rušení. Moderní sítě stále více využívají optická vlákna a bezdrátové technologie, zatímco metalické kabely zůstávají důležité především v lokálních sítích.
   ],
   resources: [
     - #link("https://www.youtube.com/watch?v=ZScMXyQSFfo")[Youtube - Fyzická vrstva]
