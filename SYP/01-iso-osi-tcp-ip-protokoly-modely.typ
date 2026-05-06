@@ -1,4 +1,4 @@
-#import "../template.typ": header, theme
+#import "../template.typ": header, simple;
 
 #show: body => header(
   title: "ISO/OSI a TCP/IP, protokoly a modely",
@@ -6,14 +6,14 @@
   body,
 )
 
-#theme(
-  intro: [
-    ISO/OSI (International Organization for Standardization / Open Systems Interconnection) je referenční model pro síťovou komunikaci, který byl vyvinut v 80. letech 20. století. Tento model rozděluje síťovou komunikaci do sedmi vrstev, z nichž každá má specifické funkce a odpovědnosti. Plní funkci jako standard pro návrh a implementaci síťových protokolů, což umožňuje interoperabilitu mezi různými systémy a zařízeními.
-
-    ISO/OSI lze přirovnat ke komunikaci mezi lidmi. Data, která chce komunikační zařízení poslat, jsou podle modelu TCP/IP zabalena do paketů, které procházejí různými vrstvami. Každá vrstva přidává své vlastní informace a funkce, aby zajistila správný přenos dat od odesílatele k příjemci.
-  ],
+#simple(
   body: [
     #set heading(numbering: "1.1")
+    = Úvod do tématu
+
+    ISO/OSI (International Organization for Standardization / Open Systems Interconnection) je referenční model pro síťovou komunikaci, který byl vyvinut v 80. letech 20. století. Tento model rozděluje síťovou komunikaci do sedmi vrstev, z nichž každá má specifické funkce a odpovědnosti. Plní funkci jako standard pro návrh a implementaci síťových protokolů, což umožňuje interoperabilitu mezi různými systémy a zařízeními.
+
+    ISO/OSI lze přirovnat ke komunikaci mezi lidmi. Začne to myšlenkou, zprocesování a korekci zprávy, vyslovení a předání zprávy řečí a zpátečně přijetí zprávy sluchem, dekódování zprávy a nakonec pochopení zprávy. Stejně to funguje i u ISO/OSI nebo TCP/IP. Data, která chce komunikační zařízení poslat (např. webový dotaz na novou stránku), Jde to od kliknutí na nějaké webové stránce, přes proces v počítači, zabalení do paketu s nutnými informacemi k přenosu, poslání do routeru až k serveru, který dotaz zpětně zpracuje obrácenou cestou, jakou byla zpráva/dotaz zpracován/a. Každá vrstva přidává své vlastní informace a funkce, aby zajistila správný přenos dat od odesílatele k příjemci.
 
     = Důvod použití vrstevnatých modelů
 
@@ -199,9 +199,6 @@
     - IPv6 adresu
     - Masku sítě
     - Výchozí bránu
-  ],
-  summary: [
-    Model ISO/OSI je důležitým konceptem v oblasti počítačových sítí, protože poskytuje strukturovaný rámec pro pochopení a návrh síťových protokolů. I když se v praxi často používají jiné modely (například TCP/IP), ISO/OSI zůstává klíčovým referenčním modelem pro výuku a porozumění síťové komunikaci.
   ],
   resources: [
     - #link("https://www.youtube.com/watch?v=036dn5OSlvA")[YouTube: Základy fungování sítí]
