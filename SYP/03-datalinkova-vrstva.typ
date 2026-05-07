@@ -10,7 +10,7 @@
   body: [
     #set heading(numbering: "1.1")
 
-    Data-linková vrstva (Data Link Layer) je druhou vrstvou referenčního modelu OSI. Tvoří most mezi fyzickým přenosem bitů a logickou komunikací vyšších vrstev — přijímá pakety vrstvy 3, zapouzdřuje je do rámců a zajišťuje jejich spolehlivý přenos mezi uzly ve stejné síti pomocí MAC adres. Na rozdíl od síťové vrstvy (IP adresy) pracuje pouze v rámci jednoho síťového segmentu.
+    *Data-linková vrstva* (Data Link Layer) je *druhou* vrstvou referenčního modelu OSI. Tvoří most mezi fyzickým přenosem bitů a logickou komunikací vyšších vrstev — přijímá pakety vrstvy 3, zapouzdřuje je do rámců a zajišťuje jejich spolehlivý přenos mezi uzly ve stejné síti pomocí MAC adres. Na rozdíl od síťové vrstvy (IP adresy) pracuje pouze v rámci jednoho síťového segmentu.
 
     = Integrace do modelu OSI
 

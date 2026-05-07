@@ -44,9 +44,9 @@
 
   body
 
-  pagebreak()
+  //pagebreak()
 
-  [= Materiály a zdroje ]
+  [= Další materiály a zdroje ]
   resources
 
   v(2em)
