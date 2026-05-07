@@ -9,11 +9,11 @@
 #theme(
   body: [
     #set heading(numbering: "1.1")
-    
+
     Tento dokument poskytuje hlubší pohled na bezdrátové sítě (WLAN). Rozebírá typy sítí, strukturu topologií podle 802.11 (BSS, ESS), metody modulace a dělení kanálů. Dále se věnuje podrobnému popisu centrální správy přístupových bodů (WLC, CAPWAP), struktuře bezdrátového rámce, autentizaci (RADIUS, EAP) a zabezpečení pomocí moderních standardů WPA2 a WPA3.
 
     = Typy bezdrátových sítí a technologie
-    
+
     / WPAN (Personal): Rozsah do 10 m. Bluetooth (BLE pro mesh, BR/EDR pro point-to-point), ZigBee.
     / WLAN (Local): Středně velké sítě (budovy, kampusy). Wi-Fi na 2,4 GHz a 5 GHz.
     / WMAN (Metropolitan): Velké vzdálenosti. WiMAX (dosah až 50 km, alternativa k DSL/kabelu).
@@ -59,7 +59,7 @@
     Vysílání podléhá rušení (mikrovlnky, cizí AP). Ke zmírnění se používají modulace:
     - *DSSS a FHSS:* Rozprostření signálu napříč širším spektrem nebo rychlé přeskakování frekvencí.
     - *OFDM / OFDMA:* Rozdělení kanálu na menší subkanály bez vzájemného rušení (802.11ax).
-    
+
     *Pásmo 2,4 GHz:* V Evropě 13 kanálů, každý široký 22 MHz s odstupem 5 MHz. Rychle se zaruší a kanály se překrývají.
     *Pásmo 5 GHz:* Nabízí 24 kanálů s odstupem 20 MHz. Nepřekrývají se, poskytují vyšší rychlost, ale mají horší prostupnost překážkami (zdmi).
 
@@ -76,15 +76,12 @@
     / Enterprise (802.1x / RADIUS): Pro korporace. Uživatel zadává vlastní jméno a heslo. AP komunikuje s *RADIUS serverem* přes protokol *EAP* a ověřuje identitu centrálně (součást AAA - Authentication, Authorization, Accounting).
 
     = Konfigurace WLC a Troubleshooting
-    Konfigurace WLC vyžaduje vytvoření virtuálních interfaců (podobné SVI) namapovaných na konkrétní VLAN a fyzické porty WLC (trunk porty). 
+    Konfigurace WLC vyžaduje vytvoření virtuálních interfaců (podobné SVI) namapovaných na konkrétní VLAN a fyzické porty WLC (trunk porty).
     - Nastaví se IP adresa, brána, DHCP scope.
     - Následně se vytvoří nová *WLAN*, naváže se na daný interface, určí se SSID, šifrování (WPA2/AES) a typ autentizace (PSK nebo RADIUS).
     - WLC může zasílat logy pomocí protokolu *SNMP* na monitorovací server.
 
     *Troubleshooting:* Kontrola IP konfigurace (`ipconfig`), `ping`, aktualizace ovladačů (NIC), fyzická kontrola zarušení a kontrola konfigurace na WLC/AP.
-  ],
-  summary: [
-    Návrh moderní WLAN vyžaduje hlubokou znalost rádiových pásem (2,4 GHz vs 5 GHz) a topologií (BSS/ESS). Zatímco domácnosti spoléhají na autonomní routery a WPA2-PSK, podnikové sítě využívají Lightweight AP, jež jsou centrálně řízeny kontroléry (WLC) pomocí protokolu CAPWAP s šifrováním DTLS. Bezpečnost v těchto prostředích zajišťuje standard WPA2/WPA3 s algoritmem AES v kombinaci s podnikovou autentizací 802.1x přes RADIUS server.
   ],
   resources: [
     - #link("https://en.wikipedia.org/wiki/IEEE_802.11")[Wiki — IEEE 802.11]
