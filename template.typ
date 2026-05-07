@@ -30,9 +30,7 @@
 }
 
 #let theme(
-  intro: [],
   body: [],
-  summary: [],
   resources: [],
 ) = {
   import "@preview/zebraw:0.6.1": *
@@ -40,37 +38,15 @@
   show: zebraw
   show footnote.entry: set text(navy)
 
-  [= Úvod ]
-  intro
-
-  body
-
-  [== Shrnutí ]
-  summary
-
   pagebreak()
-
-  [== Materiály a zdroje ]
-  resources
-
-  v(2em)
-  line(length: 40%, stroke: 0.5pt + gray)
-}
-
-#let simple(
-  body: [],
-  resources: [],
-) = {
-  import "@preview/zebraw:0.6.1": *
-
-  show footnote.entry: set text(navy)
-  show: zebraw
+  
+  [= Úvod do tématu]
 
   body
 
   pagebreak()
 
-  [== Materiály a zdroje ]
+  [= Materiály a zdroje ]
   resources
 
   v(2em)

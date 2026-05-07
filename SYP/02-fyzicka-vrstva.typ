@@ -1,4 +1,4 @@
-#import "../template.typ": header, simple
+#import "../template.typ": header, theme
 
 #show: body => header(
   title: "Fyzická vrstva, přenosová média a jejich vlastnosti",
@@ -6,11 +6,9 @@
   body,
 )
 
-#simple(
+#theme(
   body: [
     #set heading(numbering: "1.1")
-
-    = Úvod do tématu
 
     Fyzická vrstva (Physical Layer) je nejnižší vrstva referenčního modelu OSI. Zajišťuje přenos jednotlivých bitů mezi zařízeními prostřednictvím fyzického média. Definuje elektrické, mechanické a funkční vlastnosti přenosu dat, například napětí, konektory, rychlosti přenosu a typy kabelů.
 

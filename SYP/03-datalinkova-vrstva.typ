@@ -7,11 +7,10 @@
 )
 
 #theme(
-  intro: [
-    Data-linková vrstva (Data Link Layer) je druhou vrstvou referenčního modelu OSI. Tvoří most mezi fyzickým přenosem bitů a logickou komunikací vyšších vrstev — přijímá pakety vrstvy 3, zapouzdřuje je do rámců a zajišťuje jejich spolehlivý přenos mezi uzly ve stejné síti pomocí MAC adres. Na rozdíl od síťové vrstvy (IP adresy) pracuje pouze v rámci jednoho síťového segmentu.
-  ],
   body: [
     #set heading(numbering: "1.1")
+
+    Data-linková vrstva (Data Link Layer) je druhou vrstvou referenčního modelu OSI. Tvoří most mezi fyzickým přenosem bitů a logickou komunikací vyšších vrstev — přijímá pakety vrstvy 3, zapouzdřuje je do rámců a zajišťuje jejich spolehlivý přenos mezi uzly ve stejné síti pomocí MAC adres. Na rozdíl od síťové vrstvy (IP adresy) pracuje pouze v rámci jednoho síťového segmentu.
 
     = Integrace do modelu OSI
 
@@ -227,9 +226,6 @@
       *Poznámka k SVI:* Switch Virtual Interface (VLAN 1) je virtuální rozhraní pro vzdálenou správu switche. Switche nativně nepracují na vrstvě 3 — SVI jim umožňuje mít IP adresu pro SSH/Telnet přístup.
     ]
 
-  ],
-  summary: [
-    Data-linková vrstva tvoří zásadní propojení mezi fyzickým přenosem bitů (vrstva 1) a logickým směrováním paketů (vrstva 3). Ethernet jako její hlavní realizace prošel vývojem od sdíleného koaxiálního média s CSMA/CD až po plně přepínané full-duplex sítě. Switch jako klíčový prvek odděluje kolizní domény, buduje MAC tabulku dynamicky a volbou metody přepínání (Store-and-Forward vs. Cut-Through) vyvažuje latenci a spolehlivost. Správná konfigurace switche — duplex, hesla, SVI, STP — je základem funkční a bezpečné LAN sítě.
   ],
   resources: [
     - #link("https://www.youtube.com/watch?v=c5lV995dSAA")[Youtube - Data Link Layer]

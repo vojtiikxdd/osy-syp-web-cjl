@@ -1,4 +1,4 @@
-#import "../template.typ": header, simple;
+#import "../template.typ": header, theme;
 
 #show: body => header(
   title: "ISO/OSI a TCP/IP, protokoly a modely",
@@ -6,10 +6,9 @@
   body,
 )
 
-#simple(
+#theme(
   body: [
     #set heading(numbering: "1.1")
-    = Úvod do tématu
 
     ISO/OSI (International Organization for Standardization / Open Systems Interconnection) je referenční model pro síťovou komunikaci, který byl vyvinut v 80. letech 20. století. Tento model rozděluje síťovou komunikaci do sedmi vrstev, z nichž každá má specifické funkce a odpovědnosti. Plní funkci jako standard pro návrh a implementaci síťových protokolů, což umožňuje interoperabilitu mezi různými systémy a zařízeními.
 
