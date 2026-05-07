@@ -7,11 +7,10 @@
 )
 
 #theme(
-  intro: [
-    Sociální inženýrství je technika manipulace lidí s cílem získat důvěrné informace, přístup k systémům nebo provést neautorizované akce. V kontextu kybernetické bezpečnosti se sociální inženýrství zaměřuje na zneužití lidské psychologie a důvěry, aby útočník dosáhl svých cílů. Tento typ útoku může být velmi účinný, protože často obchází technické bezpečnostní opatření a spoléhá na lidskou chybu nebo nedostatek informací.
-  ],
   body: [
     #set heading(numbering: "1.1")
+
+    Sociální inženýrství je technika manipulace lidí s cílem získat důvěrné informace, přístup k systémům nebo provést neautorizované akce. V kontextu kybernetické bezpečnosti se sociální inženýrství zaměřuje na zneužití lidské psychologie a důvěry, aby útočník dosáhl svých cílů. Tento typ útoku může být velmi účinný, protože často obchází technické bezpečnostní opatření a spoléhá na lidskou chybu nebo nedostatek informací.
 
     = Sociální inženýrství
     Sociální inženýrství je technika manipulace s lidskou myslí pomocí různých sociotechnických metod (psychologie) a metod přesvědčování. 
@@ -119,9 +118,6 @@
     == Kybergrooming
     Termín kybergrooming (child grooming) označuje chování uživatelů internetu (predátorů), které má v jejich oběti vyvolat falešnou důvěru a přimět ji k osobní schůzce v reálném světě. Výsledkem schůzky může být např. sexuální zneužití, fyzické násilí, zneužití oběti pro dětskou prostituci, k výrobě dětské pornografie apod. Kybergrooming je druhem psychické manipulace, ve které komunikuje dospělý uživatel s dítětem (komunikace s obětí často pod falešnou identitou). Využívá celou řadu strategií: zrcadlení (mirroring), spear phishing, profilování oběti, vábení a uplácení, strategie snižování zábran dětí a mládeže zaváděním
     sexuálního obsahu do konverzace, izolační metody, strategie manipulace dětí prostřednictvím fotografií opačného pohlaví a další techniky.
-  ],
-  summary: [
-    
   ],
   resources: [
     - #link("https://www.youtube.com")[Youtube - Téma]

@@ -7,11 +7,10 @@
 )
 
 #theme(
-  intro: [
-    Tento dokument shrnuje základní vlastnosti protokolů na transportní vrstvě (TCP, UDP), aplikační vrstvě (DHCP, FTP) a protokol ICMP, který je klíčový pro diagnostiku sítě. 
-  ],
   body: [
     #set heading(numbering: "1.1")
+
+    Tento dokument shrnuje základní vlastnosti protokolů na transportní vrstvě (TCP, UDP), aplikační vrstvě (DHCP, FTP) a protokol ICMP, který je klíčový pro diagnostiku sítě. 
 
     = Transportní vrstva
 
@@ -53,9 +52,6 @@
     Poskytuje síťové služby samotným aplikacím, které uživatel používá. Jednotlivé protokoly naslouchají na specifických portech (číslech).
     - *DHCP:* Zajišťuje dynamické přidělování IP adres a dalších parametrů. (Porty 67, 68 / UDP).
     - *FTP:* Slouží pro přenos souborů v síti. (Port 21 pro řízení, Port 20 pro data / TCP).
-  ],
-  summary: [
-    Transportní vrstva využívá porty k rozlišení služeb a rozděluje se primárně na spolehlivý, ale pomalejší protokol TCP a rychlý, nespolehlivý protokol UDP. ICMP je nástroj síťové vrstvy pro zjišťování stavu sítě (ping, traceroute). Aplikační vrstva obsahuje konkrétní služby, jako je FTP pro přenos souborů nebo DHCP pro automatickou konfiguraci sítě.
   ],
   resources: [
     - #link("https://cs.wikipedia.org/wiki/Transmission_Control_Protocol")[Wiki - TCP]

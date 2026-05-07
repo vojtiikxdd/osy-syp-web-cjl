@@ -7,13 +7,13 @@
 )
 
 #theme(
-  intro: [
-    Tento dokument shrnuje základy IP adresace (Internet Protocol) ve verzích IPv4 a IPv6. Vysvětluje formáty adres, rozdělení na třídy (u IPv4), principy podsítí (subnetting) a praktické výpočty síťových parametrů (adresa sítě, broadcast, rozsah použitelných hostů) na základě IP adresy a masky podsítě.
-  ],
   body: [
     #set heading(numbering: "1.1")
 
+    Tento dokument shrnuje základy IP adresace (Internet Protocol) ve verzích IPv4 a IPv6. Vysvětluje formáty adres, rozdělení na třídy (u IPv4), principy podsítí (subnetting) a praktické výpočty síťových parametrů (adresa sítě, broadcast, rozsah použitelných hostů) na základě IP adresy a masky podsítě.
+
     = IPv4
+    
     - Formát IP adresy, kterým je zařízení viditelné pro internet, je zapsán v tzv. dekadickém tečkovaném formátu.
     
     IPv4 je tvořena 4 bajty = 4 oktety:
@@ -148,9 +148,6 @@
 
     Počet hostů v podsíti se dá vypočítat ze "zbytkových bitů" po prefixu. 32 (všechny bity) - 22 (použitý prefix) = 10 bitů zbývá na hosty.
     Pro počet hostů se udává vzorec 2^n - 2 (kde 2 adresy odečítáme pro samotnou síť a pro broadcast). Tedy 2^10 - 2 = 1024 - 2 = 1022 použitelných hostů.
-  ],
-  summary: [
-    Tento dokument vysvětlil rozdíly a strukturu IPv4 a IPv6 adres. U IPv4 jsme probrali jeho decimální tečkový formát (32 bitů), využití privátních/veřejných adres a historické dělení na třídy (Class A, B, C), které bylo nahrazeno efektivnějším CIDR formátem. Následně jsme detailně rozebrali postupy pro výpočet klíčových síťových parametrů (adresa sítě, broadcast adresa, rozsah použitelných IP adres a počet vytvořených subnetů/hostů) z libovolné zadané IP adresy a prefixu.
   ],
   resources: [
     - #link("[https://cs.wikipedia.org/wiki/IPv4](https://cs.wikipedia.org/wiki/IPv4)")[Wiki - IPv4]

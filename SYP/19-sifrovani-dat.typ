@@ -7,11 +7,10 @@
 )
 
 #theme(
-  intro: [
-      Šifrování dat je proces transformace informací do nečitelných formátů, které mohou být dešifrovány pouze oprávněnými osobami s odpovídajícím klíčem. Cílem šifrování je zajistit důvěrnost, integritu a autenticitu dat, což je klíčové pro ochranu citlivých informací před neoprávněným přístupem a zajištění bezpečné komunikace v digitálním světě.
-  ],
   body: [
     #set heading(numbering: "1.1")
+
+    Šifrování dat je proces transformace informací do nečitelných formátů, které mohou být dešifrovány pouze oprávněnými osobami s odpovídajícím klíčem. Cílem šifrování je zajistit důvěrnost, integritu a autenticitu dat, což je klíčové pro ochranu citlivých informací před neoprávněným přístupem a zajištění bezpečné komunikace v digitálním světě.
 
     = Symetrická kryptografie
     Symetrické kryptografické systémy využívají pro šifrování (Encryption) zprávy *M (Message)* a dešifrování (Decryption) šif. textu *C (Ciphertext)* stejný klíč *K (Key)*. Klíč K se v symetrické kryptografii nazývá „tajný klíč“ (secret key).
@@ -189,9 +188,6 @@
         - Odolný proti útokům hrubou silou (délky klíčů 128, 192 a 256b)
         - Nejsou známy analytické útoky rychlejší než hrubou silou
         - Útoky postranními kanály
-  ],
-  summary: [
-    Šifrování dat je klíčovým nástrojem pro zajištění bezpečnosti a důvěrnosti informací v digitálním světě. Existují dva hlavní typy kryptografie – symetrická a asymetrická – které se liší způsobem, jakým používají klíče pro šifrování a dešifrování dat. Symetrická kryptografie využívá stejný klíč pro oba procesy, zatímco asymetrická kryptografie používá pár klíčů (veřejný a soukromý). Mezi nejznámější algoritmy patří DES, AES pro symetrickou kryptografii a RSA pro asymetrickou kryptografii. V praxi se často využívá kombinace obou typů kryptografie pro dosažení optimální bezpečnosti a výkonu.
   ],
   resources: [
     - #link("https://www.youtube.com")[Youtube - Téma]

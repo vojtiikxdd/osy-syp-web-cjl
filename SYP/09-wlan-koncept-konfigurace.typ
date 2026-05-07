@@ -7,13 +7,13 @@
 )
 
 #theme(
-  intro: [
-    Tento dokument poskytuje hlubší pohled na bezdrátové sítě (WLAN). Rozebírá typy sítí, strukturu topologií podle 802.11 (BSS, ESS), metody modulace a dělení kanálů. Dále se věnuje podrobnému popisu centrální správy přístupových bodů (WLC, CAPWAP), struktuře bezdrátového rámce, autentizaci (RADIUS, EAP) a zabezpečení pomocí moderních standardů WPA2 a WPA3.
-  ],
   body: [
     #set heading(numbering: "1.1")
+    
+    Tento dokument poskytuje hlubší pohled na bezdrátové sítě (WLAN). Rozebírá typy sítí, strukturu topologií podle 802.11 (BSS, ESS), metody modulace a dělení kanálů. Dále se věnuje podrobnému popisu centrální správy přístupových bodů (WLC, CAPWAP), struktuře bezdrátového rámce, autentizaci (RADIUS, EAP) a zabezpečení pomocí moderních standardů WPA2 a WPA3.
 
     = Typy bezdrátových sítí a technologie
+    
     / WPAN (Personal): Rozsah do 10 m. Bluetooth (BLE pro mesh, BR/EDR pro point-to-point), ZigBee.
     / WLAN (Local): Středně velké sítě (budovy, kampusy). Wi-Fi na 2,4 GHz a 5 GHz.
     / WMAN (Metropolitan): Velké vzdálenosti. WiMAX (dosah až 50 km, alternativa k DSL/kabelu).

@@ -7,11 +7,10 @@
 )
 
 #theme(
-  intro: [
-    Virtualizace je technologie, která umožňuje vytvořit softwarovou (virtuální) verzi počítačových prostředků — serverů, operačních systémů, disků nebo celých sítí. Díky virtualizaci lze provozovat více operačních systémů nebo aplikací na jednom fyzickém zařízení současně. Klíčovým prvkem je software zvaný *hypervizor*, který odděluje hardware od operačního systému a spravuje jednotlivé virtuální stroje.
-  ],
   body: [
     #set heading(numbering: "1.1")
+
+    Virtualizace je technologie, která umožňuje vytvořit softwarovou (virtuální) verzi počítačových prostředků — serverů, operačních systémů, disků nebo celých sítí. Díky virtualizaci lze provozovat více operačních systémů nebo aplikací na jednom fyzickém zařízení současně. Klíčovým prvkem je software zvaný *hypervizor*, který odděluje hardware od operačního systému a spravuje jednotlivé virtuální stroje.
 
     = Základní terminologie
     / Hostitel (Host): Fyzický počítač, na kterém virtualizace běží.
@@ -69,9 +68,6 @@
     - *Vyšší nároky na HW:* Virtualizace přidává výkonnostní režii (overhead).
     - *Komplexnější správa:* Více vrstev znamená složitější diagnostiku a údržbu.
     - *Single point of failure:* Výpadek hostitele způsobí výpadek všech běžících VM.
-  ],
-  summary: [
-    Virtualizace umožňuje efektivně sdílet fyzický hardware mezi více virtuálními prostředími pomocí hypervizoru. Rozlišujeme hypervizory typu 1 (bare-metal, přímý přístup k HW) a typu 2 (hosted, běží nad OS). Mezi hlavní typy virtualizace patří emulace, plná virtualizace, paravirtualizace, OS-level virtualizace (kontejnery) a aplikační virtualizace. Nejrozšířenějšími nástroji jsou VirtualBox, VMware, Hyper-V a Proxmox. Virtualizace šetří náklady a zvyšuje flexibilitu, ale přináší výkonnostní režii a vyšší nároky na správu.
   ],
   resources: [
     - #link("https://cs.wikipedia.org/wiki/Virtualizace")[Wiki — Virtualizace]

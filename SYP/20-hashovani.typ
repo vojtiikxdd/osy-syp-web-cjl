@@ -7,11 +7,10 @@
 )
 
 #theme(
-  intro: [
-    Hasování je proces převodu vstupních dat (klíče) na pevně dlouhý řetězec znaků, který slouží jako jedinečný identifikátor pro daná data. Tento proces se provádí pomocí hašovací funkce, která zajišťuje, že i malá změna ve vstupních datech povede k výrazně odlišnému haši. Hašování se široce využívá v oblasti bezpečnosti, například pro ukládání hesel, ověřování integrity dat a digitální podpisy.
-  ],
   body: [
     #set heading(numbering: "1.1")
+
+    Hasování je proces převodu vstupních dat (klíče) na pevně dlouhý řetězec znaků, který slouží jako jedinečný identifikátor pro daná data. Tento proces se provádí pomocí hašovací funkce, která zajišťuje, že i malá změna ve vstupních datech povede k výrazně odlišnému haši. Hašování se široce využívá v oblasti bezpečnosti, například pro ukládání hesel, ověřování integrity dat a digitální podpisy.
 
     = Proč se používají hashe?
 
@@ -243,9 +242,6 @@
     Jedním z nejpoužívanějších slovníků je rockyou obsahující 14 344 392 hesel.
 
     Duhová tabulka - tabulka hashů, které už existují - slouží k porovnávání hashů
-  ],
-  summary: [
-    Shrnutí.
   ],
   resources: [
     - #link("https://www.youtube.com")[Youtube - Téma]

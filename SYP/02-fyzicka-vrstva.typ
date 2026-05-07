@@ -23,28 +23,30 @@
 
     == Metalická (drátová) média
 
-    Také známá jako metalické kabely, jsou nejběžnějším typem přenosového média v počítačových sítích. Patří sem:
+    Také známá jako metalické kabely, jsou nejběžnějším typem přenosového média v počítačových sítích. 
+    
+    / Patří sem:
 
-    / Kroucená dvoulinka (Twisted Pair):
+      / Kroucená dvoulinka (Twisted Pair):
 
-      - Typy: UTP, STP, FTP
-      - Maximální délka: 100 m (pro Ethernet)
-      - Konektor: RJ-45
+        - Typy: *UTP*, *STP*, *FTP*
+        - Maximální délka: 100 m (pro Ethernet)
+        - Konektor: RJ-45
 
-      #figure(
-        image("../assets/kroucena-dvoulinka.jpg", width: 60%),
-        caption: "Kroucená dvoulinka (Twisted Pair)",
-      )
+        #figure(
+          image("../assets/kroucena-dvoulinka.jpg", width: 45%),
+          caption: "Kroucená dvoulinka (Twisted Pair)",
+        )
 
-    / Koaxiální kabel:
+      / Koaxiální kabel:
 
-      - Maximální délka: cca 185 m (10BASE2), až 500 m (10BASE5)
-      - Konektor: BNC
+        - Maximální délka: cca 185 m (10BASE2), až 500 m (10BASE5)
+        - Konektor: BNC
 
-      #figure(
-        image("../assets/koaxialni-kabel.jpg", width: 50%),
-        caption: "Koaxiální kabel (Coaxial Cable)",
-      )
+        #figure(
+          image("../assets/koaxialni-kabel.jpg", width: 40%),
+          caption: "Koaxiální kabel (Coaxial Cable)",
+        )
 
     == Optická média
 
@@ -52,15 +54,16 @@
       / Typy:
         - Multimode (MM)
         - Singlemode (SM)
-
-        #figure(
-          image("../assets/opticke-vlakno.webp", width: 80%),
-          caption: "Optické vlákno (Fiber Optic)",
-        )
-
+        
       / Maximální délka:
         - MM: stovky metrů až jednotky km
         - SM: desítky až stovky km
+        
+      #figure(
+        image("../assets/opticke-vlakno.webp", width: 100%),
+        caption: "Optické vlákno (Fiber Optic)",
+      )
+
       / Konektory:
         - SC, LC, ST
 
@@ -69,11 +72,9 @@
         caption: "Optické vlákno s konektory (Fiber Optic Cable)",
       )
 
-    #pagebreak()
-
     == Bezdrátová přenosová média
 
-    Jako fyzické médium využívají bezdrátové technologie elektromagnetické vlnění v nelicencovaných pásmech ISM (Industrial, Scientific, and Medical). Zatímco fyzická vrstva může být u různých zařízení identická (shodná frekvence), způsob řízení přístupu k médiu a formátování dat se zásadně liší podle použitého standardu.
+    Jako fyzické médium využívají bezdrátové technologie *elektromagnetické vlnění v nelicencovaných pásmech ISM* (Industrial, Scientific, and Medical). Zatímco fyzická vrstva může být u různých zařízení identická (shodná frekvence), způsob řízení přístupu k médiu a formátování dat se zásadně liší podle použitého standardu.
 
     / Wi-Fi (Standard IEEE 802.11):
       
@@ -88,6 +89,8 @@
       - *Mechanismus AFH (Adaptive Frequency Hopping):* Zařízení dynamicky mění komunikační kanály v rámci pásma, aby eliminovala kolize s širokopásmovými signály Wi-Fi.
       
       - *Interference:* Při vysokém vytížení pásma 2,4 GHz (např. intenzivní stahování dat přes Wi-Fi) může dojít k zahlcení fyzického média, což vede k zahození rámců periferie a projevuje se jako zpoždění (lag) nebo výpadky vstupu.
+    
+    #pagebreak()
 
     / Bluetooth:
 
@@ -107,8 +110,6 @@
     / Satelitní komunikace:
 
       - Dosah: globální
-
-    #pagebreak()
 
     = Výhody, nevýhody a použití jednotlivých médií
 
@@ -168,8 +169,6 @@
       - Použití:
         - PC ↔ PC
         - switch ↔ switch (starší zařízení bez Auto-MDIX)
-
-    #pagebreak()
 
     = Vlivy okolního prostředí na přenos
 

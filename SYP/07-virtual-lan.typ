@@ -7,13 +7,13 @@
 )
 
 #theme(
-  intro: [
-    VLAN (Virtual Local Area Network) slouží k logickému rozdělení sítě nezávisle na fyzickém uspořádání. Umožňuje segmentovat síť na menší logické celky uvnitř jedné fyzické struktury, obvykle na úrovni přepínačů (L2). Tímto dosahujeme oddělení provozu, zvýšení bezpečnosti a snížení zátěže sítě (broadcastů).
-  ],
   body: [
     #set heading(numbering: "1.1")
 
+    VLAN (Virtual Local Area Network) slouží k logickému rozdělení sítě nezávisle na fyzickém uspořádání. Umožňuje segmentovat síť na menší logické celky uvnitř jedné fyzické struktury, obvykle na úrovni přepínačů (L2). Tímto dosahujeme oddělení provozu, zvýšení bezpečnosti a snížení zátěže sítě (broadcastů).
+
     = Výhody a principy VLAN
+
     VLAN vytváří menší broadcastové domény, což vede k efektivnějšímu využití šířky pásma. Mezi hlavní výhody patří:
     - *Snížení broadcastů:* Zlepšení výkonu sítě omezením zbytečného provozu.
     - *Zjednodušená správa:* Přesun uživatele do jiné sítě vyžaduje pouze SW konfiguraci, nikoliv fyzické přepojování kabelů.
@@ -21,6 +21,7 @@
     - *Snížení nákladů na HW:* Na jednom fyzickém switchi může běžet více virtuálních podsítí.
 
     = Metody zařazení do VLAN
+
     / Podle portu: Nejpoužívanější a nejrychlejší řešení. Port je napevno přiřazen konkrétní VLAN (Static VLAN).
     / Podle MAC adresy: Dynamické zařazení. Zařízení je po připojení do libovolného portu zařazeno do správné VLAN na základě své fyzické adresy (náročné na správu tabulek).
     / Podle protokolu: Na základě informací ze 3. vrstvy. V praxi méně rozšířené a pomalejší.
@@ -69,9 +70,6 @@
     S1# show vlan brief
     S1(config)# no vlan 10
     ```
-  ],
-  summary: [
-    VLAN logicky dělí fyzickou síť, čímž zvyšuje výkon (méně broadcastů) a bezpečnost. Pro přenos mezi switchi se používá trunking s tagováním 802.1q. Vzájemná komunikace mezi VLAN (Inter-VLAN routing) se řeší buď pomocí subinterfaces na routeru (Router-on-a-Stick), nebo pomocí SVI rozhraní na L3 switchi. Agregace linek (LACP) pak zajišťuje vyšší rychlost a odolnost páteřních spojů.
   ],
   resources: [
     - #link("https://cs.wikipedia.org/wiki/Virtual_LAN")[Wiki — Virtual LAN]

@@ -7,11 +7,10 @@
 )
 
 #theme(
-  intro: [
-    Tento dokument shrnuje koncepty bezdrátových lokálních sítí (WLAN). Popisuje výhody a nevýhody bezdrátového přenosu, rozdělení sítí podle velikosti, standardy rodiny IEEE 802.11 (Wi-Fi), hardwarové komponenty včetně antén, možnosti zabezpečení proti kybernetickým hrozbám a základy konfigurace bezdrátového směrovače.
-  ],
   body: [
     #set heading(numbering: "1.1")
+
+    Tento dokument shrnuje koncepty bezdrátových lokálních sítí (WLAN). Popisuje výhody a nevýhody bezdrátového přenosu, rozdělení sítí podle velikosti, standardy rodiny IEEE 802.11 (Wi-Fi), hardwarové komponenty včetně antén, možnosti zabezpečení proti kybernetickým hrozbám a základy konfigurace bezdrátového směrovače.
 
     = Úvod do bezdrátových sítí
     WLAN (Wireless Local Area Network) je počítačová síť spojující zařízení pomocí rádiových vln (nejčastěji v nelicencovaných pásmech 2,4 GHz a 5 GHz).
@@ -75,9 +74,6 @@
     3. Výběr typu zabezpečení (ideálně WPA2/WPA3) a nastavení silného přístupového hesla.
     4. Nastavení vysílacího kanálu (např. 1–12 v pásmu 2,4 GHz) pro minimalizaci rušení.
     5. Změnu IP adresy routeru a nastavení rozsahu lokálních adres přidělovaných DHCP serverem.
-  ],
-  summary: [
-    Bezdrátové sítě (WLAN) přinášejí obrovskou flexibilitu a mobilitu, ale vyžadují pečlivý návrh (volba vhodného standardu 802.11 a správného typu antén) a především důkladné zabezpečení. Vzhledem k tomu, že rádiový signál lze snadno odposlouchávat, je nezbytností použití silného šifrování (WPA2/WPA3), silných hesel, a v případě využívání veřejných sítí také šifrovaného spojení pomocí VPN, které chrání před útoky typu Man-in-the-Middle.
   ],
   resources: [
     - #link("https://cs.wikipedia.org/wiki/Wi-Fi")[Wiki — Wi-Fi (IEEE 802.11)]

@@ -7,11 +7,10 @@
 )
 
 #theme(
-  intro: [
-    Linux je svobodný operační systém s otevřeným zdrojovým kódem (open-source) založený na unixových principech. Jeho samotný základ tvoří linuxové jádro (Kernel), které v roce 1991 vytvořil Linus Torvalds. Protože jádro samo o sobě netvoří použitelný systém, vznikají tzv. *linuxové distribuce*, které jádro spojují s dalšími nezbytnými nástroji a uživatelským rozhraním.
-  ],
   body: [
     #set heading(numbering: "1.1")
+
+    Linux je svobodný operační systém s otevřeným zdrojovým kódem (open-source) založený na unixových principech. Jeho samotný základ tvoří linuxové jádro (Kernel), které v roce 1991 vytvořil Linus Torvalds. Protože jádro samo o sobě netvoří použitelný systém, vznikají tzv. *linuxové distribuce*, které jádro spojují s dalšími nezbytnými nástroji a uživatelským rozhraním.
 
     = Architektura a složení linuxové distribuce
     Běžná linuxová distribuce se skládá z několika klíčových vrstev:
@@ -112,9 +111,6 @@
     Grafický dvoupanelový správce souborů (GUI), primárně navržený pro prostředí KDE. Svým chováním i vzhledem silně připomíná Total Commander z Windows.
     - *Instalace:* `sudo apt install krusader`
     - Umožňuje pokročilou archivaci (ZIP, TAR, RAR), připojení k síťovým diskům a FTP serverům a hromadnou synchronizaci složek.
-  ],
-  summary: [
-    Linuxový ekosystém je extrémně variabilní. Distribuce se skládají z linuxového jádra, GNU nástrojů, balíčkovacího systému a grafického prostředí. Zatímco systémy jako Debian nebo RHEL dominují na poli serverů a korporátní infrastruktury díky své nekompromisní stabilitě, distribuce jako Ubuntu, Linux Mint či Fedora cílí na běžné uživatele a vývojáře, kterým nabízejí moderní software a přívětivé grafické prostředí. Specifickou kategorií jsou pak rolling release systémy jako Arch Linux nebo specializované nástroje pro penetrační testování, jako je Kali Linux.
   ],
   resources: [
     - #link("https://cs.wikipedia.org/wiki/Linuxov%C3%A1_distribuce")[Wiki — Linuxová distribuce]

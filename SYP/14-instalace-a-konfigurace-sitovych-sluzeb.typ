@@ -7,11 +7,10 @@
 )
 
 #theme(
-  intro: [
-    Síťové služby představují základní funkce serverů v počítačové síti. Umožňují komunikaci mezi zařízeními, sdílení dat, správu uživatelů nebo poskytování webových aplikací. Každá síťová služba naslouchá na konkrétním *portu* a komunikuje přes protokol *TCP* nebo *UDP*. Správce systému musí služby nejen nainstalovat, ale také správně nastavit jejich konfiguraci, zabezpečení a správu uživatelů.
-  ],
   body: [
     #set heading(numbering: "1.1")
+
+    Síťové služby představují základní funkce serverů v počítačové síti. Umožňují komunikaci mezi zařízeními, sdílení dat, správu uživatelů nebo poskytování webových aplikací. Každá síťová služba naslouchá na konkrétním *portu* a komunikuje přes protokol *TCP* nebo *UDP*. Správce systému musí služby nejen nainstalovat, ale také správně nastavit jejich konfiguraci, zabezpečení a správu uživatelů.
 
     = Rozdíl mezi Windows a Linuxem
     Instalace a konfigurace síťových služeb se mezi systémy Windows a Linux výrazně liší — především v přístupu ke správě, konfiguračním souborům a nástrojům.
@@ -168,9 +167,6 @@
         # Zobrazení síťových rozhraní
         ip a
     ```
-  ],
-  summary: [
-    Síťové služby jsou klíčovou součástí každé IT infrastruktury. Na *Windows Serveru* se instalují jako role přes Server Manager nebo PowerShell, na *Linuxu* pomocí správců balíčků (`apt`, `dnf`) a spravují přes `systemctl`. Mezi nejdůležitější služby patří *DHCP* (automatické přidělování IP), *DNS* (překlad doménových jmen), *HTTP/HTTPS* (webové servery), *FTP/SFTP* (přenos souborů), *SSH* (vzdálená správa), *SMB* (sdílení souborů) a *SMTP* (e-mail). Každá služba komunikuje na definovaném portu přes TCP nebo UDP a vyžaduje správné nastavení přístupových práv a zabezpečení.
   ],
   resources: [
     - #link("https://cs.wikipedia.org/wiki/S%C3%AD%C5%A5ov%C3%A1_slu%C5%BEba")[Wiki — Síťová služba]

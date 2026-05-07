@@ -10,19 +10,19 @@
   body: [
     #set heading(numbering: "1.1")
 
-    *Data-linková vrstva* (Data Link Layer) je *druhou* vrstvou referenčního modelu OSI. Tvoří most mezi fyzickým přenosem bitů a logickou komunikací vyšších vrstev — přijímá pakety vrstvy 3, zapouzdřuje je do rámců a zajišťuje jejich spolehlivý přenos mezi uzly ve stejné síti pomocí MAC adres. Na rozdíl od síťové vrstvy (IP adresy) pracuje pouze v rámci jednoho síťového segmentu.
+    *Data-linková vrstva* (Data Link Layer) je *druhou* vrstvou referenčního modelu ISO/OSI. Tvoří most mezi fyzickým přenosem bitů a logickou komunikací vyšších vrstev — *přijímá pakety vrstvy 3, zapouzdřuje je do rámců* a *zajišťuje* jejich *spolehlivý přenos* mezi uzly ve stejné síti pomocí MAC adres. Na rozdíl od síťové vrstvy (IP adresy) pracuje pouze v rámci jednoho síťového segmentu.
 
-    = Integrace do modelu OSI
+    = Integrace do modelu ISO/OSI
 
-    Ethernet jako technologie operuje na vrstvách 1 a 2 modelu OSI — zasahuje do fyzické vrstvy (způsob přenosu bitů) i do linkové vrstvy (přenos rámců mezi sousedními uzly). V modelu TCP/IP odpovídá vrstvě síťového rozhraní.
+    *Ethernet* jako technologie *operuje na vrstvách 1 a 2* modelu ISO/ISO/OSI — zasahuje do fyzické vrstvy (způsob přenosu bitů) i do linkové vrstvy (přenos rámců mezi sousedními uzly). V modelu TCP/IP odpovídá vrstvě síťového rozhraní.
 
-    Datalinková vrstva plní tyto klíčové funkce:
+    / Datalinková vrstva plní tyto klíčové funkce:
 
-    - Zapouzdřuje pakety vrstvy 3 (IPv4, IPv6) do rámců vrstvy 2
-    - Umožňuje vyšším vrstvám přístup k médiím — protokoly vyšší vrstvy neznají typ použitého média
-    - Provádí detekci chyb a zahazuje poškozené rámce
-    - Adresuje komunikaci pomocí MAC adres (ne IP adres)
-    - Při každém skoku na routeru: přijme rámec → rozbalí → znovu zapouzdří → odešle
+      - Zapouzdřuje pakety vrstvy 3 (IPv4, IPv6) do rámců vrstvy 2
+      - Umožňuje vyšším vrstvám přístup k médiím — protokoly vyšší vrstvy neznají typ použitého média
+      - Provádí detekci chyb a zahazuje poškozené rámce
+      - Adresuje komunikaci pomocí MAC adres (ne IP adres)
+      - Při každém skoku na routeru: přijme rámec → rozbalí → znovu zapouzdří → odešle
 
     == Podvrstvy IEEE 802
 

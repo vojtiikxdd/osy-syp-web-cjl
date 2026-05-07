@@ -7,11 +7,10 @@
 )
 
 #theme(
-  intro: [
-    Souborový systém je způsob, jakým operační systém organizuje, ukládá a spravuje data na úložném médiu (pevný disk, SSD, USB flash disk). Určuje strukturu, pojmenování a přístup k souborům a adresářům. Bez souborového systému by data na disku byla pouze neuspořádaná sekvence bitů — OS by nedokázal rozlišit jednotlivé soubory ani adresáře.
-  ],
   body: [
     #set heading(numbering: "1.1")
+
+    Souborový systém je způsob, jakým operační systém organizuje, ukládá a spravuje data na úložném médiu (pevný disk, SSD, USB flash disk). Určuje strukturu, pojmenování a přístup k souborům a adresářům. Bez souborového systému by data na disku byla pouze neuspořádaná sekvence bitů — OS by nedokázal rozlišit jednotlivé soubory ani adresáře.
 
     = Co souborový systém určuje
     Každý souborový systém definuje:
@@ -174,9 +173,6 @@
         mv old.txt new.txt # Přejmenování souboru
         touch soubor    # Vytvoření prázdného souboru
     ```
-  ],
-  summary: [
-    Souborový systém organizuje data na disku do souborů a adresářů a spravuje metadata, přístupová práva a integritu dat. Klíčovým mechanismem je *žurnálování*, které chrání data při neočekávaném výpadku. Pro Linux je standardem *ext4* (stabilní, žurnálování, nízká fragmentace), moderní alternativou *Btrfs* (snapshoty, kontrola integrity) nebo *XFS* (výkon na serverech). Windows používá *NTFS* (žurnálování, BitLocker, ACL), přenosná média *FAT32/exFAT*. Disky se dělí na oddíly dle schématu *MBR* (starší, max. 2 TB) nebo *GPT* (moderní). Mountování zpřístupňuje FS do adresářového stromu, přičemž trvalé připojení se zapisuje do `/etc/fstab`.
   ],
   resources: [
     - #link("https://cs.wikipedia.org/wiki/Souborov%C3%BD_syst%C3%A9m")[Wiki — Souborový systém]

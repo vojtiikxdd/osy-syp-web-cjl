@@ -7,13 +7,13 @@
 )
 
 #theme(
-  intro: [
-    Router (směrovač) odděluje sítě a jeho hlavním úkolem je přeposlat paket po nejlepší cestě až k příjemci (klidně přes několik dalších routerů). K rozhodování využívá směrovací tabulku (routing table). Každý router se rozhoduje zcela samostatně — to, že router A zná cestu k routeru B, neznamená, že router B zná zpáteční cestu.
-  ],
   body: [
     #set heading(numbering: "1.1")
 
+    Router (směrovač) odděluje sítě a jeho hlavním úkolem je přeposlat paket po nejlepší cestě až k příjemci (klidně přes několik dalších routerů). K rozhodování využívá směrovací tabulku (routing table). Každý router se rozhoduje zcela samostatně — to, že router A zná cestu k routeru B, neznamená, že router B zná zpáteční cestu.
+
     = Směrovací tabulka a výběr cesty
+    
     IP adresa příjemce v paketu neobsahuje délku prefixu (masku). Router proto porovnává IP adresu cíle se záznamy ve své směrovací tabulce. 
     
     Platí pravidlo *Nejdelší shody (Longest Match)*: Pokud existuje více možných cest (např. `172.16.0.0/12`, `172.16.0.0/18` a `172.16.0.0/26`), router vždy preferuje tu s nejdelší shodou (v tomto případě `/26`), protože je nejspecifičtější. Aby byla shoda validní, musí se s adresou příjemce shodovat alespoň bity určené prefixem.
@@ -72,9 +72,6 @@
     2. *Default Static Route:* Cesta posledního záchrany (`0.0.0.0/0`).
     3. *Summary Static Route:* Shrnující cesta, kde se maska upraví tak, aby zahrnovala více menších sítí pod jeden záznam.
     4. *Floating Static Route:* Slouží jako *záložní trasa*. Konfiguruje se s vyšší AD, než má primární dynamický protokol. (Např. EIGRP má AD 90, záložní Floating statické cestě nastavíme AD 95. Dokud EIGRP běží, router preferuje EIGRP. Když EIGRP selže, aktivuje se záložní statická trasa).
-  ],
-  summary: [
-    Základním úkolem routeru je přeposílání paketů na základě pravidla nejdelší shody (Longest Match) v routovací tabulce. Moderní routery využívají k urychlení tohoto procesu technologii CEF. Zatímco dynamické protokoly (OSPF, EIGRP) se samy učí a adaptují pomocí výpočtů metrik, statické směrování definuje pevné cesty. Pokud router zná více cest z různých protokolů, rozhoduje podle Administrativní vzdálenosti (AD), kde nižší hodnota vyhrává.
   ],
   resources: [
     - #link("https://cs.wikipedia.org/wiki/Sm%C4%9Brov%C3%A1n%C3%AD")[Wiki — Směrování (Routing)]

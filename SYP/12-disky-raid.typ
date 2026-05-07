@@ -7,11 +7,10 @@
 )
 
 #theme(
-  intro: [
-    Ukládání dat je kritickou a nepostradatelnou součástí každého počítačového systému. Paměťová média se vyznačují tím, že jsou *permanentní* a *nonvolatilní* (stálá) – to znamená, že uložená data zůstávají zachována i po odpojení od zdroje elektrické energie. Během historie prošly disky obrovským technologickým vývojem. Dnes se pro bezpečné a rychlé ukládání velkých objemů dat využívají sofistikovaná komunikační rozhraní (NVMe) a technologie redundance (RAID).
-  ],
   body: [
     #set heading(numbering: "1.1")
+
+    Ukládání dat je kritickou a nepostradatelnou součástí každého počítačového systému. Paměťová média se vyznačují tím, že jsou *permanentní* a *nonvolatilní* (stálá) – to znamená, že uložená data zůstávají zachována i po odpojení od zdroje elektrické energie. Během historie prošly disky obrovským technologickým vývojem. Dnes se pro bezpečné a rychlé ukládání velkých objemů dat využívají sofistikovaná komunikační rozhraní (NVMe) a technologie redundance (RAID).
 
     = Základní parametry a dělení disků
     Při výběru a hodnocení úložných zařízení se posuzuje několik klíčových parametrů:
@@ -84,9 +83,6 @@
     / RAID 10 (1+0): Spojuje to nejlepší z RAID 1 a RAID 0. Vyžaduje *minimálně 4 disky*. Disky se nejprve spojí do zrcadlených párů (ochrana) a nad těmito páry se následně provádí prokládání (rychlost).
       - *Výhoda:* Maximální výkon i bezpečnost. Pole zvládne výpadek i vícera disků najednou (pokud neodejde celý zrcadlený pár). Špička pro profesionální databáze.
       - *Nevýhoda:* Nejvyšší finanční náklady. Trvale ztratíte celou polovinu zakoupené fyzické kapacity na tvorbu kopií.
-  ],
-  summary: [
-    Úložná zařízení prošla obrovským vývojem od pomalých, fyzicky limitovaných disket, přes mechanické HDD s plotnami a cylindry, až po moderní bleskově rychlá NVMe SSD bez pohyblivých částic. Pro zvládání enormního nárůstu produkce dat a zajištění kritické firemní bezpečnosti se fyzické disky v operačním systému nekonfigurují samostatně, ale sdružují se do sofistikovaných struktur RAID. Zapojení jako RAID 1 a 5 poskytují nezbytnou hardwarovou ochranu (redundanci) proti fatálnímu výpadku a ztrátě důležitých informací.
   ],
   resources: [
     - #link("https://cs.wikipedia.org/wiki/Pevn%C3%BD_disk")[Wiki — Pevný disk (HDD) a geometrie]

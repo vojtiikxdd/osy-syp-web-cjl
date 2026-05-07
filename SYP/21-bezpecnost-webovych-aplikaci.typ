@@ -7,11 +7,10 @@
 )
 
 #theme(
-  intro: [
-    Bezpečnost webových aplikací je klíčovým aspektem vývoje a provozu moderních webových služeb. S rostoucí závislostí na internetu a webových aplikacích se zvyšuje i riziko útoků a zneužití těchto aplikací. Bezpečnost webových aplikací zahrnuje širokou škálu opatření a technik, které mají za cíl chránit data, uživatele a infrastrukturu před různými hrozbami, jako jsou SQL injection, cross-site scripting (XSS), cross-site request forgery (CSRF) a další. Implementace bezpečnostních opatření je nezbytná pro zajištění důvěry uživatelů a ochranu citlivých informací.
-  ],
   body: [
     #set heading(numbering: "1.1")
+
+    Bezpečnost webových aplikací je klíčovým aspektem vývoje a provozu moderních webových služeb. S rostoucí závislostí na internetu a webových aplikacích se zvyšuje i riziko útoků a zneužití těchto aplikací. Bezpečnost webových aplikací zahrnuje širokou škálu opatření a technik, které mají za cíl chránit data, uživatele a infrastrukturu před různými hrozbami, jako jsou SQL injection, cross-site scripting (XSS), cross-site request forgery (CSRF) a další. Implementace bezpečnostních opatření je nezbytná pro zajištění důvěry uživatelů a ochranu citlivých informací.
 
     = Bezpečnost webových aplikací
     Webové aplikace jsou z důvodu jejich snadné dostupnosti častým cílem kybernetických útoků, které mohou způsobit škody velkého rozsahu od přerušení služeb až po krádež nebo ztrátu citlivých dat.
@@ -139,9 +138,6 @@
     Útočníci mohou získat přístup k lokálním souborům nebo interním službám a získat tak citlivé informace (např. file: `///etc/passwd, http://localhost:2301)`.
 
     Útočník dokáže zneužít interní služby k dalším útokům, jako je vzdálené spuštění kódu (RCE - Remote Code Execution) nebo odepření služby DoS (Denial of Service).
-  ],
-  summary: [
-    Shrnutí.
   ],
   resources: [
     - #link("https://www.youtube.com")[Youtube - Téma]

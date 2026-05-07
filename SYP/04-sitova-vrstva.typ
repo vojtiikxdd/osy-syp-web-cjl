@@ -7,11 +7,10 @@
 )
 
 #theme(
-  intro: [
-    Síťová vrstva (Network Layer) je třetí vrstvou referenčního modelu OSI. Zajišťuje end-to-end komunikaci mezi koncovými zařízeními skrz celou síť — na rozdíl od datalinkové vrstvy, která řeší pouze přenos mezi sousedními uzly. K tomu využívá dvě klíčové funkce: *adresování* (přiřazení IP adresy) a *směrování* (výběr nejlepší cesty paketu sítí).
-  ],
   body: [
     #set heading(numbering: "1.1")
+
+    Síťová vrstva (Network Layer) je třetí vrstvou referenčního modelu OSI. Zajišťuje end-to-end komunikaci mezi koncovými zařízeními skrz celou síť — na rozdíl od datalinkové vrstvy, která řeší pouze přenos mezi sousedními uzly. K tomu využívá dvě klíčové funkce: *adresování* (přiřazení IP adresy) a *směrování* (výběr nejlepší cesty paketu sítí).
 
     = Integrace do modelu OSI
 
@@ -121,9 +120,6 @@
       *Poznámka k DHCP:* V síti musí být aktivní DHCP server pouze na jednom zařízení. Více DHCP serverů způsobí přidělení duplicitních IP adres a kolaps komunikace v celé síti.
     ]
 
-  ],
-  summary: [
-    Síťová vrstva zajišťuje end-to-end doručení paketů skrz celou síť pomocí IP adresování a směrování. ARP tvoří klíčový most mezi logickými IP adresami (vrstva 3) a fyzickými MAC adresami (vrstva 2) — bez něj by nebylo možné doručit rámec ve stejné podsíti. Router jako hlavní prvek vrstvy 3 vybírá nejlepší cestu paketu na základě směrovací tabulky, a to buď staticky nebo dynamicky. Správná konfigurace routeru zahrnuje nastavení hesel, rozhraní, směrování a uložení konfigurace do NVRAM.
   ],
   resources: [
     - #link("https://cs.wikipedia.org/wiki/ARP")[Wiki — ARP]

@@ -7,11 +7,10 @@
 )
 
 #theme(
-  intro: [
-
-  ],
   body: [
     #set heading(numbering: "1.1")
+
+    _zatim neni intro bruh_
 
     = Zabezpečení MS Windows
     
@@ -80,9 +79,6 @@
     )
 
     *Obnovení Systému* je pro návrat k některému z předchozích bodů obnovení (pokud je tato funkce zapnutá). *Obnovení z bitové kopie systému* umožní obnovu systému ze zálohy, která bitovou kopii obsahuje.
-  ],
-  summary: [
-    Shrnutí.
   ],
   resources: [
     - #link("https://www.youtube.com")[Youtube - Téma]

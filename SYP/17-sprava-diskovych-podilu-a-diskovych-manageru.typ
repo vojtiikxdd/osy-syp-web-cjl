@@ -7,11 +7,10 @@
 )
 
 #theme(
-  intro: [
-    Diskový oddíl je logická část fyzického pevného disku nebo SSD, která se chová jako samostatná jednotka s vlastním souborovým systémem. Správné rozdělení disku umožňuje oddělit systémová data od uživatelských, instalovat více operačních systémů (*multi-boot*) nebo zvýšit bezpečnost dat — při pádu systémového oddílu uživatelská data zůstanou nedotčena.
-  ],
   body: [
     #set heading(numbering: "1.1")
+
+    Diskový oddíl je logická část fyzického pevného disku nebo SSD, která se chová jako samostatná jednotka s vlastním souborovým systémem. Správné rozdělení disku umožňuje oddělit systémová data od uživatelských, instalovat více operačních systémů (*multi-boot*) nebo zvýšit bezpečnost dat — při pádu systémového oddílu uživatelská data zůstanou nedotčena.
 
     = Tabulky oddílů: MBR vs. GPT
     Při inicializaci disku je nutné zvolit *schéma tabulky oddílů*, které určuje, jak jsou informace o oddílech na disku uloženy.
@@ -144,9 +143,6 @@
     / PV (Physical Volume): Fyzický disk nebo oddíl přidaný do LVM.
     / VG (Volume Group): Skupina PV — společný pool úložného prostoru.
     / LV (Logical Volume): Logický svazek z VG — ekvivalent klasického oddílu.
-  ],
-  summary: [
-    Diskové oddíly jsou logická rozdělení fyzického disku, spravovaná pomocí tabulky *MBR* (max. 2 TB, 4 primární oddíly) nebo *GPT* (disky nad 2 TB, až 128 oddílů, záložní kopie tabulky). Ve *Windows* se oddíly spravují graficky přes `diskmgmt.msc` nebo příkazově přes `DiskPart`. V *Linuxu* slouží *GParted* (GUI) nebo `fdisk`/`parted` (CLI), disky jsou označeny cestami `/dev/sda1`. Základní operace jsou vytváření, mazání, zmenšování, rozšiřování a formátování oddílů. Linux navíc používá *swap* jako virtuální RAM a *LVM* pro pokročilou správu více disků. Před jakoukoliv manipulací s oddíly je nutné *zálohovat data*.
   ],
   resources: [
     - #link("https://cs.wikipedia.org/wiki/Diskov%C3%BD_odd%C3%ADl")[Wiki — Diskový oddíl]

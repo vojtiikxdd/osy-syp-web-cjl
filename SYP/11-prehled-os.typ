@@ -7,11 +7,10 @@
 )
 
 #theme(
-  intro: [
-    Operační systém (OS) je základní software každého počítače nebo elektronického zařízení. Jeho hlavním úkolem je řídit hardware zařízení, spravovat systémové prostředky a umožnit uživateli pracovat s aplikacemi. Funguje jako prostředník mezi uživatelem, aplikacemi a hardwarem.
-  ],
   body: [
     #set heading(numbering: "1.1")
+
+    Operační systém (OS) je základní software každého počítače nebo elektronického zařízení. Jeho hlavním úkolem je řídit hardware zařízení, spravovat systémové prostředky a umožnit uživateli pracovat s aplikacemi. Funguje jako prostředník mezi uživatelem, aplikacemi a hardwarem.
 
     = Hlavní funkce operačního systému
     Mezi základní funkce OS patří:
@@ -67,9 +66,6 @@
     == Linux
     - `uname -a` – Zobrazí základní informace o systému: typ OS (Linux), název stroje (hostname), verzi jádra (kernel), architekturu procesoru (např. x86_64) a datum kompilace.
     - `lsb_release -a` – Zobrazí detaily o konkrétní linuxové distribuci: výrobce (Distributor ID), název a verzi systému (Description), číslo verze (Release) a kódové označení (Codename, např. *jammy*).
-  ],
-  summary: [
-    Operační systémy jsou nezbytnou součástí všech moderních zařízení. Zajišťují komunikaci mezi hardwarem a aplikacemi pomocí svého jádra (Kernelu) a spravují paměť, běžící procesy i souborový systém. Trh je silně diverzifikovaný — Windows s komerčním licencováním, macOS vázaný na Apple hardware s hybridním XNU jádrem a open-source Linux — každý systém má své specifické licencování a cílovou oblast použití.
   ],
   resources: [
     - #link("https://cs.wikipedia.org/wiki/Opera%C4%8Dn%C3%AD_syst%C3%A9m")[Wiki — Operační systém]
