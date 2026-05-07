@@ -50,7 +50,7 @@
 
   pagebreak()
 
-  [== Zdroje ]
+  [== Materiály a zdroje ]
   resources
 
   v(2em)
@@ -70,7 +70,7 @@
 
   pagebreak()
 
-  [== Zdroje ]
+  [== Materiály a zdroje ]
   resources
 
   v(2em)

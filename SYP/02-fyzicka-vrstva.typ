@@ -17,7 +17,7 @@
     Fyzická vrstva neřeší kontrolu nad daty, ale pouze zajišťuje, že data jsou fyzicky přenášena mezi zařízeními. Jakákoliv data budou odeslány na fyzickou vrstvu, budou přenesena. Kontrolu nad daty a jejich správností zajišťují vyšší vrstvy, zejména datalinková vrstva, bez ní by mohly vznikat kolize a chyby v přenášených datech.
 
     #figure(
-      image("../assets/kolize-mezi-daty.png", width: 80%),
+      image("../assets/kolize-mezi-daty.png", width: 70%),
       caption: "Ukázka kolize mezi daty při přenosu bez kontroly",
     )
 
@@ -34,7 +34,7 @@
       - Konektor: RJ-45
 
       #figure(
-        image("../assets/kroucena-dvoulinka.jpg", width: 70%),
+        image("../assets/kroucena-dvoulinka.jpg", width: 60%),
         caption: "Kroucená dvoulinka (Twisted Pair)",
       )
 
@@ -44,7 +44,7 @@
       - Konektor: BNC
 
       #figure(
-        image("../assets/koaxialni-kabel.jpg", width: 70%),
+        image("../assets/koaxialni-kabel.jpg", width: 50%),
         caption: "Koaxiální kabel (Coaxial Cable)",
       )
 
