@@ -1,4 +1,4 @@
-#import "../template.typ": header, simple
+#import "../template.typ": header, theme
 
 #show: body => header(
   title: "Datový typ pole",
@@ -6,7 +6,7 @@
   body,
 )
 
-#simple(
+#theme(
   body: [
     #set heading(numbering: "1.1")
 
@@ -600,7 +600,6 @@
 
   ],
   resources: [
-    - #link("https://www.youtube.com")[Youtube - Téma]
-    - #link("https://en.wikipedia.org/")[Wiki - Téma]
+    Žádné další zdroje
   ],
 )

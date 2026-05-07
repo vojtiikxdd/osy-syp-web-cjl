@@ -14,7 +14,7 @@
 
     = Integrace do modelu ISO/OSI
 
-    *Ethernet* jako technologie *operuje na vrstvách 1 a 2* modelu ISO/ISO/OSI — zasahuje do fyzické vrstvy (způsob přenosu bitů) i do linkové vrstvy (přenos rámců mezi sousedními uzly). V modelu TCP/IP odpovídá vrstvě síťového rozhraní.
+    *Ethernet* jako technologie *operuje na vrstvách 1 a 2* modelu ISO/OSI — zasahuje do fyzické vrstvy (způsob přenosu bitů) i do linkové vrstvy (přenos rámců mezi sousedními uzly). V modelu TCP/IP odpovídá vrstvě síťového rozhraní.
 
     / Datalinková vrstva plní tyto klíčové funkce:
 
