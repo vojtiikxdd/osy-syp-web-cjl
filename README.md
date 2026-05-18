@@ -46,53 +46,27 @@ Zkopíruj tuto kostru do svého `.typ` souboru:
 )
 
 #theme(
-  intro: [
-    Krátký úvod k tématu.
-  ],
   body: [
-    #set heading(numbering: "1.1")
+    = Úvod k tématu
+
+    Krátký úvod k tématu...
+    
+    #set heading(numbering: "1.1")   
 
     = Nadpis kapitoly
-    Text...
-  ],
-  summary: [
-    Shrnutí.
-  ],
-  resources: [
-    - #link("https://www.youtube.com")[Youtube - Téma]
-    - #link("https://en.wikipedia.org/")[Wiki - Téma]
-  ],
-)
-```
-
-nebo *jednodušší* verzi *bez úvodu a závěru*
-
-```typ
-#import "../template.typ": header, simple
-
-#show: body => header(
-  title: "Název otázky",
-  author: "Jméno Příjmení",
-  body,
-)
-
-#simple(
-  body: [
-    #set heading(numbering: "1.1")
-
-    = Nadpis kapitoly
+    
     Text...
   ],
   resources: [
-    - #link("https://www.youtube.com")[Youtube - Téma]
-    - #link("https://en.wikipedia.org/")[Wiki - Téma]
+    - #link("https://www.youtube.com")[Youtube - Video k témtu nebo tak]
+    - #link("https://en.wikipedia.org/")[Wiki - Wiki neni uplne zdroj k přečtení no ale tak co]
   ],
 )
 ```
 
 Do Zrdojů není nutné uvádět vše poctivě, je ale dobré přihodit např. youtube video, které téma dobře vysvětluje
 
-Dokumentace různých funkcí Typstu [zde](https://typst.app/docs/)
+Dokumentace různých funkcí a syntaxe Typstu [zde](https://typst.app/docs/)
 
 ---
 

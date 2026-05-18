@@ -8,9 +8,11 @@
 
 #theme(
   body: [
-    #set heading(numbering: "1.1")
+    = Úvod do tématu
 
     VLAN (Virtual Local Area Network) slouží k logickému rozdělení sítě nezávisle na fyzickém uspořádání. Umožňuje segmentovat síť na menší logické celky uvnitř jedné fyzické struktury, obvykle na úrovni přepínačů (L2). Tímto dosahujeme oddělení provozu, zvýšení bezpečnosti a snížení zátěže sítě (broadcastů).
+
+    #set heading(numbering: "1.1")
 
     = Výhody a principy VLAN
 

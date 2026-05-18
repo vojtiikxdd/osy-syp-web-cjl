@@ -8,7 +8,7 @@
 
 #theme(
   body: [
-    #set heading(numbering: "1.1")
+    = Úvod do tématu
 
     Fyzická vrstva (Physical Layer) je nejnižší vrstva referenčního modelu OSI. Zajišťuje přenos jednotlivých bitů mezi zařízeními prostřednictvím fyzického média. Definuje elektrické, mechanické a funkční vlastnosti přenosu dat, například napětí, konektory, rychlosti přenosu a typy kabelů.
 
@@ -19,19 +19,28 @@
       caption: "Ukázka kolize mezi daty při přenosu bez kontroly",
     )
 
+    #set heading(numbering: "1.1")
+
     = Typy běžně používaných přenosových - síťových médií:
 
     == Metalická (drátová) média
 
-    Také známá jako metalické kabely, jsou nejběžnějším typem přenosového média v počítačových sítích. 
-    
+    Také známá jako metalické kabely, jsou nejběžnějším typem přenosového média v počítačových sítích.
+
     / Patří sem:
 
       / Kroucená dvoulinka (Twisted Pair):
 
-        - Typy: *UTP*, *STP*, *FTP*
+        - Vodiče jsou stáčeny do párů pro eliminaci přeslechu (crosstalk) a elektromagnetického rušení.
+        - Typy: *UTP* (Unshielded – nestíněný), *STP* (Shielded – stíněný), *FTP* (Foiled – stíněný fólií)
         - Maximální délka: 100 m (pro Ethernet)
         - Konektor: RJ-45
+
+        *Kategorie kabelů:*
+        - *Cat5e* – rychlost 1 Gbps na 100 m; frekvence 100 MHz (dnešní základní standard)
+        - *Cat6* – rychlost 10 Gbps na cca 55 m; frekvence 250 MHz (hustší kroucení a plastový kříž proti přeslechu)
+        - *Cat6a* – rychlost 10 Gbps na 100 m; frekvence 500 MHz (tlustší, tvrdší izolace, většinou stíněná verze STP/FTP)
+        - *Cat7* – rychlost 10 Gbps; frekvence 600 MHz (vždy přísně stíněný; prémiový kabel)
 
         #figure(
           image("../assets/kroucena-dvoulinka.jpg", width: 45%),
@@ -52,8 +61,8 @@
 
     / Optické vlákno (Fiber Optic):
       / Typy:
-        - Multimode (MM)
-        - Singlemode (SM)
+        - *Multimode (MM)* – jako zdroj světla využívá LED diody, šíří se více paprsků, dochází k vnitřním odrazům (což může vést k rozmazání signálu na delší vzdálenosti)
+        - *Singlemode (SM)* – jako zdroj světla využívá úzký laser, paprsek se šíří rovně téměř bez odrazů
         
       / Maximální délka:
         - MM: stovky metrů až jednotky km
@@ -83,13 +92,10 @@
     / Proprietární RF rozhraní #footnote[RF - Radio Frequency] (Periferie):
       
       Bezdrátové periferie, jako jsou klávesnice a myši, využívají v pásmu 2,4 GHz specifické proprietární protokoly (WPAN), které se od Wi-Fi liší architekturou vrstvy síťového rozhraní.
-      
       - *Energetická optimalizace:* Protokoly jsou navrženy pro extrémně nízkou spotřebu a minimální latenci při přenosu malých objemů dat (např. kódy stisknutých kláves).
-      
       - *Mechanismus AFH (Adaptive Frequency Hopping):* Zařízení dynamicky mění komunikační kanály v rámci pásma, aby eliminovala kolize s širokopásmovými signály Wi-Fi.
-      
       - *Interference:* Při vysokém vytížení pásma 2,4 GHz (např. intenzivní stahování dat přes Wi-Fi) může dojít k zahlcení fyzického média, což vede k zahození rámců periferie a projevuje se jako zpoždění (lag) nebo výpadky vstupu.
-    
+
     #pagebreak()
 
     / Bluetooth:
@@ -156,7 +162,7 @@
 
     = Zapojení UTP kabelu
 
-    Existují dva základní standardy zapojení:
+    Existují dva základní standardy zapojení: T568A a T568B.
 
     / Přímý kabel (Straight-through):
       - Oba konce zapojeny stejně (T568A nebo T568B)
@@ -166,13 +172,14 @@
 
     / Křížený kabel (Crossover):
       - Jeden konec T568A, druhý T568B
+      - Dnes se využívá technologie *Auto-MDIX*, která dokáže automaticky detekovat typ kabelu a elektronicky porty uvnitř zařízení překřížit podle potřeby.
       - Použití:
         - PC ↔ PC
-        - switch ↔ switch (starší zařízení bez Auto-MDIX)
+        - switch ↔ switch (u starších zařízení bez Auto-MDIX)
 
     = Vlivy okolního prostředí na přenos
 
-    Každé médium má svoje slabiny
+    Každé médium má svoje slabiny.
 
     == Negativní vlivy
 
@@ -181,6 +188,9 @@
 
     / Přeslech (Crosstalk):
       - Vzájemné ovlivňování vodičů uvnitř kabelu
+
+    / Útlum (Attenuation):
+      - Postupné slábnutí signálu se vzrůstající vzdáleností na médiu
 
     / Fyzické poškození:
       - Nadměrný ohyb nebo zlomení kabelu
@@ -197,7 +207,7 @@
     - Správné vedení kabeláže (dál od silových vodičů)
     - Použití optických vláken (odolné vůči EMI)
     - Kvalitní instalace a mechanická ochrana kabelů
-    - Použití opakovačů (repeaters) nebo zesilovačů
+    - Použití opakovačů (repeaters) nebo zesilovačů pro řešení útlumu
     - Využití korekčních mechanismů (např. CRC)
   ],
   resources: [

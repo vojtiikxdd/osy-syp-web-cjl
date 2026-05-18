@@ -8,10 +8,12 @@
 
 #theme(
   body: [
-    #set heading(numbering: "1.1")
+    = Úvod do tématu
 
     Tento dokument shrnuje základní vlastnosti protokolů na transportní vrstvě (TCP, UDP), aplikační vrstvě (DHCP, FTP) a protokol ICMP, který je klíčový pro diagnostiku sítě. 
 
+    #set heading(numbering: "1.1")
+    
     = Transportní vrstva
 
     Transportní vrstva (4. vrstva OSI) je zodpovědná za end-to-end komunikaci mezi aplikacemi na různých hostitelích. Rozděluje data od aplikační vrstvy na *segmenty* a předává je síťové vrstvě. Zajišťuje multiplexování (rozlišení aplikací pomocí portů). Hlavními protokoly jsou TCP a UDP.

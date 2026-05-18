@@ -40,8 +40,6 @@
 
   pagebreak()
   
-  [= Úvod do tématu]
-
   body
 
   //pagebreak()

@@ -8,11 +8,14 @@
 
 #theme(
   body: [
-    #set heading(numbering: "1.1")
+    = Úvod do tématu
 
     Tento dokument shrnuje koncepty bezdrátových lokálních sítí (WLAN). Popisuje výhody a nevýhody bezdrátového přenosu, rozdělení sítí podle velikosti, standardy rodiny IEEE 802.11 (Wi-Fi), hardwarové komponenty včetně antén, možnosti zabezpečení proti kybernetickým hrozbám a základy konfigurace bezdrátového směrovače.
 
+    #set heading(numbering: "1.1")
+
     = Úvod do bezdrátových sítí
+    
     WLAN (Wireless Local Area Network) je počítačová síť spojující zařízení pomocí rádiových vln (nejčastěji v nelicencovaných pásmech 2,4 GHz a 5 GHz).
 
     / Výhody: Eliminace kabeláže, mobilita uživatelů, snadné připojení desítek až stovek mobilních zařízení, jednodušší a levnější upgrade infrastruktury oproti výměně starých kabelů.
