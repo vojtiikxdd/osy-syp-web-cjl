@@ -37,7 +37,7 @@
   show heading: set block(below: 6pt, above: 6pt)
   show heading.where(level: 2): set text(size: 12pt, weight: "bold", fill: eastern)
   show heading.where(level: 4): set text(size: 10pt, weight: "bold", fill: navy)
-  show heading.where(level: 5): set text(size: 8pt, weight: "regular", fill: aqua)
+  show heading.where(level: 5): set text(size: 7pt, weight: "regular", fill: gray)
 
   columns(2, [
     #heading(level: 1, [#title])
