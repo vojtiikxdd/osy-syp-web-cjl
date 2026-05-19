@@ -33,68 +33,87 @@
     ),
   )
   set text(font: "New Computer Modern", size: 8pt)
-  show heading.where(level: 1): set text(size: 14pt, weight: "bold")
+  show heading.where(level: 1): set text(size: 14pt, weight: "bold", fill: blue)
   show heading: set block(below: 6pt, above: 6pt)
-  show heading.where(level: 2): set text(size: 12pt, weight: "bold", fill: red)
-  show heading.where(level: 3): set text(size: 10pt, weight: "bold", fill: red)
-  show heading.where(level: 5): set text(size: 8pt, weight: "regular")
+  show heading.where(level: 2): set text(size: 12pt, weight: "bold", fill: eastern)
+  show heading.where(level: 4): set text(size: 10pt, weight: "bold", fill: navy)
+  show heading.where(level: 5): set text(size: 8pt, weight: "regular", fill: aqua)
 
   columns(2, [
-      #heading(level: 1, [#title])
-      *#author* | *#year*
+    #heading(level: 1, [#title])
+    *#author* | *#year*
 
-      == Charakteristika díla
-      ==== Podle obsahu/formy (poezie, próza, drama)
-      #characteristics.obsah
-      ==== Konkrétní útvary a znaky (lyrika, epika, drama, útvar)
-      #characteristics.utvary
-      ==== Význam názvu
-      #characteristics.name-meaning
-      ==== Téma
-      #characteristics.tema
+    #v(1.5em)
 
-      == Literárněhistorický kontext
-      ==== Přiřazení k uměleckému směru, tematickému okruhu, hnutí, skupině + časové vymezení
-      #literary-context.umelecke-smer
+    == Charakteristika díla
+    ==== Podle obsahu/formy (poezie, próza, drama)
+    #characteristics.obsah
+    ==== Konkrétní útvary a znaky (lyrika, epika, drama, útvar)
+    #characteristics.utvary
+    ==== Význam názvu
+    #characteristics.name-meaning
+    ==== Téma
+    #characteristics.tema
 
-      ==== Historické souvislosti
-      #literary-context.historicke-souvislosti
+    #v(1em)
 
-      ==== Autorovi současníci v domácí/zahraniční literatuře 
-      ===== _(zejména srovnání s díly se stejnou tematikou)_
-      #literary-context.soucasnici
+    == Literárněhistorický kontext
+    ==== Přiřazení k uměleckému směru, tematickému okruhu, hnutí, skupině + časové vymezení
+    #literary-context.umelecke-smer
 
-      ==== Rámcové údaje týkající se autorova života 
-      ===== _(a okolnosti ovlivňující napsání díla)_
-      #literary-context.autoruv-zivot
+    ==== Historické souvislosti
+    #literary-context.historicke-souvislosti
 
-      ==== Další autorova díla
-      #literary-context.dalsi-dila
+    ==== Autorovi současníci v domácí/zahraniční literatuře
+    ===== _(zejména srovnání s díly se stejnou tematikou)_
+    #literary-context.soucasnici
 
-      == Kompozice díla 
-      ===== _(chronologická, retrospektivní, paralelní, rámcová, řetězová, rozsah díla, kapitoly a jejich označení, návaznost částí, dějství, výstupy, sbírka básní, motto, prolog, doslov atp.)_
-      #kompozice
+    ==== Rámcové údaje týkající se autorova života
+    ===== _(a okolnosti ovlivňující napsání díla)_
+    #literary-context.autoruv-zivot
 
-      == Obsah díla 
-      ===== _(zasazení výňatku do kontextu díla, základní dějová linie, zejména zásadní a zlomové situace, závěr, typ a charakteristika básní)_
-      #obsah-dila
+    ==== Další autorova díla
+    #literary-context.dalsi-dila
 
-      == Postavy
-      ===== _(hlavní -- vedlejší + charakteristika (přímá, nepřímá, opisem), vývoj postav v průběhu díla)_
-      #postavy
+    #v(1em)
 
-      == Vypravěčský způsob a vypravěč 
-      ===== _(ich/er forma, jedna z postav příběhu, vševědoucí vypravěč, vypravěč  vstupující do díla, role lyrického subjektu)_
-      #vypravecsky-zpusob
+    == Kompozice díla
+    ===== _(chronologická, retrospektivní, paralelní, rámcová, řetězová, rozsah díla, kapitoly a jejich označení, návaznost částí, dějství, výstupy, sbírka básní, motto, prolog, doslov atp.)_
+    #kompozice
 
-      == Jazyk díla 
-      ===== _(spisovný/nespisovný a jeho varianty, větná stavba, motivované nebo nemotivované odchylky od větné stavby (viz výňatek z díla), umělecké jazykové prostředky (tropy a figury) a jejich funkce, účinek použitého jazyka na čtenáře)_
-      #jazyk-dila
+    #v(1em)
 
-      == Ohlas díla 
-      ===== _(pohled literární kritiky a čtenářů (i v různých dobách, pokud se jedná o dílo starší), (překlady), inspirace pro jiná umělecká zpracování)_
-      #ohlas-dila
-    ])
+    == Obsah díla
+    ===== _(zasazení výňatku do kontextu díla, základní dějová linie, zejména zásadní a zlomové situace, závěr, typ a charakteristika básní)_
+    #obsah-dila
+
+    #v(1em)
+
+    == Postavy
+    ===== _(hlavní -- vedlejší + charakteristika (přímá, nepřímá, opisem), vývoj postav v průběhu díla)_
+    #postavy
+
+    #v(1em)
+
+    == Vypravěčský způsob a vypravěč
+    ===== _(ich/er forma, jedna z postav příběhu, vševědoucí vypravěč, vypravěč  vstupující do díla, role lyrického subjektu)_
+    #vypravecsky-zpusob
+    #v(1em)
+    == Jazyk díla
+    ===== _(spisovný/nespisovný a jeho varianty, větná stavba, motivované nebo nemotivované odchylky od větné stavby (viz výňatek z díla), umělecké jazykové prostředky (tropy a figury) a jejich funkce, účinek použitého jazyka na čtenáře)_
+    #jazyk-dila
+
+    #v(1em)
+
+    == Ohlas díla
+    ===== _(pohled literární kritiky a čtenářů (i v různých dobách, pokud se jedná o dílo starší), (překlady), inspirace pro jiná umělecká zpracování)_
+    #ohlas-dila
+
+    #v(1em)
+
+    == Osoboní názor
+    ===== _(spis staci shrnout pocity z toho, co jsi precetl tady, nikdo ty knizky necte lol)_
+  ])
 }
 
 #work(
