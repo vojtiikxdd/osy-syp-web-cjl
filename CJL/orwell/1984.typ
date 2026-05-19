@@ -59,7 +59,7 @@
       - *Na dně v Paříži a Londýně* -- zážitky z dob, kdy byl Orwell tulákem
     ],
     autoruv-zivot: [
-      *George Orwell*, vlastním jménem *Eric Arthur Blair* (1903-1950), byl britský spisovatel, novinář a kritik totalitarismu. Narodil se v Indii, ale většinu svého života strávil ve Velké Británii. Orwell sloužil jako policista v Barmě, což ovlivnilo jeho pohled na imperialismus a sociální spravedlnost. 
+      *George Orwell*, vlastním jménem *Eric Arthur Blair* (_*1903-1950*_), byl britský spisovatel, novinář a kritik totalitarismu. Narodil se v Indii, ale většinu svého života strávil ve Velké Británii. Orwell sloužil jako policista v Barmě, což ovlivnilo jeho pohled na imperialismus a sociální spravedlnost. 
 
       Po roce 1936 se Orwell jako dobrovolník zapojil do španělské občanské války.
       

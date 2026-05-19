@@ -14,6 +14,9 @@
     
     #set heading(numbering: "1.1")
 
+    // stp proptokol pro prevenci smyček v sítích s více switchemi, které jsou propojené kruhovou topologií (např. pro zálohu). Bez něj by docházelo k nekonečnému šíření broadcastů a zahlcení sítě.
+
+
     = Integrace do modelu ISO/OSI
 
     *Ethernet* jako technologie *operuje na vrstvách 1 a 2* modelu ISO/OSI — zasahuje do fyzické vrstvy (způsob přenosu bitů) i do linkové vrstvy (přenos rámců mezi sousedními uzly). V modelu TCP/IP odpovídá vrstvě síťového rozhraní.
@@ -62,6 +65,8 @@
 
     = Duplex a řízení přístupu k médiu
 
+    simplex ?? pouze prijmat, pouze vysílat - jako hadice nebo treba walkie talkie
+
     == Half-duplex vs. Full-duplex
 
     / Half-duplex: Obě zařízení mohou vysílat i přijímat, ale ne současně. Používá WLAN a starší sběrnicové topologie. Vyžaduje metody řízení přístupu.
@@ -108,8 +113,6 @@
       [Latence], [Nižší], [Vyšší],
     )
 
-    #pagebreak()
-
     = Ethernet a ethernetový rámec
 
     Ethernet je dnes dominantní technologie pro LAN sítě. Rychlosti sahají od 10 Mb/s až po 100 Gb/s.
@@ -149,6 +152,17 @@
     / FCS — Frame Check Sequence (4 B): 32bitový CRC kontrolní součet ze všech polí. Příjemce si vypočítá vlastní CRC a porovná — při neshodě rámec zahodí.
 
     = MAC adresy
+
+    //mac adress tabulka ??
+    
+    /*
+    
+      doplnit 
+
+    learning
+    flooding
+    forwarding
+    */
 
     MAC adresa je unikátní 48bitový identifikátor síťového rozhraní (NIC), označovaná jako BIA (Burned-In Address) — vypálena do ROM. Běžně se zapisuje hexadecimálně, např. `00:1A:2B:3C:4D:5E`. Při spuštění zařízení se zkopíruje do RAM.
 
@@ -190,6 +204,15 @@
     / Bridge: Pracuje na datalinkové vrstvě. Má MAC tabulku, odděluje kolizní domény mezi segmenty.
     / Switch: Multiportový bridge. Přeposílá rámce pouze na cílový port dle MAC tabulky. Vytváří pro každé zařízení vlastní kolizní doménu. Broadcast a multicast šíří na všechny porty. Defaultně pracuje ve full-duplexu.
     / Router: Pracuje na vrstvě 3. Směruje pakety dle IP adres, propojuji různé sítě a odděluje broadcastové domény.
+
+    == Kolizní a broadcastové domény
+
+     / Kolizní doména: 
+      - Část sítě, kde může docházet ke kolizím rámců. Switch každý port izoluje do vlastní kolizní domény. Hub celou síť spojuje do jedné velké kolizní domény.
+     / Broadcastová doména: 
+      - Část sítě, kam se šíří broadcast (rámce typu `FF:FF:FF:FF:FF:FF`). Switch broadcastovou doménu nerozděluje — to dělá až router (nebo nasazení VLAN).
+
+     *Poznámka:* Switche jsou dnes standardem pro LAN sítě, protože efektivně přeposílají data pouze tam, kde jsou potřeba, a minimalizují kolize. Routery se používají pro propojení různých sítí a směrování dat na internetu.
 
     == Funkce switche — MAC tabulka (CAM)
 

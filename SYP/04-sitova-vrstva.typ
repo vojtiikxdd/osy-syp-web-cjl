@@ -54,8 +54,6 @@
       - Nativní podpora bezpečnosti (IPsec).
       - Defaultní gateway a adresa přijímána automaticky (SLAAC) — není potřeba ruční konfigurace.
 
-    #pagebreak()
-
     = ARP a RARP — propojení vrstvy 2 a 3
 
     ARP (Address Resolution Protocol) tvoří most mezi datalinkovou a síťovou vrstvou — převádí IP adresu na MAC adresu, která je nutná pro skutečné doručení rámce ve stejné síti.
@@ -98,8 +96,6 @@
       - *RIP* (Routing Information Protocol) - jednodušší protokol založený na počtu přeskoků.
       - *OSPF* (Open Shortest Path First) - pokročilejší, bere v potaz rychlost a cenu linky, běžný ve firemních sítích.
       - *BGP* (Border Gateway Protocol) - hlavní protokol, který se stará o směrování v celém internetu.
-
-    #pagebreak()
 
     = Zabezpečení routeru
 

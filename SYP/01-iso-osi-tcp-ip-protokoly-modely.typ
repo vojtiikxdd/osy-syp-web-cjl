@@ -14,7 +14,7 @@
 
     *TCP/IP je implementace teoretického modelu ISO/OSI*, která se stala základem pro moderní internet. TCP/IP model má *pouze čtyři vrstvy, které jsou zjednodušenou verzí vrstev ISO/OSI*, ale stále zachovávají klíčové funkce pro komunikaci v síti. *TCP/IP model nebyl jedniný co vznikl*, ale díky vzniku internetu stal se dominantním standardem pro síťovou komunikaci a byl tak přijat ve většině moderních sítí.
 
-    ISO/OSI lze přirovnat ke komunikaci mezi lidmi. Začne to myšlenkou, zprocesování a korekci zprávy, vyslovení a předání zprávy řečí a zpátečně přijetí zprávy sluchem, dekódování zprávy a nakonec pochopení zprávy.
+    ISO/OSI lze přirovnat ke komunikaci mezi lidmi. Začne to myšlenkou, zprocesování a korekcí zprávy, vyslovení a předání zprávy řečí a zpátečné přijetí zprávy sluchem, dekódování zprávy a nakonec pochopení zprávy.
 
     Stejně to funguje i u ISO/OSI nebo TCP/IP. Data, která chce komunikační zařízení poslat (např. webový dotaz na novou stránku), Jde to od kliknutí na nějaké webové stránce, přes proces v počítači, zabalení do paketu s nutnými informacemi k přenosu, poslání do routeru až k serveru, který dotaz zpětně zpracuje obrácenou cestou, jakou byla zpráva/dotaz zpracován/a.
 
@@ -36,42 +36,40 @@
     - Snazší diagnostika chyb
     - Kompatibilita mezi různými zařízeními a systémy
 
-    #pagebreak()
-
     = Porovnání modelů ISO-OSI a TCP/IP
 
     == ISO-OSI model (7 vrstev):
 
-    7. *Aplikační vrstva* (Application Layer)
-      - Poskytuje *rozhraní pro uživatele a aplikace* k přístupu ke službám sítě
-      - Zahrnuje protokoly jako *HTTP*, *FTP*, *SMTP* a další
-
-    6. *Prezentační vrstva* (Presentation Layer)
-      - Zajišťuje převod dat do formátu, který může být pochopen aplikací
-      - Řeší problémy jako kódování, komprese a šifrování dat
-
-    5. *Relační vrstva* (Session Layer)
-      - Zajišťuje správu relací mezi aplikacemi
-      - Umožňuje synchronizaci a koordinaci komunikace mezi nimi 
-
-    4. *Transportní vrstva* (Transport Layer)
-      - Zajišťuje spolehlivý přenos dat mezi koncovými body komunikace
-      - Řeší problémy jako řízení toku, detekce a oprava chyb a segmentace dat
-
-    3. *Síťová vrstva* (Network Layer)
-      - Zajišťuje směrování dat mezi různými sítěmi a zařízeními
-      - Řeší problémy jako adresování, směrování a fragmentace datových paketů
-      - *Typické zařízení:* Router
+    1. *Fyzická vrstva* (Physical Layer)
+      - Zajišťuje *přenos bitů přes fyzické médium*, jako jsou kabely nebo bezdrátové signály
+      - Definuje elektrické, mechanické a funkční vlastnosti přenosového média
+      - *Typické zařízení:* _Hub, Repeater, kabely_
 
     2. *Linková (_spojová_) vrstva* (Data Link Layer)
       - Zajišťuje spolehlivý *přenos dat mezi dvěma zařízeními na stejné síti*
       - Řeší problémy jako *detekce a oprava chyb*, řízení toku a adresování pomocí MAC adres
       - *Typické zařízení:* Switch
 
-    1. *Fyzická vrstva* (Physical Layer)
-      - Zajišťuje přenos bitů přes fyzické médium, jako jsou kabely nebo bezdrátové signály
-      - Definuje elektrické, mechanické a funkční vlastnosti přenosového média
-      - *Typické zařízení:* Hub, Repeater, kabely
+    3. *Síťová vrstva* (Network Layer)
+      - Zajišťuje *směrování dat mezi různými sítěmi a zařízeními*
+      - Řeší problémy jako adresování, směrování a fragmentace datových paketů
+      - *Typické zařízení:* Router
+
+    4. *Transportní vrstva* (Transport Layer)
+      - Zajišťuje *spolehlivý přenos dat mezi koncovými body komunikace*
+      - Řeší problémy jako řízení toku, detekce a oprava chyb a segmentace dat
+
+    5. *Relační vrstva* (Session Layer)
+      - Zajišťuje *správu relací mezi aplikacemi*
+      - Umožňuje synchronizaci a koordinaci komunikace mezi nimi
+
+    6. *Prezentační vrstva* (Presentation Layer)
+      - Zajišťuje *převod dat do formátu, který může být pochopen aplikací*
+      - Řeší problémy jako kódování, komprese a šifrování dat
+
+    7. *Aplikační vrstva* (Application Layer)
+      - Poskytuje *rozhraní pro uživatele a aplikace* k přístupu ke službám sítě
+      - Zahrnuje protokoly jako *HTTP* (_80_), *FTP* (_20_, _21_), *SMTP* (_25_, _587_) a další
 
     == TCP/IP model (4 vrstvy):
 
@@ -106,7 +104,7 @@
       caption: "Model ISO/OSI v porovnání s TCP/IP v češtině a v angličtině",
     )
 
-    = Průběh zapouzdření dat (Encapsulation):
+    = Průběh zapouzdření dat _(Encapsulation)_:
     
     *PDU (Protocol Data Unit)*: Odborný název pro rámec, paket nebo segment. 
 

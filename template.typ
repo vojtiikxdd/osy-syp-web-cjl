@@ -6,7 +6,7 @@
     numbering: "1",
   )
 
-  set text(font: "New Computer Modern", size: 11pt, lang: "cs")
+  set text(font: "JetBrains Mono", size: 11pt, lang: "cs")
   set par(justify: true)
 
   show heading.where(level: 1): set text(size: 22pt, weight: "bold", fill: navy)

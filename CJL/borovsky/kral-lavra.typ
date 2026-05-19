@@ -65,6 +65,8 @@
         - Dílo je plné satiry a kritiky rakouského režimu, což odráží jeho osobní zkušenosti s útlakem a nesvobodou.
       - Po podepsání smlouvy že se již nebude angažovat ve veřejných aktivitách byl propuštěn z vyhnanství v roce 1854 a vrátil se do Česka. Dokud mu nebyla diagnostikována tuberkulóza, měl zakázáno cestovat do Prahy.
       - Smrt: Zemřel 29. července 1856 v Praze ve věku 34 let na tuberkulózu.
+      
+      - Kritizoval Palackého, Udělal si vlastní noviny
     ],
   ),
   kompozice: [

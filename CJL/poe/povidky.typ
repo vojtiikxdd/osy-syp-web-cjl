@@ -81,6 +81,7 @@
       - Poté odchází do Bostonu, kde začíná publikovat
       - Několik let v armádě, stal se seržantem a zároveň měl dost času na psaní
       - Armádu opustil, aby se mohl věnovat literatuře
+      - žil díky jeho kritickým esejím a za ně byl i ceněn, díla moc ceněna nebyla
       - Vymyslel si neexistující Folio Club -- založeno na ironii, zesměšňoval literární nepřátele
       - Stále oblíbenější autor, ale fyzicky je na tom čím dál hůř
       - Oženil se se svojí sestřenicí, čtrnáctiletou Virginií -- žili spolu 11 let, zemřela na tuberkulózu
@@ -105,6 +106,7 @@
     - Odehrává se během několika let, sleduje postupný pád hlavní postavy do šílenství.
     - Není členěna do kapitol, děj je plynulý.
     - Vypravěč popisuje svůj život a činy z první osoby.
+    - Má rád zvířata, má doma i opici, ale později zešílí a kocoura zabije 
 
   ],
   obsah-dila: [

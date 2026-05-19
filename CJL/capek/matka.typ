@@ -41,6 +41,7 @@
       - Přátelil se s T. G. Masarykem (napsal *Hovory s TGM*).
       - Obdivoval vědu a techniku, ale bál se, aby neovládla člověka. Miloval lidi, věřil v lidský rozum.
       - Kvůli svým postojům a varování před válkou byl terčem fašistů. Po Mnichovské dohodě nechtěl dál žít a zemřel v prosinci 1938.
+      - Matka odkazuje na nebezpeci valky spis nez na nebezceci fašismu, protoze valka bere deti a matky trpi, zatimco fašismus bere _jen_ svobodu a demokracii.
     ],
     dalsi-dila: [
       - *Dramata*: R.U.R., Věc Makropulos, Bílá nemoc, Loupežník, Ze života hmyzu (s bratrem).

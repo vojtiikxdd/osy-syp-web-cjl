@@ -44,8 +44,12 @@
       - Díky nemoci se vyhnul 1. světové válce.
       - Hodně cestoval. Působil jako vychovatel, knihovník, tvůrce sloupku a redaktor (Národní listy, Lidové noviny).
       - Žurnalista, mistr zkratky a miniatury s mimořádným zájmem o obyčejné maličkosti.
-      - Blízký přítel TGM (byl mluvčím Hradu).
+      - Blízký přítel TGM (byl mluvčím Hradu) - *Pátečníci*.
       - Ke konci života byl často napadán reakční částí české buržoazie za svůj silný protifašistický postoj (Byl jedním z důvodů plánované perzekuce gestapem, ale vyhnul se jí úmrtím na zápal plic ještě před obsazením Čech a Moravy).
+      - Mel bratra, ktery tvoril taky - Pejsek a kočička, Josef Čapek. Byl to on, kdo vymyslel slovo „robot“ pro Karel Čapka, když mu pomáhal s psaním R.U.R. (Rossumovi Univerzální Roboti).
+      - Mel nemocna zada kvuli tomu nesel do valky
+      - Byl raněn Mnichovskou dohodou - psychicky - oněmocněl na zapal plic
+      - Hodně cestoval s přítelkyní (slay girl)
     ],
     dalsi-dila: [
       - *Utopie a sci-fi*: R.U.R., Továrna na absolutno, Krakatit, Věc Makropulos, Ze života hmyzu a Adam stvořitel (s Josefem Čapkem), Válka s mloky.

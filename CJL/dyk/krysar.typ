@@ -41,8 +41,9 @@
     soucasnici: [
       - F. Šrámek
       - J. Hašek
+      - S. K. Neumann
       - P. Bezruč
-      - F. Kafka
+      - F. Kafka - (Dyk uz nepsal kdyz zacal psat Kafka)
       - T. Mann
       - M. Gorkij
       - G. B. Shaw
