@@ -331,8 +331,8 @@
       *Poznámka k SVI:* Switch Virtual Interface (VLAN 1) je virtuální rozhraní pro vzdálenou správu switche. Switche nativně nepracují na vrstvě 3 — SVI jim umožňuje mít IP adresu pro SSH/Telnet přístup.
     ]
 
-    = Odpovědi podle podotázek
-
+  ],
+  subquestions: [
     == Jakou metodu přístupu k médiu používá ethernet, porovnejte s jinou metodou. Porovnejte jednotlivé metody (výhody / nevýhody)
     
     @csma

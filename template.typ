@@ -30,12 +30,12 @@
     title: "Obsah",
   )
 
-
   body
 }
 
 #let theme(
   body: [],
+  subquestions: [],
   resources: [],
 ) = {
   import "@preview/zebraw:0.6.1": *
@@ -47,7 +47,16 @@
   
   body
 
-  //pagebreak()
+  [= Odpovědi na zadané podotázeky]
+  block(
+    fill: luma(240), 
+    inset: 10pt, 
+    radius: 4pt
+  )[
+   Každá otázka na začátku odpovědi obsahuje odkaz na konkrétní kapitolu v zápise s proklikem 
+  ]
+  
+  subquestions
 
   [= Další materiály a zdroje ]
   resources

@@ -24,7 +24,7 @@
 
     #set heading(numbering: "1.1")
     
-    = Důvod použití vrstevnatých modelů
+    = Důvod použití vrstevnatých modelů <duvod-pouiziti-vrstevnatych-modelu>
 
     Vrstevnaté modely v počítačových sítích slouží k rozdělení složité komunikace na menší, přehledné části (vrstvy). Každá vrstva má přesně definovanou funkci a komunikuje pouze se sousedními vrstvami.
 
@@ -99,16 +99,17 @@
       - Zajišťuje spolehlivý fyzický přenos dat přes konkrétní médium (Ethernet, Wi-Fi).
       - Správa spojení mezi zařízeními na úrovni hardwaru (řeší MAC adresy a mechanické vlastnosti).
 
-    == Porovnání:
+    == Porovnání: <provnani-modelu>
 
     #figure(
       image("../assets/ISO-OSI-TCP-IP.jpg"),
       caption: "Model ISO/OSI v porovnání s TCP/IP v češtině a v angličtině",
     )
 
-    = Průběh zapouzdření dat _(Encapsulation)_:
+    = Průběh zapouzdření dat _(Encapsulation)_: <zapouzdrovani-ramce>
     
-    *PDU (Protocol Data Unit)*: Odborný název pro rámec, paket nebo segment. 
+    *PDU (Protocol Data Unit)*: Odborný název pro rámec, paket nebo segment.
+    *Zapouzdření* (Encapsulation) je proces, kdy každá vrstva přidává své vlastní informace (hlavičku a případně patičku) k datům z vyšší vrstvy, aby zajistila správný přenos dat od odesílatele k příjemci.
 
     / Aplikační vrstva:
       - Data vytvořená aplikací _např. obsah webové stránky, e-mail nebo soubor_
@@ -135,7 +136,7 @@
 
     *Při příjmu dat se tento proces obrací (Dekapsulace)*: bity jsou převáděny zpět na rámce, pak na pakety, segmenty/datagramy a nakonec na data pro aplikaci. Při čtení si každá vrstva přečte svou hlavičku, zahodí ji a předá data další (vyšší) vrstvě.
 
-    = Protokoly modelu TCP/IP
+    = Protokoly modelu TCP/IP <protokoly-tcp-ip>
 
     / Aplikační vrstva:
       - HTTP – přenos webových stránek (port 80)
@@ -198,6 +199,94 @@
     = Závěr
     Vrstevnaté modely ISO-OSI a TCP/IP jsou základním kamenem počítačových sítí. Umožňují efektivní komunikaci, standardizaci protokolů a snadnější správu. TCP/IP model je prakticky využívaný v dnešním internetu, zatímco ISO-OSI slouží spíše jako teoretický referenční model pro pochopení celé síťové komunikace.
 
+  ],
+  subquestions: [
+    
+    == Vysvětlete důvod použití vrstevnatých modelů
+    
+    @duvod-pouiziti-vrstevnatych-modelu
+
+    Vrstevnaté modely v počítačových sítích slouží k rozdělení složité komunikace na menší, přehledné části (vrstvy). Každá vrstva má přesně definovanou funkci a komunikuje pouze se sousedními vrstvami.
+
+    / Hlavní důvody použití:
+      
+      - Zjednodušení návrhu a správy sítí
+      
+      - Standardizace komunikace
+      
+      - Možnost vývoje nezávislých technologií
+      
+      - Snazší diagnostika chyb
+      
+      - Kompatibilita mezi různými zařízeními a systémy
+
+    #pagebreak()
+    
+    == Nakreslete vedle sebe a porovnejte oba základní modely
+    
+    @provnani-modelu
+
+    #image("../assets/ISO-OSI-TCP-IP.jpg")
+    
+    
+    == Vysvětlete termín „zapouzdření ethernetového rámce - encapsulation“, a co se děje v jednotlivých vrstvách od chvíle, kdy chceme v aplikační vrstvě odeslat nějaká data až po signály na fyzické vrstvě. A napište, jak se datové struktury v jednotlivých vrstvách jmenují
+    
+    @zapouzdrovani-ramce
+
+    *Zapouzdření* (Encapsulation) je proces, kdy každá vrstva přidává své vlastní informace (hlavičku a případně patičku) k datům z vyšší vrstvy, aby zajistila správný přenos dat od odesílatele k příjemci.
+
+    / Aplikační vrstva:
+      - Data vytvořená aplikací _např. obsah webové stránky, e-mail nebo soubor_
+      - Název: *Data*
+      - Jedná se například o obsah webové stránky, e-mail nebo soubor, který chceme přenést.
+
+    / Transportní vrstva:
+      - Přidání TCP/UDP hlavičky
+      - Název: *Segment* (TCP) / *Datagram* (UDP)
+      - Tato vrstva rozdělí data na menší části (segmenty nebo datagramy) 
+        - každý má maximálně 1,5 KB pro TCP a asi 65 KB pro UDP - a přidá informace potřebné pro správný přenos, jako jsou porty a čísla sekvencí (transportní hlavička).
+
+    / Internetová vrstva:
+      - Přidání IP hlavičky
+      - Název: *Paket* (Packet)
+    
+    / Linková vrstva:
+      - Přidání MAC adres (hlavička a patička)
+      - Název: *Rámec* (Frame)
+    
+    / Fyzická vrstva:
+      - Převod na elektrické/optické signály
+      - Název: *Bity* (Bits)
+    
+    == Vyjmenujte, jaké protokoly máme v jednotlivých vrstvách TCP-IP modelu a u některých popište jejich funkci
+
+    @protokoly-tcp-ip
+
+    #image("../assets/ISO-OSI-TCP-IP.jpg")
+
+    / Aplikační vrstva:
+      - HTTP – přenos webových stránek (port 80)
+      - HTTPS – zabezpečený HTTP (port 443)
+      - FTP – přenos souborů (port 20, 21)
+      - SMTP – odesílání e-mailů (port 25, 587)
+      - POP3 – stažení mailů ze serveru do zařízení (port 110)
+      - IMAP – synchronizace mailů se serverem a více zařízeními (port 143)
+      - DNS – překlad domén na IP adresy (port 53)
+
+    / Transportní vrstva:
+      - TCP – spolehlivý přenos (kontrola chyb, pořadí)
+      - UDP – rychlý, bez záruky doručení
+
+    / Internetová vrstva:
+      - IP – adresace zařízení
+      - ICMP – diagnostika (např. ping)
+
+    / ARP:
+      - překlad IP na MAC adresu
+
+    / Síťové rozhraní:
+      - Ethernet – přenos v lokální síti
+      - Wi-Fi – bezdrátová komunikace
   ],
   resources: [
     - #link("https://www.youtube.com/watch?v=036dn5OSlvA")[YouTube: Základy fungování sítí]

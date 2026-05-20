@@ -27,7 +27,7 @@
 
     #set heading(numbering: "1.1")
 
-    = Typy běžně používaných přenosových - síťových médií:
+    = Typy běžně používaných přenosových - síťových médií: <typy-medii>
 
     == Metalická (drátová) média
 
@@ -35,7 +35,7 @@
 
     / Patří sem:
 
-      === Kroucená dvoulinka (Twisted Pair):
+      === Kroucená dvoulinka (Twisted Pair): <utp-zapojeni>
 
       - Vodiče jsou stáčeny do párů pro eliminaci přeslechu (crosstalk) a elektromagnetického rušení.
       - Typy: *UTP* (Unshielded – nestíněný), *STP* (Shielded – stíněný), *FTP* (Foiled – stíněný fólií)
@@ -179,7 +179,7 @@
       [GEO \ (Geostationary Orbit)], [35 786 km], [- Satelit je fixní vůči Zemi \ - Stačí málo družic], [- Vysoká latence \ - TV vysílání],
     )
 
-    = Výhody, nevýhody a použití jednotlivých médií
+    = Výhody, nevýhody a použití jednotlivých médií <vyhody-nevyhody-pouziti>
 
     Každá kategorie přenosových médií má své specifické výhody, nevýhody a oblasti použití:
 
@@ -239,7 +239,7 @@
         - PC ↔ PC
         - switch ↔ switch (u starších zařízení bez Auto-MDIX)
 
-    = Vlivy okolního prostředí na přenos
+    = Vlivy okolního prostředí na přenos <vlivy-okolniho-prostredi>
 
     Každé médium má svoje slabiny.
 
@@ -272,47 +272,52 @@
     - Použití opakovačů (repeaters) nebo zesilovačů pro řešení útlumu
     - Využití korekčních mechanismů (např. CRC)
 
-    = Odpovědi podle podotázek
+  ],
+  subquestions: [
 
     == Vyjmenujte všechny typy běžně používaných síťových medií a zařaďte je do kategorií, uveďte maximální délky pasivního segmentu nebo komunikační vzdálenosti a používané konektory 
 
-      === Typy médií:
-      
-        - Drátová (metalická): Kroucená dvoulinka (UTP, STP), Koaxiální kabel
-        - Optická: Optické vlákno (Multimode, Singlemode)
-        - Bezdrátová: Wi-Fi, Bluetooth, Mikrovlnné spoje, Satelitní komunikace
-      
-      === Maximální délky / vzdálenosti:
-      
-      #v(0.8em)
+    @typy-medii
 
-      / Metalická média:
-        - Kroucená dvoulinka: 100 m (Ethernet)
-        - Koaxiální kabel: 185 m (10BASE2), 500 m (10BASE5)
+    === Typy médií:
+    
+      - Drátová (metalická): Kroucená dvoulinka (UTP, STP), Koaxiální kabel
+      - Optická: Optické vlákno (Multimode, Singlemode)
+      - Bezdrátová: Wi-Fi, Bluetooth, Mikrovlnné spoje, Satelitní komunikace
+    
+    === Maximální délky / vzdálenosti:
+    
+    #v(0.8em)
 
-      / Optická média:
-        - Multimode: stovky metrů až jednotky km
-        - Singlemode: desítky až stovky km
+    / Metalická média:
+      - Kroucená dvoulinka: 100 m (Ethernet)
+      - Koaxiální kabel: 185 m (10BASE2), 500 m (10BASE5)
 
-      / Bezdrátová média:
-        - Wi-Fi: desítky metrů
-        - Bluetooth: cca 10 m (běžně), až 50 m
-        - Mikrovlnné spoje: až desítky km (přímá viditelnost)
-        - Satelitní komunikace: globální
-      
-      === Používané konektory:
+    / Optická média:
+      - Multimode: stovky metrů až jednotky km
+      - Singlemode: desítky až stovky km
 
-      / Metalická média:
-        - Kroucená dvoulinka: RJ-45
-        - Koaxiální kabel: BNC
+    / Bezdrátová média:
+      - Wi-Fi: desítky metrů
+      - Bluetooth: cca 10 m (běžně), až 50 m
+      - Mikrovlnné spoje: až desítky km (přímá viditelnost)
+      - Satelitní komunikace: globální
+    
+    === Používané konektory:
 
-      / Optická média:
-        - SC, LC, ST
+    / Metalická média:
+      - Kroucená dvoulinka: RJ-45
+      - Koaxiální kabel: BNC
 
-      / Bezdrátová média:
-        - Nemají fyzické konektory, komunikace probíhá vzduchem
+    / Optická média:
+      - SC, LC, ST
+
+    / Bezdrátová média:
+      - Nemají fyzické konektory, komunikace probíhá vzduchem
 
     == U jednotlivých medií uveďte jejich výhody a nevýhody, příklady použití
+
+    @vyhody-nevyhody-pouziti
 
     === Kroucená dvoulinka (UTP/STP):
       - Výhody: Nízká cena, snadná instalace, dostupnost
@@ -341,6 +346,8 @@
 
     == U UTP kabelu uveďte nebo nakreslete možné způsoby zapojení a kde se využívají
     
+    @utp-zapojeni
+
     Dnes už je jedno jaký kabel se využívá, protože technologie Auto-MDIX umožňuje automatickou detekci typu kabelu a přizpůsobení portů uvnitř zařízení. Nicméně, pro úplnost:
 
     / Přímý kabel (Straight-through):
@@ -366,6 +373,8 @@
     )
 
     == Na některá síťová média negativně působí okolní vlivy, uveďte, které to jsou a jak se dá jejich vliv na přenos dat eliminovat
+
+    @vlivy-okolniho-prostredi
 
     === Negativní vlivy
 
