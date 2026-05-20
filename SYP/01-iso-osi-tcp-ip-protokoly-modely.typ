@@ -28,6 +28,8 @@
 
     Vrstevnaté modely v počítačových sítích slouží k rozdělení složité komunikace na menší, přehledné části (vrstvy). Každá vrstva má přesně definovanou funkci a komunikuje pouze se sousedními vrstvami.
 
+    #pagebreak()
+
     == Hlavní důvody použití:
 
     - Zjednodušení návrhu a správy sítí
@@ -41,14 +43,14 @@
     == ISO-OSI model (7 vrstev):
 
     1. *Fyzická vrstva* (Physical Layer)
-      - Zajišťuje *přenos bitů přes fyzické médium*, jako jsou kabely nebo bezdrátové signály
+      - Zajišťuje *přenos bitů přes médium*, jako jsou fzyické kabely nebo bezdrátové signály
       - Definuje elektrické, mechanické a funkční vlastnosti přenosového média
       - *Typické zařízení:* _Hub, Repeater, kabely_
 
     2. *Linková (_spojová_) vrstva* (Data Link Layer)
       - Zajišťuje spolehlivý *přenos dat mezi dvěma zařízeními na stejné síti*
-      - Řeší problémy jako *detekce a oprava chyb*, řízení toku a adresování pomocí MAC adres
-      - *Typické zařízení:* Switch
+      - Řeší problémy jako *detekce a oprava chyb, řízení toku a adresování* pomocí MAC adres
+      - *Typické zařízení:* _Switch_
 
     3. *Síťová vrstva* (Network Layer)
       - Zajišťuje *směrování dat mezi různými sítěmi a zařízeními*
@@ -147,8 +149,6 @@
     / Transportní vrstva:
       - TCP – spolehlivý přenos (kontrola chyb, pořadí)
       - UDP – rychlý, bez záruky doručení
-
-    #pagebreak()
 
     / Internetová vrstva:
       - IP – adresace zařízení
