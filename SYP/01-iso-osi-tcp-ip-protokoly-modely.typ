@@ -148,6 +148,8 @@
       - TCP – spolehlivý přenos (kontrola chyb, pořadí)
       - UDP – rychlý, bez záruky doručení
 
+    #pagebreak()
+
     / Internetová vrstva:
       - IP – adresace zařízení
       - ICMP – diagnostika (např. ping)
