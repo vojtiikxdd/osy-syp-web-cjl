@@ -19,6 +19,15 @@
   show heading.where(level: 3): set text(size: 14pt, weight: "semibold", style: "italic", fill: navy.darken(20%))
   show heading.where(level: 4): set text(size: 14pt, weight: "semibold", fill: navy.darken(25%))
 
+  show raw.where(block: false): it => box(
+    fill: luma(240),
+    inset: (x: 2pt, y: 0pt),
+    outset: (y: 3pt),
+    radius: 3pt,
+    baseline: 0%,
+    it
+  )
+
   align(center)[
     #block(text(size: 28pt, weight: "bold", fill: blue.darken(15%))[#title])
     #v(1em)
