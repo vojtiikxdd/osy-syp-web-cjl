@@ -12,7 +12,7 @@
     
     *Data-linková vrstva* (Data Link Layer) je *druhou* vrstvou referenčního modelu ISO/OSI. Tvoří most mezi fyzickým přenosem bitů a logickou komunikací vyšších vrstev — *přijímá pakety ze síťové vrstvy, zapouzdřuje je do rámců* a *zajišťuje* jejich *přenos mezi uzly pomocí hardwarových _MAC_ adres*. Na rozdíl od síťové vrstvy, která směruje data napříč internetem pomocí _IP_ adres, tato vrstva operuje výhradně v rozsahu přímého spojení mezi sousedními uzly v lokální síti.
 
-    Primární zařízení datalinkové vrstvy jsou *switche* a *bridgy*, které přeposílají rámce na základě MAC adres. Dále se zde nacházejí *NIC* (Network Interface Cards), které implementují datalinkovou vrstvu pro jednotlivá zařízení.
+    Primární zařízení datalinkové vrstvy jsou *switche* a *bridge*, které přeposílají rámce na základě MAC adres. Dále se zde nacházejí *NIC* (Network Interface Cards), které implementují datalinkovou vrstvu pro jednotlivá zařízení.
     
     #set heading(numbering: "1.1")
 
@@ -78,14 +78,17 @@
       *Důležité:* Obě propojená rozhraní musí fungovat ve stejném duplexním režimu. Neshoda způsobuje latenci a kolize. Funkce *Auto-Negotiation* vyjednává duplex automaticky — pokud je na jedné straně vypnuta, může dojít k neshodě.
     ]
 
-    == Metody řízení přístupu (half-duplex) <csma>
+    == Metody řízení přístupu (Half-duplex) <csma>
 
     / CSMA/CD (Carrier Sense Multiple Access with Collision Detection):
       Používáno v drátovém Ethernetu s huby (bus topologie).
+      
       - NIC naslouchá médiu — pokud je ticho, vysílá.
-      - Pokud dvě stanice vysílají současně → kolize.
-      - Stanice detekuje kolizi (amplituda na médiu > normální nebo porovnání dat), vyšle JAM signál.
-      - Všechny stanice přestanou vysílat, po náhodné době zkusí znovu.
+      
+      + Pokud dvě stanice vysílají současně → kolize.
+      + Stanice detekuje kolizi (amplituda na médiu > normální nebo porovnání dat), vyšle JAM signál.
+      + Všechny stanice přestanou vysílat, po náhodné době zkusí znovu.
+      
       - Čím více zařízení, tím vyšší pravděpodobnost kolize.
 
     / CSMA/CA (Carrier Sense Multiple Access with Collision Avoidance):
@@ -167,11 +170,22 @@
 
       [*Preambule*], [7 B], [Střídavé nuly a jedničky (10101010...) sloužící pro hardwarovou synchronizaci hodin příjemce.],
       [*SFD* \ _(Start Frame Delimiter)_], [1 B], [Končí sekvencí 11 a oznamuje příjemci: „Pozor, následující bajt je již začátek samotného rámce.“],
-      [*Cílová MAC adresa*], [6 B], [48bitová fyzická adresa příjemce (Unicast/Multicast/Broadcast). Switch ji čte jako první, aby mohl rámec ihned začít směrovat do správného portu.],
-      [*Zdrojová MAC adresa*], [6 B], [48bitová fyzická adresa odesílatele (síťové karty).],
-      [*Typ / Délka*], [2 B], [Určuje, jaký protokol z vyšší (síťové) vrstvy je zabalen uvnitř dat (např. 0x0800 pro IPv4, 0x08DD pro IPv6).],
+      [*Cílová MAC adresa* 
+      
+      (_Destination MAC Address_)], [6 B], [48bitová fyzická adresa příjemce (Unicast/Multicast/Broadcast). Switch ji čte jako první, aby mohl rámec ihned začít směrovat do správného portu.],
+      [*Zdrojová MAC adresa* 
+      
+      (_Source MAC Address_)], [6 B], [48bitová fyzická adresa odesílatele (síťové karty).],
+      [*Typ / Délka* 
+      
+      (_EtherType_)], [2 B], [Určuje, jaký protokol z vyšší (síťové) vrstvy je zabalen uvnitř dat (např. 0x0800 pro IPv4, 0x08DD pro IPv6).],
       [*Data* \ _(Payload)_], [46 – 1500 B], [Samotný zapouzdřený paket z vyšší vrstvy. Pokud jsou data menší než 46 B, doplní se prázdnou výplní (_padding_) na minimální délku.],
       [*FCS* \ _(Frame Check Sequence)_], [4 B], [Kontrolní součet (32-bit CRC) vypočítaný ze všech polí. Pokud výpočet příjemci nesouhlasí, rámec bez milosti zahodí jako poškozený.]
+    )
+
+    #figure(
+      image("../assets/ethernet-ramec-struktura.png"),
+      caption: "Struktura ethernetového rámce"
     )
 
     = MAC adresy
@@ -179,8 +193,6 @@
     MAC adresa je unikátní 48bitový identifikátor síťového rozhraní (NIC), označovaná jako BIA (Burned-In Address) — vypálena do ROM. Běžně se zapisuje hexadecimálně, např. `00:1A:2B:3C:4D:5E`. Při spuštění zařízení se zkopíruje do RAM.
 
     Prvních 24 bitů tvoří *OUI* (Organizationally Unique Identifier) přiřazený výrobci od IEEE, dalších 24 bitů je unikátní číslo přiřazené výrobcem. Duplicita je možná (chyba výroby, softwarová změna).
-
-    #pagebreak()
 
     == Typy MAC adres
 
@@ -333,16 +345,28 @@
 
   ],
   subquestions: [
-    == Jakou metodu přístupu k médiu používá ethernet, porovnejte s jinou metodou. Porovnejte jednotlivé metody (výhody / nevýhody)
-    
-    @csma
+    #block(
+      fill: luma(240), 
+      inset: 10pt, 
+      radius: 4pt
+    )[
+      === "Jakou metodu přístupu k médiu používá ethernet, porovnejte s jinou metodou. Porovnejte jednotlivé metody (výhody / nevýhody)"
+      #v(1em)
+      > @csma
+    ]
 
-    Ethernet používá metodu CSMA/CD (_Carrier Sense Multiple Access with Collision Detection_) pro řízení přístupu k médiu v half-duplexních sítích. V porovnání s CSMA/CA (_Carrier Sense Multiple Access with Collision Avoidance_), která se používá ve Wi-Fi, má CSMA/CD nižší režii a latenci, ale je náchylnější ke kolizím, zejména při větším počtu zařízení. CSMA/CA se snaží kolizím předcházet rezervací média, což zvyšuje spolehlivost, ale také zvyšuje režii a latenci.
+    Ethernet používá metodu *CSMA/CD* (_Carrier Sense Multiple Access with Collision Detection_) pro řízení přístupu k médiu v half-duplexních sítích. V porovnání s *CSMA/CA* (_Carrier Sense Multiple Access with Collision Avoidance_), která se používá ve Wi-Fi, *má CSMA/CD nižší režii a latenci*, ale je *náchylnější ke kolizím*, zejména při větším počtu zařízení. *CSMA/CA se snaží kolizím předcházet* rezervací média, což zvyšuje spolehlivost, ale také *zvyšuje režii a latenci*.
 
-    == Vyjmenujte jednotlivé varianty ethernetu na metalickém médiu, u každého definujte šířku pásma a maximální délku pasivního segmentu
+    #block(
+      fill: luma(240), 
+      inset: 10pt, 
+      radius: 4pt
+    )[
+      === "Vyjmenujte jednotlivé varianty ethernetu na metalickém médiu, u každého definujte šířku pásma a maximální délku pasivního segmentu"
+      #v(1em)
+      > @verze-ethernetu
+    ]
 
-    @verze-ethernetu
-    
     U metalických rozhraní je maximální délka segmentu omezena na 100 metrů kvůli útlumu signálu a ztrátám způsobeným elektromagnetickým rušením. Pro delší vzdálenosti se používají optické kabely.
 
     / Ethernet (10BASE-T): 10 Mb/s, max. délka segmentu 100 m
@@ -357,9 +381,15 @@
 
     #pagebreak()
 
-    == Uveďte, z jakých základních aktivních prvků je složena LAN a podrobně popište jejich funkci 
-    
-    @aktivni-prvky-lan
+    #block(
+      fill: luma(240), 
+      inset: 10pt, 
+      radius: 4pt
+    )[
+      === "Uveďte, z jakých základních aktivních prvků je složena LAN a podrobně popište jejich funkci"
+      #v(1em)
+      > @aktivni-prvky-lan
+    ]
 
     Mezi základní aktivní prvky LAN patří:
     
@@ -375,40 +405,74 @@
     
     / Router: Pracuje na vrstvě 3. Směruje pakety dle IP adres, propojuji různé sítě a odděluje broadcastové domény. Nezbytný pro komunikaci mezi různými sítěmi (např. LAN a internet).
 
-    == Jaké adresy se využívají na přepínačích a jak probíhá rozhodovací proces na těchto prvcích
-    
-    @funkce-swiche
+    #block(
+      fill: luma(240), 
+      inset: 10pt, 
+      radius: 4pt
+    )[
+      === "Jaké adresy se využívají na přepínačích a jak probíhá rozhodovací proces na těchto prvcích" 
+      #v(1em)    
+      > @funkce-swiche
+    ]
 
-    Switche využívají *MAC adresy* pro rozhodování o přeposílání rámců. Při příjmu rámce switch nejprve zkontroluje *zdrojovou* MAC adresu a aktualizuje svou MAC tabulku (CAM) s informací, z kterého portu rámec přišel. Poté se podívá na *cílovou* MAC adresu:
-    - Pokud ji v tabulce najde, rámec přepošle pouze na odpovídající port - tzv. _Unicast_.
-    - Pokud ji nenajde, rámec zaplaví (flooding) do všech portů kromě toho, kterým přišel - tzv. _Multicast_.
-    - Broadcastové a multicastové rámce se automaticky šíří do všech portů kromě příchozího - tzv. _Broadcast_.
+    Switche využívají *MAC adresy* pro rozhodování o přeposílání rámců. Při příjmu rámce switch nejprve zkontroluje *zdrojovou* MAC adresu a aktualizuje svou MAC tabulku (_CAM_) s informací, z kterého portu rámec přišel (proces _Learning_). Poté se podívá na *cílovou* MAC adresu:
 
-    == Podrobně popište fungování switche, MAC table, Store-and-Forward Switching, Cut-Through Switching
+    - Pokud ji v tabulce *najde*, rámec *přepošle pouze na odpovídající port* – jedná se o doručení typu _*Known Unicast*_ (známý unicast).
     
-    @funkce-swiche
-    @metody-prepinani-switche
+    - Pokud ji *nenajde*, switch rámec *zaplaví* (_flooding_) *do všech portů* kromě toho, kterým přišel – jedná se o doručení typu _*Unknown Unicast*_ (neznámý unicast).
+    
+    - Broadcastové rámce (s cílovou adresou `FF:FF:FF:FF:FF:FF`) a multicastové rámce se *automaticky šíří do všech aktivních portů kromě příchozího*.
 
-    Switch buduje a udržuje svou MAC (Content Addressable Memory) tabulku dynamicky na základě procházejícího provozu. Tabulka mapuje vazbu mezi `[MAC adresa <-> Fyzický port]`. Při příjmu rámce switch nejprve zkontroluje *zdrojovou* MAC adresu a aktualizuje svou MAC tabulku s informací, z kterého portu rámec přišel. Poté se podívá na *cílovou* MAC adresu:
-    
-    - Pokud ji v tabulce najde, rámec přepošle pouze na odpovídající port - tzv. _Unicast_.
-    
-    - Pokud ji nenajde, rámec zaplaví (flooding) do všech portů kromě toho, kterým přišel - tzv. _Multicast_.
-    
-    - Broadcastové a multicastové rámce se automaticky šíří do všech portů kromě příchozího - tzv. _Broadcast_.
+    #block(
+      fill: luma(240), 
+      inset: 10pt, 
+      radius: 4pt
+    )[    
+      === "Podrobně popište fungování switche, MAC table, Store-and-Forward Switching, Cut-Through Switching"
+      #v(1em)
+      > @funkce-swiche
+      
+      > @metody-prepinani-switche
+    ]
 
-    == Vysvětlete pojem broadcastová a kolizní doména
+    Switch buduje a udržuje svou MAC tabulku (CAM - Content Addressable Memory) dynamicky na základě procházejícího provozu. Tabulka mapuje vazbu mezi `[MAC adresa <-> Fyzický port]`. Při příjmu rámce switch nejprve zkontroluje *zdrojovou* MAC adresu a aktualizuje svou MAC tabulku s informací, z kterého portu rámec přišel. Poté se podívá na *cílovou* MAC adresu:
     
-    @kolizni-broadcast-domena
+    - Pokud ji v tabulce *najde*, rámec *přepošle pouze na odpovídající port* – jedná se o doručení typu _*Known Unicast*_.
+    
+    - Pokud ji *nenajde*, switch rámec *zaplaví* (_flooding_) *do všech portů* kromě toho, kterým přišel – jedná se o doručení typu _*Unknown Unicast*_.
+    
+    - Broadcastové rámce (s cílovou adresou `FF:FF:FF:FF:FF:FF`) a multicastové rámce se *automaticky šíří do všech aktivních portů kromě příchozího*.
+
+    / Store-and-Forward Switching:
+      Switch přijme celý rámec do vyrovnávací paměti a ověří jeho integritu pomocí kontrolního součtu (CRC) v patičce. Teprve poté jej přepošle dál. Zajišťuje, že se sítí nešíří poškozené rámce, ale daňovou za to je vyšší latence.
+
+    / Cut-Through Switching:
+      Switch nečeká na stažení celého rámce, ale začne ho přeposílat okamžitě, jakmile přečte cílovou MAC adresu. Nabízí extrémně nízkou latenci, avšak nevýhodou je, že neprovádí kontrolu chyb a propouští i poškozené rámce.
+    
+    #block(
+      fill: luma(240), 
+      inset: 10pt, 
+      radius: 4pt
+    )[    
+      === "Vysvětlete pojem broadcastová a kolizní doména"
+      #v(1em)
+      > @kolizni-broadcast-domena
+    ]
 
     / Kolizní doména: Část sítě, kde může docházet ke kolizím rámců. Switch každý port izoluje do vlastní kolizní domény. Hub celou síť spojuje do jedné velké kolizní domény.
     / Broadcastová doména: Část sítě, kam se šíří broadcast (rámce typu `FF:FF:FF:FF:FF:FF`). Switch broadcastovou doménu nerozděluje — to dělá až router (nebo nasazení VLAN).
 
      V praxi to znamená, že v kolizní doméně může docházet ke kolizím datových rámců, což snižuje výkon sítě. Broadcastová doména určuje rozsah, ve kterém se šíří broadcastové zprávy, což může také ovlivnit výkon a bezpečnost sítě.
 
-    == Problémy přepínaných sítí a jejich řešení pomocí spanning-three protokolu
-
-    @stp
+    #block(
+      fill: luma(240), 
+      inset: 10pt, 
+      radius: 4pt
+    )[    
+      === "Problémy přepínaných sítí a jejich řešení pomocí spanning-three protokolu"
+      #v(1em)
+      > @stp
+    ]
 
     Propojení více switchů kruhovou topologií kvůli záloze může způsobit *síťové smyčky* a *broadcast storm* (broadcast se šíří donekonečna a způsobí zahlcení sítě a nestabilitu MAC tabulek).
     Spanning Tree Protocol (STP) tomuto brání. Vypočítá topologii bez smyček tím, že:
@@ -418,7 +482,8 @@
 
   ],
   resources: [
-    - #link("https://www.youtube.com/watch?v=c5lV995dSAA")[Youtube - Data Link Layer]
+    - #link("https://www.youtube.com/watch?v=c5lV995dSAA")[Youtube - The Data Link Layer - pt. 1]
+    - #link("https://www.youtube.com/watch?v=Q_55Lryu9zc")[Youtube - The Data Link Layer - pt. 2]
     - #link("https://www.netwrix.com/cisco_commands_cheat_sheet.html")[Cisco Commands Cheat Sheet]
   ],
 )

@@ -16,6 +16,8 @@
 
   show heading.where(level: 1): set text(size: 22pt, weight: "bold", fill: eastern.darken(20%))
   show heading.where(level: 2): set text(size: 16pt, weight: "bold", fill: navy.lighten(20%))
+  show heading.where(level: 3): set text(size: 14pt, weight: "semibold", style: "italic", fill: navy.darken(20%))
+  show heading.where(level: 4): set text(size: 14pt, weight: "semibold", fill: navy.darken(25%))
 
   align(center)[
     #block(text(size: 28pt, weight: "bold", fill: blue.darken(15%))[#title])

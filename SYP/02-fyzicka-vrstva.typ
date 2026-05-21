@@ -12,7 +12,7 @@
 
     Fyzická vrstva (Physical Layer) je nejnižší vrstva referenčního modelu OSI. Zajišťuje *přenos jednotlivých bitů mezi zařízeními prostřednictvím fyzického média*. Definuje elektrické, mechanické a funkční vlastnosti přenosu dat, například napětí, konektory, rychlosti přenosu a typy kabelů.
 
-    Fyzická vrstva neřeší kontrolu nad daty, ale pouze zajišťuje, že data jsou fyzicky přenášena mezi zařízeními. *Jakákoliv data budou odeslány na fyzickou vrstvu, budou přenesena*. *Kontrolu nad daty* a jejich správností zajišťují vyšší vrstvy, zejména *datalinková vrstva*, bez ní by mohly vznikat kolize a chyby v přenášených datech.
+    Fyzická vrstva neřeší kontrolu nad daty - *nerozhoduje o jejich správnosti*, ale pouze zajišťuje, že data jsou fyzicky přenášena mezi zařízeními. *Jakákoliv data budou odeslány na fyzickou vrstvu, budou přenesena*. *Kontrolu nad daty* a jejich správností zajišťují vyšší vrstvy, zejména *datalinková vrstva*, bez ní by mohly vznikat kolize a chyby v přenášených datech.
 
     / Dělíme ji na tři části:
       - *Drátová média* (metalická) – kroucená dvoulinka, koaxiální kabel
@@ -275,78 +275,95 @@
   ],
   subquestions: [
 
-    == Vyjmenujte všechny typy běžně používaných síťových medií a zařaďte je do kategorií, uveďte maximální délky pasivního segmentu nebo komunikační vzdálenosti a používané konektory 
+    #block(
+      fill: luma(240), 
+      inset: 10pt, 
+      radius: 4pt
+    )[
+      === "Vyjmenujte všechny typy běžně používaných síťových medií a zařaďte je do kategorií, uveďte maximální délky pasivního segmentu nebo komunikační vzdálenosti a používané konektory"
+      #v(1em)
+      > @typy-medii
+    ]
 
-    @typy-medii
-
-    === Typy médií:
+    ==== Typy médií:
     
       - Drátová (metalická): Kroucená dvoulinka (UTP, STP), Koaxiální kabel
       - Optická: Optické vlákno (Multimode, Singlemode)
       - Bezdrátová: Wi-Fi, Bluetooth, Mikrovlnné spoje, Satelitní komunikace
     
-    === Maximální délky / vzdálenosti:
+    ==== Maximální délky / vzdálenosti:
     
     #v(0.8em)
 
     / Metalická média:
-      - Kroucená dvoulinka: 100 m (Ethernet)
-      - Koaxiální kabel: 185 m (10BASE2), 500 m (10BASE5)
+      - _*Kroucená dvoulinka*_: 100 m (Ethernet)
+      - _*Koaxiální kabel*_: 185 m (10BASE2), 500 m (10BASE5)
 
-    / Optická média:
+    / Optická média - _*Optický kabel (vlkákno)*_:
       - Multimode: stovky metrů až jednotky km
       - Singlemode: desítky až stovky km
 
     / Bezdrátová média:
-      - Wi-Fi: desítky metrů
-      - Bluetooth: cca 10 m (běžně), až 50 m
-      - Mikrovlnné spoje: až desítky km (přímá viditelnost)
-      - Satelitní komunikace: globální
+      - _*Wi-Fi*_: desítky metrů
+      - _*Bluetooth*_: cca 10 m (běžně), až 50 m
+      - _*Mikrovlnné spoje*_: až desítky km (přímá viditelnost)
+      - _*Satelitní komunikace*_: globální
     
-    === Používané konektory:
+    ==== Používané konektory:
 
     / Metalická média:
-      - Kroucená dvoulinka: RJ-45
-      - Koaxiální kabel: BNC
+      - Kroucená dvoulinka: _*RJ-45*_
+      - Koaxiální kabel: _*BNC*_
 
     / Optická média:
-      - SC, LC, ST
-
+      - _*SC*_, _*LC*_, _*ST*_
     / Bezdrátová média:
-      - Nemají fyzické konektory, komunikace probíhá vzduchem
+      - _*Nemají fyzické konektory*_, komunikace probíhá vzduchem _(možná by se dal vzít v potaz příjmač s anténou)_
 
-    == U jednotlivých medií uveďte jejich výhody a nevýhody, příklady použití
+    #block(
+      fill: luma(240), 
+      inset: 10pt, 
+      radius: 4pt
+    )[
+      === "U jednotlivých medií uveďte jejich výhody a nevýhody, příklady použití"
+      #v(1em)
+      > @vyhody-nevyhody-pouziti
+    ]
 
-    @vyhody-nevyhody-pouziti
-
-    === Kroucená dvoulinka (UTP/STP):
+    ==== Kroucená dvoulinka (UTP/STP):
       - Výhody: Nízká cena, snadná instalace, dostupnost
       - Nevýhody: Náchylnost k rušení (UTP), omezená délka
       - Použití: LAN sítě, kanceláře, domácnosti
 
-    === Koaxiální kabel:
+    ==== Koaxiální kabel:
       - Výhody: Lepší odolnost než UTP, větší dosah než UTP
       - Nevýhody: Horší flexibilita, dnes zastaralý a méně používaný
       - Použití: Starší Ethernet, *kabelová TV*
 
-    === Optické vlákno:
+    ==== Optické vlákno:
       - Výhody: Vysoká rychlost, velká vzdálenost, odolnost vůči rušení
       - Nevýhody: Vyšší cena, náročnější instalace
       - Použití: Páteřní sítě, datová centra
 
-    === Wi-Fi:
+    ==== Wi-Fi:
       - Výhody: Mobilita, jednoduché nasazení
       - Nevýhody: Rušení, nižší bezpečnost, kolísání signálu
       - Použití: Domácnosti, kanceláře, veřejné sítě
 
-    === Bluetooth:
+    ==== Bluetooth:
       - Výhody: Nízká spotřeba, jednoduché spojení
       - Nevýhody: Krátký dosah, nízká rychlost
       - Použití: Sluchátka, hodinky, reproduktory, ostatní periferie
 
-    == U UTP kabelu uveďte nebo nakreslete možné způsoby zapojení a kde se využívají
-    
-    @utp-zapojeni
+    #block(
+      fill: luma(240), 
+      inset: 10pt, 
+      radius: 4pt
+    )[
+      === "U UTP kabelu uveďte nebo nakreslete možné způsoby zapojení a kde se využívají"
+      #v(1em)
+      > @utp-zapojeni
+    ]
 
     Dnes už je jedno jaký kabel se využívá, protože technologie Auto-MDIX umožňuje automatickou detekci typu kabelu a přizpůsobení portů uvnitř zařízení. Nicméně, pro úplnost:
 
@@ -372,11 +389,17 @@
       caption: "Ukázka zapojení křížené kroucené dvoulinky (Crossover)",
     )
 
-    == Na některá síťová média negativně působí okolní vlivy, uveďte, které to jsou a jak se dá jejich vliv na přenos dat eliminovat
+    #block(
+      fill: luma(240), 
+      inset: 10pt, 
+      radius: 4pt
+    )[
+      === "Na některá síťová média negativně působí okolní vlivy, uveďte, které to jsou a jak se dá jejich vliv na přenos dat eliminovat"
+      #v(1em)
+      > @vlivy-okolniho-prostredi
+    ]
 
-    @vlivy-okolniho-prostredi
-
-    === Negativní vlivy
+    ==== Negativní vlivy
 
     / Elektromagnetické rušení (EMI):
       - Zdroje: elektrické motory, silová vedení, transformátory
@@ -396,7 +419,7 @@
     / Teplota a vlhkost:
       - Ovlivňuje elektrické vlastnosti materiálů
 
-    === Eliminace vlivů
+    ==== Eliminace vlivů
 
     - Použití stíněných kabelů (STP, FTP)
     - Správné vedení kabeláže (dál od silových vodičů)
@@ -408,5 +431,7 @@
   ],
   resources: [
     - #link("https://www.youtube.com/watch?v=ZScMXyQSFfo")[Youtube - Fyzická vrstva]
+
+    - #link("https://www.youtube.com/watch?v=c5lV995dSAA&t=0s")[Youtube - The Physical Layer]
   ],
 )

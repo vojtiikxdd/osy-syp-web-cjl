@@ -178,6 +178,8 @@
     IP adresy se používají na:
       - Internetové (síťové) vrstvě
     
+    #pagebreak()
+
     = Zjištění IP adresy počítače
     
     Windows:
@@ -195,22 +197,27 @@
     - IPv6 adresu
     - Masku sítě
     - Výchozí bránu
-
-    = Závěr
-    Vrstevnaté modely ISO-OSI a TCP/IP jsou základním kamenem počítačových sítí. Umožňují efektivní komunikaci, standardizaci protokolů a snadnější správu. TCP/IP model je prakticky využívaný v dnešním internetu, zatímco ISO-OSI slouží spíše jako teoretický referenční model pro pochopení celé síťové komunikace.
-
   ],
   subquestions: [
     
-    == Vysvětlete důvod použití vrstevnatých modelů
+    #block(
+      fill: luma(240), 
+      inset: 10pt, 
+      radius: 4pt
+    )[
+      === "Vysvětlete důvod použití vrstevnatých modelů"
+      #v(1em)
+      > @duvod-pouiziti-vrstevnatych-modelu
+    ]
     
-    @duvod-pouiziti-vrstevnatych-modelu
 
     Vrstevnaté modely v počítačových sítích slouží k rozdělení složité komunikace na menší, přehledné části (vrstvy). Každá vrstva má přesně definovanou funkci a komunikuje pouze se sousedními vrstvami.
 
     / Hlavní důvody použití:
       
       - Zjednodušení návrhu a správy sítí
+
+      - Přehlednost a modularita — každá vrstva se stará o specifickou část komunikace, což usnadňuje vývoj a údržbu sítí
       
       - Standardizace komunikace
       
@@ -222,45 +229,75 @@
 
     #pagebreak()
     
-    == Nakreslete vedle sebe a porovnejte oba základní modely
-    
-    @provnani-modelu
+    #block(
+      fill: luma(240), 
+      inset: 10pt, 
+      radius: 4pt
+    )[
+      === "Nakreslete vedle sebe a porovnejte oba základní modely"
+      #v(1em)
+      > @provnani-modelu
+    ]
 
     #image("../assets/ISO-OSI-TCP-IP.jpg")
     
-    
-    == Vysvětlete termín „zapouzdření ethernetového rámce - encapsulation“, a co se děje v jednotlivých vrstvách od chvíle, kdy chceme v aplikační vrstvě odeslat nějaká data až po signály na fyzické vrstvě. A napište, jak se datové struktury v jednotlivých vrstvách jmenují
-    
-    @zapouzdrovani-ramce
+    #block(
+      fill: luma(240), 
+      inset: 10pt, 
+      radius: 4pt
+    )[
+      === "Vysvětlete termín 'zapouzdření ethernetového rámce - encapsulation', a co se děje v jednotlivých vrstvách od chvíle, kdy chceme v aplikační vrstvě odeslat nějaká data až po signály na fyzické vrstvě. A napište, jak se datové struktury v jednotlivých vrstvách jmenují"
+      #v(1em)
+      > @zapouzdrovani-ramce
+    ]
 
-    *Zapouzdření* (Encapsulation) je proces, kdy každá vrstva přidává své vlastní informace (hlavičku a případně patičku) k datům z vyšší vrstvy, aby zajistila správný přenos dat od odesílatele k příjemci.
+    ==== Zapouzdření (Encapsulation) a odpouzdření (Decapsulation) dat
 
-    / Aplikační vrstva:
-      - Data vytvořená aplikací _např. obsah webové stránky, e-mail nebo soubor_
-      - Název: *Data*
-      - Jedná se například o obsah webové stránky, e-mail nebo soubor, který chceme přenést.
+    *Zapouzdření (Encapsulation)* je proces, při kterém data vytvořená uživatelskou aplikací postupují síťovým modelem shora dolů (od aplikační k fyzické vrstvě). Každá vrstva vezme data z vyšší vrstvy, považuje je za čistý náklad (Payload) a nabalí na ně své vlastní řídicí informace — *hlavičku (Header)*, případně *patičku (Trailer)*. 
 
-    / Transportní vrstva:
-      - Přidání TCP/UDP hlavičky
-      - Název: *Segment* (TCP) / *Datagram* (UDP)
-      - Tato vrstva rozdělí data na menší části (segmenty nebo datagramy) 
-        - každý má maximálně 1,5 KB pro TCP a asi 65 KB pro UDP - a přidá informace potřebné pro správný přenos, jako jsou porty a čísla sekvencí (transportní hlavička).
+    Obecný odborný název pro datový blok na jakékoliv vrstvě se nazývá *PDU (Protocol Data Unit)*.
 
-    / Internetová vrstva:
-      - Přidání IP hlavičky
-      - Název: *Paket* (Packet)
-    
-    / Linková vrstva:
-      - Přidání MAC adres (hlavička a patička)
-      - Název: *Rámec* (Frame)
-    
-    / Fyzická vrstva:
-      - Převod na elektrické/optické signály
-      - Název: *Bity* (Bits)
-    
-    == Vyjmenujte, jaké protokoly máme v jednotlivých vrstvách TCP-IP modelu a u některých popište jejich funkci
+    ==== Průběh zapouzdření shora dolů (Odesílatel)
 
-    @protokoly-tcp-ip
+    / 1. Aplikační vrstva — PDU: *Data*
+      Uživatel odešle požadavek (např. klikne na odkaz na webu, odešle e-mail)[cite: 37, 94]. Aplikace vygeneruje čistá data srozumitelná pro daný program[cite: 50, 100].
+      - _Příklad obsahu:_ Surový HTTP text dotazu, tělo e-mailu[cite: 114].
+
+    / 2. Transportní vrstva — PDU: *Segment* (TCP) / *Datagram* (UDP)
+      Tato vrstva přijme velký blok dat z aplikační vrstvy a v případě TCP ho rozseká na menší, zvládnutelné části[cite: 39, 115]. Přidá transportní hlavičku[cite: 53, 115].
+      - _Klíčový obsah hlavičky:_ *Zdrojový a cílový port* (identifikace konkrétní aplikace v počítači, např. port 80 pro web) a u TCP také sekvenční čísla pro opětovné složení dat[cite: 66, 115].
+
+    / 3. Internetová (Síťová) vrstva — PDU: *Paket* (Packet)
+      Vezme segment/datagram z transportní vrstvy a zapouzdří ho do IP hlavičky[cite: 56, 117]. Na této vrstvě se rozhoduje o směrování v internetu[cite: 41, 110].
+      - _Klíčový obsah hlavičky:_ *Zdrojová a cílová IP adresa* (logické adresy odesílatele a konečného příjemce kdesi v síti) a hodnota TTL (Time to Live) proti zacyklení[cite: 77, 110, 542].
+
+    / 4. Linková vrstva — PDU: *Rámec* (Frame)
+      Tato vrstva připravuje paket pro konkrétní fyzické médium[cite: 112]. Jako jediná vrstva přidává jak *hlavičku*, tak i *patičku* s kontrolním součtem[cite: 116].
+      - _Klíčový obsah hlavičky:_ *Zdrojová a cílová MAC adresa* (fyzické adresy síťových karet sousedících zařízení v lokální síti)[cite: 59, 112].
+      - _Klíčový obsah patičky:_ *FCS (Frame Check Sequence)* obsahující CRC kontrolní součet pro detekci chyb, které by mohly vzniknout poškozením kabelu[cite: 30, 381].
+
+    / 5. Fyzická vrstva — PDU: *Bity* (Bits)
+      Rámec z linkové vrstvy je převeden na sekvenci jedniček a nul (bitový proud). Tyto bity jsou transformovány na signály odpovídající danému médiu a vyslány do sítě[cite: 62, 116].
+      - _Forma signálu:_ Elektrické napětí (metalický kabel), světelné záblesky (optické vlákno) nebo rádiové vlnění (Wi-Fi)[cite: 33].
+
+    ==== Průběh odpouzdření zdola nahoru (Příjemce — Decapsulation)
+
+    Když data dorazí k příjemci (nebo na mezilehlé síťové zařízení jako router), celý proces probíhá přesně *v opačném pořadí (zdola nahoru)*:
+    1. Fyzická vrstva zachytí signály a převede je zpět na bity.
+    2. Linková vrstva z bitů poskládá rámec, zkontroluje pomocí patičky (CRC), zda data nejsou poškozená, přečte si cílovou MAC adresu, *odřízne (zahodí) linkovou hlavičku i patičku* a zbytek (paket) předá výš[cite: 46, 117, 382].
+    3. Internetová vrstva zkontroluje cílovou IP adresu, *odřízne IP hlavičku* a předá segment transportní vrstvě.
+    4. Transportní vrstva seřadí segmenty do správného pořadí, podle cílového portu zjistí, jaké aplikaci data patří, *odřízne transportní hlavičku* a čistá data předá aplikaci[cite: 46, 74, 117].
+    5. Aplikační vrstva zobrazí uživateli výsledný obsah (např. vykreslí webovou stránku)[cite: 37, 94].
+
+    #block(
+      fill: luma(240), 
+      inset: 10pt, 
+      radius: 4pt
+    )[
+      === "Vyjmenujte, jaké protokoly máme v jednotlivých vrstvách TCP-IP modelu a u některých popište jejich funkci"
+      #v(1em)
+      > @protokoly-tcp-ip
+    ]
 
     #image("../assets/ISO-OSI-TCP-IP.jpg")
 
@@ -272,6 +309,7 @@
       - POP3 – stažení mailů ze serveru do zařízení (port 110)
       - IMAP – synchronizace mailů se serverem a více zařízeními (port 143)
       - DNS – překlad domén na IP adresy (port 53)
+      - Telnet – vzdálený přístup k příkazové řádce (port 23)
 
     / Transportní vrstva:
       - TCP – spolehlivý přenos (kontrola chyb, pořadí)
