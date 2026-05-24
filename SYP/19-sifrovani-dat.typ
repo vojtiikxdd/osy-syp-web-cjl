@@ -189,6 +189,17 @@
         - Nejsou známy analytické útoky rychlejší než hrubou silou
         - Útoky postranními kanály
   ],
+  subquestions: [
+    #block(
+      fill: luma(240),
+      inset: 10pt,
+      radius: 4pt,
+    )[
+      === ""
+      #v(1em)
+      //> @
+    ]
+  ],
   resources: [
     - #link("https://www.youtube.com")[Youtube - Téma]
     - #link("https://en.wikipedia.org/")[Wiki - Téma]

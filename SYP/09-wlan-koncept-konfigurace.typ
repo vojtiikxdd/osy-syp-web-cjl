@@ -83,6 +83,77 @@
 
     *Troubleshooting:* Kontrola IP konfigurace (`ipconfig`), `ping`, aktualizace ovladačů (NIC), fyzická kontrola zarušení a kontrola konfigurace na WLC/AP.
   ],
+  subquestions: [
+    #block(
+      fill: luma(240),
+      inset: 10pt,
+      radius: 4pt,
+    )[
+      === "Co je to směrování a jeho základní dělení"
+      #v(1em)
+      //> @
+    ]
+    
+    #block(
+      fill: luma(240),
+      inset: 10pt,
+      radius: 4pt,
+    )[
+      === "Funkce směrovače."
+      #v(1em)
+      //> @
+    ]
+    
+    #block(
+      fill: luma(240),
+      inset: 10pt,
+      radius: 4pt,
+    )[
+      === "Možné způsoby připojení k směrovači pro jeho základní konfiguraci. Režimy směrovače."
+      #v(1em)
+      //> @
+    ]
+    
+    #block(
+      fill: luma(240),
+      inset: 10pt,
+      radius: 4pt,
+    )[
+      === "Směrovací tabulka,"
+      #v(1em)
+      //> @
+    ]
+    
+    #block(
+      fill: luma(240),
+      inset: 10pt,
+      radius: 4pt,
+    )[
+      === "Přímo připojené sítě, vzdálené sítě, výchozí trasa."
+      #v(1em)
+      //> @
+    ]
+    
+    #block(
+      fill: luma(240),
+      inset: 10pt,
+      radius: 4pt,
+    )[
+      === "Router, routing table, next hop, administrative distance"
+      #v(1em)
+      //> @
+    ]
+    
+    #block(
+      fill: luma(240),
+      inset: 10pt,
+      radius: 4pt,
+    )[
+      === "`ip route network-address subnet-mask {ip-address | exit-intf [ip-address]} [distance]`"
+      #v(1em)
+      //> @
+    ]
+  ],
   resources: [
     - #link("https://en.wikipedia.org/wiki/IEEE_802.11")[Wiki — IEEE 802.11]
     - #link("https://en.wikipedia.org/wiki/CAPWAP")[Wiki — CAPWAP Protocol]

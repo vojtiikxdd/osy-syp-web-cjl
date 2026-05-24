@@ -80,6 +80,17 @@
 
     *Obnovení Systému* je pro návrat k některému z předchozích bodů obnovení (pokud je tato funkce zapnutá). *Obnovení z bitové kopie systému* umožní obnovu systému ze zálohy, která bitovou kopii obsahuje.
   ],
+  subquestions: [
+    #block(
+      fill: luma(240),
+      inset: 10pt,
+      radius: 4pt,
+    )[
+      === ""
+      #v(1em)
+      //> @
+    ]
+  ],
   resources: [
     - #link("https://www.youtube.com")[Youtube - Téma]
     - #link("https://en.wikipedia.org/")[Wiki - Téma]

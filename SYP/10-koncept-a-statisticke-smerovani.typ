@@ -73,6 +73,78 @@
     3. *Summary Static Route:* Shrnující cesta, kde se maska upraví tak, aby zahrnovala více menších sítí pod jeden záznam.
     4. *Floating Static Route:* Slouží jako *záložní trasa*. Konfiguruje se s vyšší AD, než má primární dynamický protokol. (Např. EIGRP má AD 90, záložní Floating statické cestě nastavíme AD 95. Dokud EIGRP běží, router preferuje EIGRP. Když EIGRP selže, aktivuje se záložní statická trasa).
   ],
+  subquestions: [
+    #block(
+      fill: luma(240),
+      inset: 10pt,
+      radius: 4pt,
+    )[
+      === "Používaná zařízení v malých sítích a způsoby jejich propojení."
+      #v(1em)
+      //> @
+    ]
+
+    
+    #block(
+      fill: luma(240),
+      inset: 10pt,
+      radius: 4pt,
+    )[
+      === "Výběr těchto zařízení."
+      #v(1em)
+      //> @
+    ]
+    
+    #block(
+      fill: luma(240),
+      inset: 10pt,
+      radius: 4pt,
+    )[
+      === "Adresace pro malou firmu."
+      #v(1em)
+      //> @
+    ]
+    
+    #block(
+      fill: luma(240),
+      inset: 10pt,
+      radius: 4pt,
+    )[
+      === "Redundance v malé síti, QoS."
+      #v(1em)
+      //> @
+    ]
+    
+    #block(
+      fill: luma(240),
+      inset: 10pt,
+      radius: 4pt,
+    )[
+      === "Služby v malé síti."
+      #v(1em)
+      //> @
+    ]
+    
+    #block(
+      fill: luma(240),
+      inset: 10pt,
+      radius: 4pt,
+    )[
+      === "Audio a video aplikace."
+      #v(1em)
+      //> @
+    ]
+    
+    #block(
+      fill: luma(240),
+      inset: 10pt,
+      radius: 4pt,
+    )[
+      === "Růst malé sítě."
+      #v(1em)
+      //> @
+    ]
+  ],
   resources: [
     - #link("https://cs.wikipedia.org/wiki/Sm%C4%9Brov%C3%A1n%C3%AD")[Wiki — Směrování (Routing)]
     - #link("https://en.wikipedia.org/wiki/Administrative_distance")[Wiki — Administrative Distance]

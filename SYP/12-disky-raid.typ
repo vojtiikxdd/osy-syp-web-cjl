@@ -84,6 +84,57 @@
       - *Výhoda:* Maximální výkon i bezpečnost. Pole zvládne výpadek i vícera disků najednou (pokud neodejde celý zrcadlený pár). Špička pro profesionální databáze.
       - *Nevýhoda:* Nejvyšší finanční náklady. Trvale ztratíte celou polovinu zakoupené fyzické kapacity na tvorbu kopií.
   ],
+  subquestions: [
+    #block(
+      fill: luma(240),
+      inset: 10pt,
+      radius: 4pt,
+    )[
+      === "geometrie disků"
+      #v(1em)
+      //> @
+    ]
+    
+    #block(
+      fill: luma(240),
+      inset: 10pt,
+      radius: 4pt,
+    )[
+      === "klasické a dynamické"
+      #v(1em)
+      //> @
+    ]
+    
+    #block(
+      fill: luma(240),
+      inset: 10pt,
+      radius: 4pt,
+    )[
+      === "RAID"
+      #v(1em)
+      //> @
+    ]
+    
+    #block(
+      fill: luma(240),
+      inset: 10pt,
+      radius: 4pt,
+    )[
+      === "Hot swap"
+      #v(1em)
+      //> @
+    ]
+    
+    #block(
+      fill: luma(240),
+      inset: 10pt,
+      radius: 4pt,
+    )[
+      === "NVMe (Non-Volatile Memory Express)"
+      #v(1em)
+      //> @
+    ]
+  ],
   resources: [
     - #link("https://cs.wikipedia.org/wiki/Pevn%C3%BD_disk")[Wiki — Pevný disk (HDD) a geometrie]
     - #link("https://cs.wikipedia.org/wiki/Solid-state_drive")[Wiki — SSD (Solid State Drive)]

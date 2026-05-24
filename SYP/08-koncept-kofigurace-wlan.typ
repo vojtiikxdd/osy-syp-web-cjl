@@ -78,6 +78,68 @@
     4. Nastavení vysílacího kanálu (např. 1–12 v pásmu 2,4 GHz) pro minimalizaci rušení.
     5. Změnu IP adresy routeru a nastavení rozsahu lokálních adres přidělovaných DHCP serverem.
   ],
+  subquestions: [
+    #block(
+      fill: luma(240),
+      inset: 10pt,
+      radius: 4pt,
+    )[
+      === "Výhody bezdrátových sítí. Typy bezdrátových sítí podle velikosti. Metoda přístupu k médiu."
+      #v(1em)
+      //> @
+    ]
+    
+    #block(
+      fill: luma(240),
+      inset: 10pt,
+      radius: 4pt,
+    )[
+      === "Bezdrátové technologie (Bluetooth, WiFi, WiMAX, mobilní, satelitní)."
+      #v(1em)
+      //> @
+    ]
+
+    
+    #block(
+      fill: luma(240),
+      inset: 10pt,
+      radius: 4pt,
+    )[
+      === "Popište jednotlivé varianty IEEE 802.11 v čem se liší a na jaké frekvenci se provozují"
+      #v(1em)
+      //> @
+    ]
+    
+    #block(
+      fill: luma(240),
+      inset: 10pt,
+      radius: 4pt,
+    )[
+      === "Antény"
+      #v(1em)
+      //> @
+    ]
+    
+    #block(
+      fill: luma(240),
+      inset: 10pt,
+      radius: 4pt,
+    )[
+      === "Možnosti zabezpečení bezdrátových sítí"
+      #v(1em)
+      //> @
+    ]
+    
+    #block(
+      fill: luma(240),
+      inset: 10pt,
+      radius: 4pt,
+    )[
+      === "DoS, Man-in-the-Middle"
+      #v(1em)
+      //> @
+    ]
+  ],
   resources: [
     - #link("https://cs.wikipedia.org/wiki/Wi-Fi")[Wiki — Wi-Fi (IEEE 802.11)]
     - #link("https://cs.wikipedia.org/wiki/MIMO")[Wiki — MIMO technologie]

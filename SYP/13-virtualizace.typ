@@ -69,6 +69,67 @@
     - *Komplexnější správa:* Více vrstev znamená složitější diagnostiku a údržbu.
     - *Single point of failure:* Výpadek hostitele způsobí výpadek všech běžících VM.
   ],
+  subquestions: [
+    #block(
+      fill: luma(240),
+      inset: 10pt,
+      radius: 4pt,
+    )[
+      === "Co vše je možné virtualizovat"
+      #v(1em)
+      //> @
+    ]
+    
+    #block(
+      fill: luma(240),
+      inset: 10pt,
+      radius: 4pt,
+    )[
+      === "Rozdělení typů virtualizace (servery, desktopy, aplikace, uložiště)"
+      #v(1em)
+      //> @
+    ]
+    
+    #block(
+      fill: luma(240),
+      inset: 10pt,
+      radius: 4pt,
+    )[
+      === "Popište výhody virtualizace"
+      #v(1em)
+      //> @
+    ]
+    
+    #block(
+      fill: luma(240),
+      inset: 10pt,
+      radius: 4pt,
+    )[
+      === "Jaké znáte virtualizační platformy"
+      #v(1em)
+      //> @
+    ]
+    
+    #block(
+      fill: luma(240),
+      inset: 10pt,
+      radius: 4pt,
+    )[
+      === "Windows a Sandbox, k čemu slouží."
+      #v(1em)
+      //> @
+    ]
+    
+    #block(
+      fill: luma(240),
+      inset: 10pt,
+      radius: 4pt,
+    )[
+      === "Co je portable aplikace."
+      #v(1em)
+      //> @
+    ]
+  ],
   resources: [
     - #link("https://cs.wikipedia.org/wiki/Virtualizace")[Wiki — Virtualizace]
     - #link("https://cs.wikipedia.org/wiki/Hypervizor")[Wiki — Hypervizor]

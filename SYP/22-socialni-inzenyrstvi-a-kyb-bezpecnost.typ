@@ -119,6 +119,17 @@
     Termín kybergrooming (child grooming) označuje chování uživatelů internetu (predátorů), které má v jejich oběti vyvolat falešnou důvěru a přimět ji k osobní schůzce v reálném světě. Výsledkem schůzky může být např. sexuální zneužití, fyzické násilí, zneužití oběti pro dětskou prostituci, k výrobě dětské pornografie apod. Kybergrooming je druhem psychické manipulace, ve které komunikuje dospělý uživatel s dítětem (komunikace s obětí často pod falešnou identitou). Využívá celou řadu strategií: zrcadlení (mirroring), spear phishing, profilování oběti, vábení a uplácení, strategie snižování zábran dětí a mládeže zaváděním
     sexuálního obsahu do konverzace, izolační metody, strategie manipulace dětí prostřednictvím fotografií opačného pohlaví a další techniky.
   ],
+  subquestions: [
+    #block(
+      fill: luma(240),
+      inset: 10pt,
+      radius: 4pt,
+    )[
+      === ""
+      #v(1em)
+      //> @
+    ]
+  ],
   resources: [
     - #link("https://www.youtube.com")[Youtube - Téma]
     - #link("https://en.wikipedia.org/")[Wiki - Téma]

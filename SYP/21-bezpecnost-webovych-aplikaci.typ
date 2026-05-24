@@ -139,6 +139,17 @@
 
     Útočník dokáže zneužít interní služby k dalším útokům, jako je vzdálené spuštění kódu (RCE - Remote Code Execution) nebo odepření služby DoS (Denial of Service).
   ],
+  subquestions: [
+    #block(
+      fill: luma(240),
+      inset: 10pt,
+      radius: 4pt,
+    )[
+      === ""
+      #v(1em)
+      //> @
+    ]
+  ],
   resources: [
     - #link("https://www.youtube.com")[Youtube - Téma]
     - #link("https://en.wikipedia.org/")[Wiki - Téma]

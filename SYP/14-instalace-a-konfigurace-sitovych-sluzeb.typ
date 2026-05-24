@@ -168,6 +168,57 @@
         ip a
     ```
   ],
+  subquestions: [
+    #block(
+      fill: luma(240),
+      inset: 10pt,
+      radius: 4pt,
+    )[
+      === "Jaký je rozdíl v instalaci síťových služeb na platformách Windows / Linux"
+      #v(1em)
+      //> @
+    ]
+    
+    #block(
+      fill: luma(240),
+      inset: 10pt,
+      radius: 4pt,
+    )[
+      === "Jaký je rozdíl v konfiguraci serveru a desktopu (Windows)"
+      #v(1em)
+      //> @
+    ]
+    
+    #block(
+      fill: luma(240),
+      inset: 10pt,
+      radius: 4pt,
+    )[
+      === "Konfigurace síťových služeb z příkazového řádku"
+      #v(1em)
+      //> @
+    ]
+    
+    #block(
+      fill: luma(240),
+      inset: 10pt,
+      radius: 4pt,
+    )[
+      === "V jakém nástroji a jak se instalují jednotlivé služby ve Windows Server"
+      #v(1em)
+      //> @
+    ]
+    
+    #block(
+      fill: luma(240),
+      inset: 10pt,
+      radius: 4pt,
+    )[
+      === "Popište jednotlivé síťové služby (DHCP, DNS, FTP, HTTP, file server, print server, SQL server, SMTP server)"
+      #v(1em)
+      //> @
+    ]
+  ],
   resources: [
     - #link("https://cs.wikipedia.org/wiki/S%C3%AD%C5%A5ov%C3%A1_slu%C5%BEba")[Wiki — Síťová služba]
     - #link("https://cs.wikipedia.org/wiki/DHCP")[Wiki — DHCP]

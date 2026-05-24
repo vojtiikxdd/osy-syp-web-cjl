@@ -174,6 +174,57 @@
         touch soubor    # Vytvoření prázdného souboru
     ```
   ],
+  subquestions: [
+    #block(
+      fill: luma(240),
+      inset: 10pt,
+      radius: 4pt,
+    )[
+      === "Co je a k čemu slouží souborový systém"
+      #v(1em)
+      //> @
+    ]
+    
+    #block(
+      fill: luma(240),
+      inset: 10pt,
+      radius: 4pt,
+    )[
+      === "Jaké znáte souborové systémy"
+      #v(1em)
+      //> @
+    ]
+    
+    #block(
+      fill: luma(240),
+      inset: 10pt,
+      radius: 4pt,
+    )[
+      === "Čím se liší žurnálovací systémy od ostatních."
+      #v(1em)
+      //> @
+    ]
+    
+    #block(
+      fill: luma(240),
+      inset: 10pt,
+      radius: 4pt,
+    )[
+      === "Jaké znáte souborové systémy vhodné pro Linux"
+      #v(1em)
+      //> @
+    ]
+    
+    #block(
+      fill: luma(240),
+      inset: 10pt,
+      radius: 4pt,
+    )[
+      === "Základní příkazy pro práci se soubory a adresáři v Linuxu"
+      #v(1em)
+      //> @
+    ]
+  ],
   resources: [
     - #link("https://cs.wikipedia.org/wiki/Souborov%C3%BD_syst%C3%A9m")[Wiki — Souborový systém]
     - #link("https://cs.wikipedia.org/wiki/Ext4")[Wiki — ext4]

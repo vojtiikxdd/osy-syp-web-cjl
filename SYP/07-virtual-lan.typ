@@ -73,6 +73,57 @@
     S1(config)# no vlan 10
     ```
   ],
+  subquestions: [
+    #block(
+      fill: luma(240),
+      inset: 10pt,
+      radius: 4pt,
+    )[
+      === "Vysvětlete důvody používání VLAN"
+      #v(1em)
+      //> @
+    ]
+    
+    #block(
+      fill: luma(240),
+      inset: 10pt,
+      radius: 4pt,
+    )[
+      === "Způsoby segmentace sítí. Metody vytváření VLAN."
+      #v(1em)
+      //> @
+    ]
+    
+    #block(
+      fill: luma(240),
+      inset: 10pt,
+      radius: 4pt,
+    )[
+      === "Konfigurace VLAN na switchi"
+      #v(1em)
+      //> @
+    ]
+    
+    #block(
+      fill: luma(240),
+      inset: 10pt,
+      radius: 4pt,
+    )[
+      === "Popište možné způsoby propojení switchů na kterých jsou vytvořeny 3 stejné VLANy"
+      #v(1em)
+      //> @
+    ]
+    
+    #block(
+      fill: luma(240),
+      inset: 10pt,
+      radius: 4pt,
+    )[
+      === "Jak je možné zajistit propojení mezi VLANami, popište možné způsoby řešení"
+      #v(1em)
+      //> @
+    ]
+  ],
   resources: [
     - #link("https://cs.wikipedia.org/wiki/Virtual_LAN")[Wiki — Virtual LAN]
     - #link("https://en.wikipedia.org/wiki/IEEE_802.1Q")[IEEE 802.1Q Tagging]

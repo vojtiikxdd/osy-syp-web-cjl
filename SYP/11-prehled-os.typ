@@ -67,6 +67,67 @@
     - `uname -a` – Zobrazí základní informace o systému: typ OS (Linux), název stroje (hostname), verzi jádra (kernel), architekturu procesoru (např. x86_64) a datum kompilace.
     - `lsb_release -a` – Zobrazí detaily o konkrétní linuxové distribuci: výrobce (Distributor ID), název a verzi systému (Description), číslo verze (Release) a kódové označení (Codename, např. *jammy*).
   ],
+  subquestions: [
+    #block(
+      fill: luma(240),
+      inset: 10pt,
+      radius: 4pt,
+    )[
+      === "jednouživatelské / víceuživatelské"
+      #v(1em)
+      //> @
+    ]
+    
+    #block(
+      fill: luma(240),
+      inset: 10pt,
+      radius: 4pt,
+    )[
+      === "lokální / síťové"
+      #v(1em)
+      //> @
+    ]
+    
+    #block(
+      fill: luma(240),
+      inset: 10pt,
+      radius: 4pt,
+    )[
+      === "placené / zdarma"
+      #v(1em)
+      //> @
+    ]
+    
+    #block(
+      fill: luma(240),
+      inset: 10pt,
+      radius: 4pt,
+    )[
+      === "podle HW platformy"
+      #v(1em)
+      //> @
+    ]
+    
+    #block(
+      fill: luma(240),
+      inset: 10pt,
+      radius: 4pt,
+    )[
+      === "licence a edice OS MS (krabicová, OEM, ...)"
+      #v(1em)
+      //> @
+    ]
+    
+    #block(
+      fill: luma(240),
+      inset: 10pt,
+      radius: 4pt,
+    )[
+      === "verze a edice OS"
+      #v(1em)
+      //> @
+    ]
+  ],
   resources: [
     - #link("https://cs.wikipedia.org/wiki/Opera%C4%8Dn%C3%AD_syst%C3%A9m")[Wiki — Operační systém]
     - #link("https://cs.wikipedia.org/wiki/J%C3%A1dro_opera%C4%8Dn%C3%ADho_syst%C3%A9mu")[Wiki — Jádro OS (Kernel)]

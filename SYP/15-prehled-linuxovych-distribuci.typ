@@ -112,6 +112,57 @@
     - *Instalace:* `sudo apt install krusader`
     - Umožňuje pokročilou archivaci (ZIP, TAR, RAR), připojení k síťovým diskům a FTP serverům a hromadnou synchronizaci složek.
   ],
+  subquestions: [
+    #block(
+      fill: luma(240),
+      inset: 10pt,
+      radius: 4pt,
+    )[
+      === "Rozdělení linuxových distribucí s přihlédnutím na finance"
+      #v(1em)
+      //> @
+    ]
+    
+    #block(
+      fill: luma(240),
+      inset: 10pt,
+      radius: 4pt,
+    )[
+      === "Rozdělení v závislosti na GUI"
+      #v(1em)
+      //> @
+    ]
+    
+    #block(
+      fill: luma(240),
+      inset: 10pt,
+      radius: 4pt,
+    )[
+      === "Architektura Linuxu z hlediska jádra OS"
+      #v(1em)
+      //> @
+    ]
+    
+    #block(
+      fill: luma(240),
+      inset: 10pt,
+      radius: 4pt,
+    )[
+      === "Jak to je s náročností Linuxu na hardware a podporou nejnovějšího hardware"
+      #v(1em)
+      //> @
+    ]
+    
+    #block(
+      fill: luma(240),
+      inset: 10pt,
+      radius: 4pt,
+    )[
+      === "Co v Linuxu představuje pojem „bash“. Porovnejte s OS Windows."
+      #v(1em)
+      //> @
+    ]
+  ],
   resources: [
     - #link("https://cs.wikipedia.org/wiki/Linuxov%C3%A1_distribuce")[Wiki — Linuxová distribuce]
     - #link("https://distrowatch.com/")[DistroWatch — Přehled a žebříčky distribucí]

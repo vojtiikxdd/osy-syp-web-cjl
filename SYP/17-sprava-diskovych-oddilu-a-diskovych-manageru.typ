@@ -144,6 +144,37 @@
     / VG (Volume Group): Skupina PV — společný pool úložného prostoru.
     / LV (Logical Volume): Logický svazek z VG — ekvivalent klasického oddílu.
   ],
+  subquestions: [
+    #block(
+      fill: luma(240),
+      inset: 10pt,
+      radius: 4pt,
+    )[
+      === "Jaký je rozdíl mezi MBR a GPT"
+      #v(1em)
+      //> @
+    ]
+    
+    #block(
+      fill: luma(240),
+      inset: 10pt,
+      radius: 4pt,
+    )[
+      === "Vytváření oddílů, rušení oddílů, úprava oddílu, formátování oddílů"
+      #v(1em)
+      //> @
+    ]
+    
+    #block(
+      fill: luma(240),
+      inset: 10pt,
+      radius: 4pt,
+    )[
+      === "Jaké příkazy / grafické nástroje znáte pro správu disků a diskových oddílů"
+      #v(1em)
+      //> @
+    ]
+  ],
   resources: [
     - #link("https://cs.wikipedia.org/wiki/Diskov%C3%BD_odd%C3%ADl")[Wiki — Diskový oddíl]
     - #link("https://cs.wikipedia.org/wiki/Master_boot_record")[Wiki — MBR]
