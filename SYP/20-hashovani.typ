@@ -145,7 +145,7 @@
         let seg(t, bg, fg) = box(
           fill: bg,
           inset: (x: 4pt, y: 3pt),
-          text(fill: fg, font: "Courier New", size: 9pt, t),
+          text(fill: fg, font: "JetBrains Mono", size: 9pt, t),
         )
 
         box({
@@ -183,7 +183,7 @@
         let seg(t, bg, fg) = box(
           fill: bg,
           inset: (x: 4pt, y: 3pt),
-          text(fill: fg, font: "Courier New", size: 9pt, t),
+          text(fill: fg, font: "JetBrains Mono", size: 9pt, t),
         )
 
         box({
