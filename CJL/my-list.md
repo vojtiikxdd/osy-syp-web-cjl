@@ -6,8 +6,8 @@
 
 # Světová a česká literatura do konce 19. století (žák si vybírá min. 3 díla)
 
-4. **Edgar Allan Poe - Havran**
-5. **Edgar Allan Poe - Povídky -- Černý kocour**
+4. **Edgar Allan Poe - Povídky -- Černý kocour**
+5. **Edgar Allan Poe - Havran**
 6. **Karel Havlíček Borovský - Tyrolské elegie**
 7. **Karel Havlíček Borovský - Král Lávra** 
 8. **Božena Němcová - Divá Bára** 

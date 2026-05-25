@@ -14,13 +14,13 @@
 
     = Proč se používají hashe?
 
-    V kryptografických aplikacích je vhodnější pracovat s krátkým reprezentantem zprávy než s celou zprávou, zejména v případě procesu ověřování. Když je hashovací funkce, je nějaká 10 znaků, výstupní má vždy 64 - fixní délka hashe. 
-    
+    V kryptografických aplikacích je vhodnější pracovat s krátkým reprezentantem zprávy než s celou zprávou, zejména v případě procesu ověřování. Když je hashovací funkce, je nějaká 10 znaků, výstupní má vždy 64 - fixní délka hashe.
+
     / Hlavní důvody, proč se používají hashe:
       - jednosměrnost – z hashe nelze inverzní operací získat původní data,
       - bezkoliznost – vytvořit různé vstupy se stejným otiskem je téměř nemožné,
       - rychlost – proces vykonání hashovací funkce je rychlý.
-      
+
     Hash je výsledkem hashovacích algoritmů/funkcí. Je to matematická operace, která „změní“ vložená data na kód tvořený číslicemi a písmeny o určité délce.
 
     / V případě kolizí uvažujeme:
@@ -41,7 +41,7 @@
       - otisky klíčů – uložení klíčů
       - prokazování autorství
       - pseudonáhodné generátory
-    
+
     / Hashovací funkce:
       - LM a NT hash - nebezpecne
       - RIPEMD
@@ -52,7 +52,7 @@
       - Bcrypt
       - Tiger
       - Argon2
-    
+
     / Nástroje pro lámání hesel:
       - John the Ripper
       - Cain & Abel
@@ -94,28 +94,28 @@
     NT Hash neobsahuje slabiny z LM Hashe, přesto je považován za prolomenou.
     V autentizačním NTLMv2 se používá nástupce MD5.
     Celkem 3 rundy, každá s 16 kroky.
-    
+
     / Příklad:
       - NT: _*635AA65C4DEFDC8AB6901B754BDFDF9C*_
       - MD4: _*423af3ab7f943065b99539d264c54657*_
 
     = MD5
     Výstupem funkce je 128 b řetězec (vstup, blok 512b).
-    
+
     Celkem 4 rundy, každá s 16 kroky.
-    
+
     Generuje stejný řetězec, jednoduché pro rozpoznání.
-    
+
     / Příklad:
       - _*e3dc865c8b8c79dced62b98865d19e7a*_
 
     = SHA
     K nejvíce používaným standardům hashovacích funkcí patří SHA, které jsou standardizované americkým úřadem NIST.
-    
+
     / K nejznámějším funkcím SHA patří SHA-1, SHA-2 a SHA-3 (preferováno):
-      - SHA-2: SHA-224, SHA-256, SHA-384, SHA-512, SHA-512/224, SHA-512/256, 
+      - SHA-2: SHA-224, SHA-256, SHA-384, SHA-512, SHA-512/224, SHA-512/256,
       - SHA-3: SHA3-224, SHA3-256, SHA3-384, SHA3-512.
-    
+
     / Příklady hashů:
       - SHA-1: _*3ae779aa2cbe03e588efedbeb845429b5c714c44*_
       - SHA-224: _*75f5188f309050e1356d5c01cb8880f13a7c7c5504e3b45153ab71ac*_
@@ -127,17 +127,17 @@
 
     = Bcrypt
     Hashovací funkce bcrypt byla navržena na základě šifry Blowfish.
-    
+
     Primární účel je hashování hesel a derivace klíčů.
-    
+
     Bcrypt používá původní náhodnou kryptografickou sůl (128b soli).
-    
+
     / Výhody hashovací funkce:
       - heslo je obtížné určit útokem hrubou silou,
       - zabraňuje vytváření duhových tabulek.
 
     Vstupem funkce bcrypt je řetězec hesla (až 72 B), číselná cena a 16 B sůl.
-    
+
     Obsahuje více informací, bezpečné.
 
     #figure(
@@ -145,13 +145,13 @@
         let seg(t, bg, fg) = box(
           fill: bg,
           inset: (x: 4pt, y: 3pt),
-          text(fill: fg, font: "Courier New", size: 9pt, t)
+          text(fill: fg, font: "Courier New", size: 9pt, t),
         )
 
         box({
-          seg("$2a$",   blue.lighten(80%),   blue.darken(20%))
-          seg("12$",    orange.lighten(80%), orange.darken(20%))
-          seg("N5h.Id2S85125bdvTlARi.",  green.lighten(80%),  green.darken(20%))
+          seg("$2a$", blue.lighten(80%), blue.darken(20%))
+          seg("12$", orange.lighten(80%), orange.darken(20%))
+          seg("N5h.Id2S85125bdvTlARi.", green.lighten(80%), green.darken(20%))
           seg("PzUg.Fg8cJ7udXWVdvbGYSVhXF2jWPG", red.lighten(80%), red.darken(20%))
         })
 
@@ -160,56 +160,56 @@
         grid(
           columns: 4,
           column-gutter: 16pt,
-          text(fill: blue.darken(20%),   size: 8pt, [• Algoritmus]),
+          text(fill: blue.darken(20%), size: 8pt, [• Algoritmus]),
           text(fill: orange.darken(20%), size: 8pt, [• Cena]),
-          text(fill: green.darken(20%),  size: 8pt, [• Sůl (pro každou zprávu jiná)]),
-          text(fill: red.darken(20%),    size: 8pt, [• Hash]),
+          text(fill: green.darken(20%), size: 8pt, [• Sůl (pro každou zprávu jiná)]),
+          text(fill: red.darken(20%), size: 8pt, [• Hash]),
         )
       },
-      caption: [Struktura bcrypt hashe rozložená na jednotlivé části]
+      caption: [Struktura bcrypt hashe rozložená na jednotlivé části],
     )
 
     = Argon2
     Argon2 je funkce pro hashování hesel, která shrnuje nejnovější poznatky v oblasti návrhu paměťově náročných aplikací nebo odvozování klíčů. Funkce má 3 varianty:
-    
+
     - Argon2i – používá nezávislé výpočty na pozicích v paměti, což zajišťuje odolnost proti útokům postranními kanály.
-    
+
     - Argon2d – používá výpočty, které jsou závislé na pozicích v paměti, vhodný pro úložiště, kde se požadují rychlé výpočty.
-    
+
     - Argon2id – kombinace obou předchozích režimů, všeobecné použití.
-    
+
     #figure(
-  {
-    let seg(t, bg, fg) = box(
-      fill: bg,
-      inset: (x: 4pt, y: 3pt),
-      text(fill: fg, font: "Courier New", size: 9pt, t)
+      {
+        let seg(t, bg, fg) = box(
+          fill: bg,
+          inset: (x: 4pt, y: 3pt),
+          text(fill: fg, font: "Courier New", size: 9pt, t),
+        )
+
+        box({
+          seg("$6$", blue.lighten(80%), blue.darken(20%))
+          seg("rounds=5000$", orange.lighten(80%), orange.darken(20%))
+          seg("saltsalt$", green.lighten(80%), green.darken(20%))
+          seg("qFmZHQ.eK0oF.6K/QG.28yvE/I.y.RkQJ.", red.lighten(80%), red.darken(20%))
+        })
+
+        v(6pt)
+
+        grid(
+          columns: 4,
+          column-gutter: 16pt,
+          text(fill: blue.darken(20%), size: 8pt, [• Algoritmus]),
+          text(fill: orange.darken(20%), size: 8pt, [• Parametry]),
+          text(fill: green.darken(20%), size: 8pt, [• Sůl]),
+          text(fill: red.darken(20%), size: 8pt, [• Hash]),
+        )
+      },
+      caption: [Struktura unixového haše (Modular Crypt Format) rozložená na jednotlivé části],
     )
-
-    box({
-      seg("$6$",   blue.lighten(80%),   blue.darken(20%))
-      seg("rounds=5000$",    orange.lighten(80%), orange.darken(20%))
-      seg("saltsalt$",  green.lighten(80%),  green.darken(20%))
-      seg("qFmZHQ.eK0oF.6K/QG.28yvE/I.y.RkQJ.", red.lighten(80%), red.darken(20%))
-    })
-
-    v(6pt)
-
-    grid(
-      columns: 4,
-      column-gutter: 16pt,
-      text(fill: blue.darken(20%),   size: 8pt, [• Algoritmus]),
-      text(fill: orange.darken(20%), size: 8pt, [• Parametry]),
-      text(fill: green.darken(20%),  size: 8pt, [• Sůl]),
-      text(fill: red.darken(20%),    size: 8pt, [• Hash]),
-    )
-  },
-  caption: [Struktura unixového haše (Modular Crypt Format) rozložená na jednotlivé části]
-)
 
     = Lámání hesla
     Síla hesel a doba jejich prolomení hrubou silou závisí na počtu znaků, jejich rozsahu a rychlosti udávané jako počet pokusů za 1 sekundu.
-  
+
     / Rozsah kombinací určujeme na základě dané množiny znaků:
       - písmena anglické abecedy (a-Z),
       - speciální znaky (@, !, ?, `#`, ...),
@@ -249,7 +249,47 @@
       inset: 10pt,
       radius: 4pt,
     )[
-      === ""
+      === "Definice a základní principy hashovací funkce."
+      #v(1em)
+      //> @
+    ]
+
+    #block(
+      fill: luma(240),
+      inset: 10pt,
+      radius: 4pt,
+    )[
+      === "Požadavky kladené na hashovací funkce."
+      #v(1em)
+      //> @
+    ]
+
+    #block(
+      fill: luma(240),
+      inset: 10pt,
+      radius: 4pt,
+    )[
+      === "Příklady aplikovaného použití hashovacích funkcí."
+      #v(1em)
+      //> @
+    ]
+
+    #block(
+      fill: luma(240),
+      inset: 10pt,
+      radius: 4pt,
+    )[
+      === "Útoky na hashovací funkce (hrubá síla, slovníkový útok, rainbow table)."
+      #v(1em)
+      //> @
+    ]
+
+    #block(
+      fill: luma(240),
+      inset: 10pt,
+      radius: 4pt,
+    )[
+      === "Popsat kryptografickou sůl a její využití ve vztahu k hashovacím funkcím."
       #v(1em)
       //> @
     ]

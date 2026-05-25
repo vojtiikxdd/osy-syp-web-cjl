@@ -32,7 +32,7 @@
       bottom: 0.5cm,
     ),
   )
-  set text(font: "New Computer Modern", size: 8pt)
+  set text(font: "JetBrains Mono", size: 8pt)
   show heading.where(level: 1): set text(size: 14pt, weight: "bold", fill: blue)
   show heading: set block(below: 6pt, above: 6pt)
   show heading.where(level: 2): set text(size: 12pt, weight: "bold", fill: eastern)

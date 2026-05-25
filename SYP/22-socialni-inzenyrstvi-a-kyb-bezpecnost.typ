@@ -125,7 +125,57 @@
       inset: 10pt,
       radius: 4pt,
     )[
-      === ""
+      === "V čem spočívá sociální inženýrství a na čem je založeno."
+      #v(1em)
+      //> @
+    ]
+    
+    #block(
+      fill: luma(240),
+      inset: 10pt,
+      radius: 4pt,
+    )[
+      === "Vyjmenovat techniky sociálního inženýrství a uvést jejich vektor útoku."
+      #v(1em)
+      //> @
+    ]
+    
+    #block(
+      fill: luma(240),
+      inset: 10pt,
+      radius: 4pt,
+    )[
+      === "Popsat Phising, Spear phising, Vishing, Smishing, Whaling, Quid Pro Quo a další, příklady."
+      #v(1em)
+      //> @
+    ]
+
+    #block(
+      fill: luma(240),
+      inset: 10pt,
+      radius: 4pt,
+    )[
+      === "Způsoby ochrany proti útokům sociálního inženýrství."
+      #v(1em)
+      //> @
+    ]
+
+    #block(
+      fill: luma(240),
+      inset: 10pt,
+      radius: 4pt,
+    )[
+      === "Definice a dělení digitální stopy a způsoby její minimalizace."
+      #v(1em)
+      //> @
+    ]
+    
+    #block(
+      fill: luma(240),
+      inset: 10pt,
+      radius: 4pt,
+    )[
+      === "Popsat kyberstalking, kyberšikanu a kybergrooming."
       #v(1em)
       //> @
     ]

@@ -145,10 +145,11 @@
       inset: 10pt,
       radius: 4pt,
     )[
-      === ""
+      === "Popsat zranitelnosti a nedostatky, doporučená opatření a příklady k následujícím kategoriím OWASP Top 10: řízení přístupu, kryptografické nedostatky, injekční útoky, nezabezpečený návrh, bezpečnostní konfigurace, zranitelné a neaktualizované komponenty, identifikace a autentizace, integrita dat, logování a monitoring."
       #v(1em)
       //> @
     ]
+    
   ],
   resources: [
     - #link("https://www.youtube.com")[Youtube - Téma]

@@ -7,7 +7,7 @@
   characteristics: (
     obsah: [
       Jedná se o drama, konkrétně o tragédii.
-      V díle se téže objevuje jak próza, tak i poezie.
+      V díle se téže objevuje jak próza (nizsi vrstva), tak i poezie (vyssi vrstva).
     ],
     utvary: [
       Veršované drama.

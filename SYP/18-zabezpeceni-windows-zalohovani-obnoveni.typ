@@ -34,6 +34,23 @@
       - přistupování malwaru do sítě.
     
     Je důležité firewall nikdy nevypínat, lze však v případě potřeby nastavit vlastní pravidla (povolit / zakázat).
+
+    Windows Defender Firewall používá *3 základní síťové profily*. Každý z nich se uplatňuje automaticky podle toho, k jakému typu sítě je počítač zrovna připojen.
+
+    === Doménový profil (Domain Profile)
+    Aktivuje se v momentě, kdy je počítač připojen k síti s funkční doménou *Active Directory* (typicky firemní infrastruktura).
+    - *Využití:* Firemní kanceláře, korporátní sítě.
+    - *Bezpečnost:* Benevolentnější nastavení. Předpokládá se, že síť je pod správou administrátorů a zařízení potřebují komunikovat mezi sebou (vzdálená správa, interní servery).
+
+    === Soukromý profil (Private Profile)
+    Tento profil uživatel volí pro sítě, které bezpečně zná a důvěřuje jim.
+    - *Využití:* Domácí síť, malá rodinná kancelář.
+    - *Bezpečnost:* Střední ochrana. Počítač je v síti *viditelný* (Network Discovery je zapnuté), což usnadňuje sdílení souborů, tisk a streamování.
+
+    === Veřejný profil (Public Profile)
+    Výchozí a nejvíce restriktivní profil pro sítě, které nemáte pod kontrolou.
+    - *Využití:* Kavárny, hotely, letiště, veřejné Wi-Fi.
+    - *Bezpečnost:* Maximální ochrana. Počítač je v síti *skrytý* pro ostatní zařízení. Sdílení souborů a tiskáren je striktně zablokováno, aby se zamezilo útokům zvenčí.
     
     == Antivirus
     
@@ -86,7 +103,37 @@
       inset: 10pt,
       radius: 4pt,
     )[
-      === ""
+      === "Obecné fungování firewall, typy pravidel a profilu v Microsoft Windows Firewall."
+      #v(1em)
+      //> @
+    ]
+
+    #block(
+      fill: luma(240),
+      inset: 10pt,
+      radius: 4pt,
+    )[
+      === "Princip SSO vč. příkladu, popsat služby Winlogon a Credential Providers."
+      #v(1em)
+      //> @
+    ]
+  
+    #block(
+      fill: luma(240),
+      inset: 10pt,
+      radius: 4pt,
+    )[
+      === "Jakým způsobem funguje prokázání identity pomocí certifikátu."
+      #v(1em)
+      //> @
+    ]
+  
+    #block(
+      fill: luma(240),
+      inset: 10pt,
+      radius: 4pt,
+    )[
+      === "Možnosti zálohování v OS Microsoft Windows a obnovení systému."
       #v(1em)
       //> @
     ]

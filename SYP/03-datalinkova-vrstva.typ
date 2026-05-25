@@ -68,7 +68,7 @@
 
     == Simplex vs. Half-duplex vs. Full-duplex
 
-    / Simplex: Komunikace pouze jedním směrem (např. vysílačka, televize). Žádná interakce.
+    / Simplex: Komunikace pouze jedním směrem (např. televize). Žádná interakce.
     / Half-duplex: Obě zařízení mohou vysílat i přijímat, ale ne současně. Používá WLAN a starší sběrnicové topologie. Vyžaduje metody řízení přístupu.
     / Full-duplex: Obě zařízení komunikují současně. Switche pracují defaultně ve full-duplexu. Po připojení k hubu se mohou přepnout do half-duplexu.
 

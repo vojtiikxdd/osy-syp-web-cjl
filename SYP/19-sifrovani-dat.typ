@@ -195,7 +195,47 @@
       inset: 10pt,
       radius: 4pt,
     )[
-      === ""
+      === "Kryptografický cyklus obecně a jeho stručný popis na vybrané substituční šifře."
+      #v(1em)
+      //> @
+    ]
+    
+    #block(
+      fill: luma(240),
+      inset: 10pt,
+      radius: 4pt,
+    )[
+      === "Symetrická kryptografie - princip, schéma, dělení, příklady algoritmů, použití."
+      #v(1em)
+      //> @
+    ]
+    
+    #block(
+      fill: luma(240),
+      inset: 10pt,
+      radius: 4pt,
+    )[
+      === "Asymetrická kryptografie - princip, schéma, příklady algoritmů, použití, porovnání hashů privátního klíče a certifikátu."
+      #v(1em)
+      //> @
+    ]
+    
+    #block(
+      fill: luma(240),
+      inset: 10pt,
+      radius: 4pt,
+    )[
+      === "Rozdíl mezi proudovou a blokovou šifrou, příklad algoritmů proudové a blokové šifry a jejich nasazení v praxi."
+      #v(1em)
+      //> @
+    ]
+
+    #block(
+      fill: luma(240),
+      inset: 10pt,
+      radius: 4pt,
+    )[
+      === "Způsob šifrování dat v MS Windows (BitLocker a subsystém EFS)."
       #v(1em)
       //> @
     ]

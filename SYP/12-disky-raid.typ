@@ -29,6 +29,19 @@
     / Cylindry (Válce): Množina všech stop se stejným poloměrem napříč všemi plotnami disku nad sebou.
     / LBA (Logical Block Addressing): Moderní metoda abstraktního adresování, kdy OS už neřeší fyzickou geometrii (Cylindr-Hlava-Sektor), ale komunikuje s diskem tak, že zkrátka sekvenčně čísluje logické bloky od nuly do maxima.
 
+    #figure(
+      image("../assets/rozdeleni-plotny-disk.png"),
+      caption: "Geometrie pevného disku: plotna s vyznačenými stopami, sektory a válci."
+    )
+
+    / Překlad:
+      - Platter - plotna
+      - Sector - sektor
+      - Track - stopa
+      - Cluster - klastr
+      - Head - hlava
+
+
     = Typy úložných zařízení (Historie a současnost)
     
     == FDD (Floppy Disk Drive – Diskety)
@@ -37,7 +50,10 @@
     - Technologie je extrémně náchylná na poškození elektromagnetickým polem. Dnes zcela zastaralá a nevyužívaná.
     
     == HDD (Hard Disk Drive – Pevný disk)
-    - Tradiční mechanické zařízení využívající magnetický zápis na rotující plotny.
+    - Tradiční mechanické zařízení využívající magnetický zápis na rotující plotny. 
+    
+    *Seagate technologie - dvě ramena s čtecími hlavami - ryhclost i kolem 500 MB/s*. Jinak běžné rychlosti se pohybují mezi 100 – 250 MB/s.
+    
     - Poskytuje velké a levné úložiště se střední rychlostí a téměř neomezeným počtem zápisů.
     - *Nevýhody:* Pomalý start (plotny se musí fyzicky roztočit), vysoká náchylnost na otřesy (nebezpečí poškození ploten čtecí hlavičkou) a rušení silným magnetem. Magnetické plochy mohou časem degradovat.
 
@@ -104,6 +120,9 @@
       #v(1em)
       //> @
     ]
+
+    klasicky disk ma omezeni na ukladani pouze na jeden disk 
+    a dynamicky disk umoznuje spojeni vice disku do jednoho logickeho celku (spanned volume) - proprietarni microsoft technologie - lze ulozit treba jeden soubor, ktery bude rozdeleny a ulozeny na vice fyzickych discich, ale pro uzivatele to bude vypadat jako jeden disk s jednim souborem
     
     #block(
       fill: luma(240),
